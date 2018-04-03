@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "48255827249",
+    "firebase_url": "https://sign-up-with-fireb.firebaseio.com",
+    "project_id": "sign-up-with-fireb",
+    "storage_bucket": "sign-up-with-fireb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:48255827249:android:2d51161eda9e7205",
+        "android_client_info": {
+          "package_name": "com.example.edwin.firebaseauthentication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "48255827249-5ninnspstc1nncdja40vqm7nu27111lh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.edwin.firebaseauthentication",
+            "certificate_hash": "e92c31a85a03f295d1e302287a4153403eda4f09"
+          }
+        },
+        {
+          "client_id": "48255827249-hqhceeo8j7b2o7ift1l5d03smp4lp7pi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZtVKzG6uaynyZEIjIakZDlfAlg_hAY2Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "48255827249-hqhceeo8j7b2o7ift1l5d03smp4lp7pi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:48255827249:android:c0c4689ab55c56b6",
+        "android_client_info": {
+          "package_name": "com.example.edwin.signupwithfireb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "48255827249-1gr1kd21vjus1ms6rhf0h6hugp3j711t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.edwin.signupwithfireb",
+            "certificate_hash": "e92c31a85a03f295d1e302287a4153403eda4f09"
+          }
+        },
+        {
+          "client_id": "48255827249-hqhceeo8j7b2o7ift1l5d03smp4lp7pi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZtVKzG6uaynyZEIjIakZDlfAlg_hAY2Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "48255827249-hqhceeo8j7b2o7ift1l5d03smp4lp7pi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

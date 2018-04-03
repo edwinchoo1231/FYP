@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.edwin.fyp.HomeActivity">
+
+    <Button
+        android:id="@+id/start_driving"
+        android:layout_width="178dp"
+        android:layout_height="94dp"
+        android:layout_marginEnd="103dp"
+        android:layout_marginStart="103dp"
+        android:text="@string/start_driving"
+        android:onClick="onStartDriving"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="82dp" />
+
+    <Button
+        android:id="@+id/book_a_ride"
+        android:layout_width="183dp"
+        android:layout_height="96dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/book_a_ride"
+        android:onClick="onBookARide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start_driving"
+        android:layout_marginRight="100dp"
+        android:layout_marginLeft="101dp" />
+
+    <Button
+    android:id="@+id/manage_booking"
+    android:layout_width="183dp"
+    android:layout_height="96dp"
+    android:layout_marginEnd="100dp"
+    android:layout_marginLeft="101dp"
+    android:layout_marginRight="100dp"
+    android:layout_marginStart="101dp"
+    android:layout_marginTop="28dp"
+    android:onClick="onViewBooking"
+    android:text="@string/Manage_booking"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/book_a_ride" />
+
+    <Button
+        android:id="@+id/user_details"
+        android:layout_width="183dp"
+        android:layout_height="96dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginLeft="101dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="16dp"
+        android:onClick="onUserDetails"
+        android:text="@string/user_details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/manage_booking" />
+
+</android.support.constraint.ConstraintLayout>

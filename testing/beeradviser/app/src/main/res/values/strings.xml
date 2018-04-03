@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">BeerAdviser</string>
+    <string name="hello_world">Hello there! - Obiwan</string>
+    <string name="find_beer">Find Beer!</string>
+    <string name="brands">Beer brand</string>
+    <string name="title_activity_checkout">Beer Checkout</string>
+    <string name="checkout">Checkout</string>
+    <string-array name="beer_colors">
+        <item>light</item>
+        <item>amber</item>
+        <item>brown</item>
+        <item>dark</item>
+    </string-array>
+</resources>
