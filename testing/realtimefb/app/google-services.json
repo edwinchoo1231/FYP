@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "757512439547",
+    "firebase_url": "https://realtimefb-fc1f4.firebaseio.com",
+    "project_id": "realtimefb-fc1f4",
+    "storage_bucket": "realtimefb-fc1f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757512439547:android:fa78f3c257969891",
+        "android_client_info": {
+          "package_name": "com.example.edwin.realtimefb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "757512439547-lu48j2j8m0ndsu71jq1u7ta696dhvveb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.edwin.realtimefb",
+            "certificate_hash": "e92c31a85a03f295d1e302287a4153403eda4f09"
+          }
+        },
+        {
+          "client_id": "757512439547-f4a6hnteshdvg9katd3ussme1olgq7jc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtoigzgRCJlsXw90qH4elDb6Y-KX8FEkQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "757512439547-f4a6hnteshdvg9katd3ussme1olgq7jc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
