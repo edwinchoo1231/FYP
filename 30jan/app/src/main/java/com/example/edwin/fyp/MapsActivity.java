@@ -1,12 +1,15 @@
 package com.example.edwin.fyp;
 
-import android.support.v4.app.FragmentActivity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -36,6 +39,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      */
     @Override
     public void onMapReady(GoogleMap googleMap) {
+        float zoomLevel = 16.0f;
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
@@ -43,18 +47,44 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         //mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
 
+
         LatLng C1 = new LatLng(3.0061, 101.7199);
-        mMap.addMarker(new MarkerOptions().position(C1).title("C1"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(C1));
+        //mMap.addMarker(new MarkerOptions().position(C1).title("C1"));
+        mMap.addMarker(new MarkerOptions()
+                .title("C1")
+                //.snippet("Check out this place.")
+                .position(C1).icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("mycoms",75,75))));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(C1, zoomLevel));
 
         LatLng C2 = new LatLng(3.0061, 101.7199);
-        mMap.addMarker(new MarkerOptions().position(C2).title("C2"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(C2));
+        //mMap.addMarker(new MarkerOptions().position(C2).title("C2"));
+        mMap.addMarker(new MarkerOptions()
+                .title("C2")
+                //.snippet("Check out this place.")
+                .position(C2).icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("mycoms",75,75))));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(C2, zoomLevel));
 
         LatLng C3 = new LatLng(2.999652, 101.708264);
-        mMap.addMarker(new MarkerOptions().position(C3).title("C3"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(C3));
+        //mMap.addMarker(new MarkerOptions().position(C3).title("C3"));
+        mMap.addMarker(new MarkerOptions()
+                .title("C3")
+                //.snippet("Check out this place.")
+                .position(C3).icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("mycoms",75,75))));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(C3, zoomLevel));
 
+        LatLng C4 = new LatLng(3.0102375, 101.7202033);
+        ////MarkerOptions marker = new MarkerOptions().position(C4).title("C4");
+        //marker.icon(BitmapDescriptorFactory.fromBitmap(R.drawable.mycoms));
+        mMap.addMarker(new MarkerOptions()
+                .title("C4")
+                //.snippet("Check out this place.")
+                .position(C4).icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("mycoms",75,75))));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(C4, zoomLevel));
+    }
 
+    public Bitmap resizeMapIcons(String iconName, int width, int height){
+        Bitmap imageBitmap = BitmapFactory.decodeResource(getResources(),getResources().getIdentifier(iconName, "drawable", getPackageName()));
+        Bitmap resizedBitmap = Bitmap.createScaledBitmap(imageBitmap, width, height, false);
+        return resizedBitmap;
     }
 }

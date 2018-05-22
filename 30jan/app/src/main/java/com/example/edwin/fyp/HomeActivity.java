@@ -28,8 +28,8 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onUserDetails(View view) {
-        Intent intent = new Intent(this, UserDetailsActivity.class);
+    public void onDrivingInfo(View view) {
+        Intent intent = new Intent(this, DrivingInfoActivity.class);
         startActivity(intent);
     }
 }

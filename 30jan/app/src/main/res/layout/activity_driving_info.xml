@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <Button
+        android:id="@+id/getCurrentSpeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="getCurrentSpeed"
+        android:text="@string/get_current_speed" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/info2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/info3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/tracker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="12dp"
+        android:onClick="onTrackerActivity"
+        android:text="tracker" />
+
+</LinearLayout>

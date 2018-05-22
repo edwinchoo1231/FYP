@@ -5,6 +5,7 @@ import android.app.DialogFragment;
 import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.text.format.DateFormat;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
@@ -12,6 +13,13 @@ import java.util.Calendar;
 
 public class TimePickerFragment extends DialogFragment implements TimePickerDialog.OnTimeSetListener{
     TextView show_booking_time_on_app;
+    Button timeBtn;
+    OnTimePickedListener mCallback;
+
+    public interface OnTimePickedListener {
+        public void onTimePicked(int hour, int minute);
+    }
+
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final Calendar c = Calendar.getInstance();
@@ -21,16 +29,16 @@ public class TimePickerFragment extends DialogFragment implements TimePickerDial
         return new TimePickerDialog(getActivity(),this,hour,minute, DateFormat.is24HourFormat(getActivity()));
     }
 
-    public void onTimeSet(TimePickerDialog view, int hourOfDay, int minute){
-        show_booking_time_on_app.findViewById(R.id.show_booking_time);
-        //show_booking_time.setText(hourOfDay+":"+minute);
-    }
-
-
 
     @Override
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-        //show_booking_time.findViewById(R.id.show_booking_time);
-        //show_booking_time.setText(hourOfDay+":"+minute);
+        TextView tv1= getActivity().findViewById(R.id.show_booking_time);
+        if (view != null) {
+            tv1.setText(getString(R.string.booking_time_is, "Hour: " + view.getCurrentHour() + " Minute: " + view.getCurrentMinute()));
+        }
+
+        else {
+            tv1.setText(null);
+        }
     }
 }

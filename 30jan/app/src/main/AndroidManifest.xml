@@ -50,7 +50,13 @@
             android:label="@string/title_activity_maps" />
         <activity android:name=".BookRideActivity" />
         <activity android:name=".ViewBookingActivity" />
-        <activity android:name=".UserDetailsActivity"></activity>
+        <activity android:name=".DrivingInfoActivity" />
+        <activity android:name=".TrackerActivity" />
+
+        <service
+            android:name=".TrackerService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>

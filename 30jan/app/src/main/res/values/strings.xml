@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FYP</string>
+    <string name="app_name">MyCOMS</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
     <string name="lorem_ipsum">MyCOMS application ease your travel within UPM Campus, anytime to anywhere!
@@ -41,6 +41,20 @@
     <string name="book_ride">Book Ride</string>
     <string name="Manage_booking">MANAGE BOOKING</string>
     <string name="booking_time">Booking Time</string>
-    <string name="booking_time_is">Booking time is :</string>
+    <string name="booking_time_is">Booking time is : %s</string>
     <string name="user_details">USER DETAILS</string>
+    <string name="get_current_speed">Get Current Speed</string>
+    <string name="info">Waiting for GPS...</string>
+    <string name="signed_out">Sign Out</string>
+    <string name="go_to_home">Go!</string>
+    <string name="signed_in_fmt">Signed in as: %s</string>
+    <string name="firebase_status_fmt">Firebase User: %s</string>
+
+    <string name="notification_text">Tracking, tap to cancel</string>
+    <string name="transport_id" translatable="false">123</string>
+    <string name="firebase_path" translatable="false">locations</string>
+    <string name="firebase_email" translatable="false">test@example.com</string>
+    <string name="firebase_password" translatable="false">password</string>
+    <string name="current_hour">00</string>
+    <string name="current_minute">00</string>
 </resources>
