@@ -6,4 +6,88 @@
     android:layout_height="match_parent"
     tools:context=".ViewBookingActivity">
 
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="167dp"
+        tools:layout_editor_absoluteY="270dp">
+
+
+        <TextView
+            android:id="@+id/departure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/departure_view" />
+
+        <TextView
+            android:id="@+id/arrival"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/arrival_view" />
+
+        <TextView
+            android:id="@+id/show_booking_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/booking_time_view" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/status_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="360dp"
+        android:layout_marginEnd="113dp"
+        android:layout_marginStart="113dp"
+        android:layout_marginTop="113dp"
+        android:layout_weight="1"
+        android:text="@string/booking_status"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="148dp"
+        android:layout_marginTop="56dp"
+        android:layout_weight="1"
+        android:text="Confirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/status_view" />
+
+    <Button
+        android:id="@+id/back_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="148dp"
+        android:layout_marginTop="100dp"
+        android:onClick="onBack"
+        android:text="Back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirm" />
+
+    <Button
+        android:id="@+id/delete_book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginTop="28dp"
+        android:text="Delete "
+        app:layout_constraintBottom_toTopOf="@+id/back_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirm"
+        app:layout_constraintVertical_bias="1.0" />
+
 </android.support.constraint.ConstraintLayout>

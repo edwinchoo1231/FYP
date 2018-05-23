@@ -1,4 +1,4 @@
-package com.example.edwin.fyp;
+package com.example.edwin.mycomsdriver;
 
 import android.Manifest;
 import android.app.PendingIntent;
@@ -86,53 +86,53 @@ public class TrackerService extends Service {
             stopSelf();
         }
     };
- /*
-    private void loginToFirebase() {
-        // Authenticate with Firebase, and request location updates
+    /*
+       private void loginToFirebase() {
+           // Authenticate with Firebase, and request location updates
 
-        String email = getString(R.string.firebase_email);
-        String password = getString(R.string.firebase_password);
-        FirebaseAuth.getInstance().signInWithEmailAndPassword(
-                email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>(){
-            @Override
-            public void onComplete(Task<AuthResult> task) {
-                if (task.isSuccessful()) {
-                    Log.d(TAG, "firebase auth success");
-                    requestLocationUpdates();
-                } else {
-                    Log.d(TAG, "firebase auth failed");
-                }
-            }
-        });
+           String email = getString(R.string.firebase_email);
+           String password = getString(R.string.firebase_password);
+           FirebaseAuth.getInstance().signInWithEmailAndPassword(
+                   email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>(){
+               @Override
+               public void onComplete(Task<AuthResult> task) {
+                   if (task.isSuccessful()) {
+                       Log.d(TAG, "firebase auth success");
+                       requestLocationUpdates();
+                   } else {
+                       Log.d(TAG, "firebase auth failed");
+                   }
+               }
+           });
 
 
 
-    }*/
-     private void firebaseAuthWithGoogle() {
-         GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
-         Log.d(TAG, "firebaseAuthWithGoogle:" + acct.getId());
+       }*/
+    private void firebaseAuthWithGoogle() {
+        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
+        Log.d(TAG, "firebaseAuthWithGoogle:" + acct.getId());
 
-         AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
-         mAuth.signInWithCredential(credential)
-                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                     @Override
-                     public void onComplete(@NonNull Task<AuthResult> task) {
-                         if (task.isSuccessful()) {
-                             // Sign in success, update UI with the signed-in user's information
-                             Log.d(TAG, "signInWithCredential:success");
-                             FirebaseUser user = mAuth.getCurrentUser();
-                             ////updateUIFire(user);
-                             requestLocationUpdates();
-                         } else {
-                             // If sign in fails, display a message to the user.
-                             Log.w(TAG, "signInWithCredential:failure", task.getException());
-                             //updateUIFire(null);
-                         }
+        AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
+        mAuth.signInWithCredential(credential)
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Log.d(TAG, "signInWithCredential:success");
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            ////updateUIFire(user);
+                            requestLocationUpdates();
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            Log.w(TAG, "signInWithCredential:failure", task.getException());
+                            //updateUIFire(null);
+                        }
 
-                         // ...
-                     }
-                 });
-     }
+                        // ...
+                    }
+                });
+    }
 
     private void requestLocationUpdates() {
         LocationRequest request = new LocationRequest();
@@ -172,15 +172,3 @@ public class TrackerService extends Service {
 
 
 }
-/*
-    GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
-        if (account != null) {
-                personName = account.getDisplayName();
-                personGivenName = account.getGivenName();
-                personFamilyName = account.getFamilyName();
-                personEmail = account.getEmail();
-                personId = account.getId();
-                personPhoto = account.getPhotoUrl();
-                }
-
-                */

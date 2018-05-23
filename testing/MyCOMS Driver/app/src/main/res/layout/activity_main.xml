@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="77dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="92dp"
+        android:text="Log In"
+        android:onClick="onSignInActivity"
+        app:layout_constraintEnd_toStartOf="@+id/buttonLogup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+
+    <Button
+        android:id="@+id/buttonLogup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="57dp"
+        android:layout_marginTop="92dp"
+        android:text="Log Up"
+        android:onClick="onSignInActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+-->
+
+    <!--
+       <EditText
+           android:id="@+id/editTextPassword"
+           android:layout_width="214dp"
+           android:layout_height="wrap_content"
+           android:layout_marginEnd="86dp"
+           android:layout_marginStart="84dp"
+           android:layout_marginTop="18dp"
+           android:ems="10"
+           android:inputType="textPassword"
+           android:text="Password"
+           android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/editText3" />
+
+       <EditText
+           android:id="@+id/editText3"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginEnd="85dp"
+           android:layout_marginStart="84dp"
+           android:layout_marginTop="83dp"
+           android:ems="10"
+           android:inputType="textEmailAddress"
+           android:text="Email"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent" />
+   -->
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:layout_marginEnd="136dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="55dp"
+        app:layout_constraintBottom_toTopOf="@+id/sign_out_and_disconnect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/status" />
+
+    <TextView
+        android:id="@+id/detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="76dp"
+        android:text="@string/firebase_status_fmt"
+        app:layout_constraintBottom_toTopOf="@+id/status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="181dp"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="108dp"
+        android:text="@string/signed_in_fmt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/sign_out_and_disconnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="188dp"
+        android:layout_marginEnd="161dp"
+        android:layout_marginStart="135dp"
+        android:text="@string/log_out"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/tracker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="121dp"
+        android:layout_marginEnd="161dp"
+        android:layout_marginStart="135dp"
+        android:layout_marginTop="19dp"
+        android:onClick="onTrackerActivity"
+        android:text="tracker"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_out_and_disconnect" />
+
+
+</android.support.constraint.ConstraintLayout>

@@ -57,4 +57,8 @@
     <string name="firebase_password" translatable="false">password</string>
     <string name="current_hour">00</string>
     <string name="current_minute">00</string>
+    <string name="booking_status">Your booking status is %s</string>
+    <string name="departure_view">d = %s</string>
+    <string name="arrival_view">a = %s</string>
+    <string name="booking_time_view">t = %s</string>
 </resources>
