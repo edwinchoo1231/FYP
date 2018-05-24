@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         SignInButton signInButton = findViewById(R.id.sign_in_button);
         signInButton.setSize(SignInButton.SIZE_STANDARD);
         findViewById(R.id.sign_in_button).setOnClickListener(signinOnclickListener);
-        //findViewById(R.id.sign_out_and_disconnect).setOnClickListener(signoutOnclickListener);
+        findViewById(R.id.sign_out_and_disconnect).setOnClickListener(signoutOnclickListener);
     }
 
     private View.OnClickListener signinOnclickListener = new View.OnClickListener(){
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     };
-/*
+
     private View.OnClickListener signoutOnclickListener = new View.OnClickListener(){
         @Override
         public void onClick(View v) {
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(homeIntent);
         }
     };
-*/
+
     @Override
     public void onStart() {
         super.onStart();
@@ -150,6 +150,7 @@ public class MainActivity extends AppCompatActivity {
             //mDetailTextView.setText(getString(R.string.firebase_status_fmt, user.getUid()));
             findViewById(R.id.sign_in_button).setVisibility(View.GONE);
             findViewById(R.id.go_to_home).setVisibility(View.VISIBLE);
+            findViewById(R.id.sign_out_and_disconnect).setVisibility(View.VISIBLE);
         }
 
         else {
@@ -158,6 +159,7 @@ public class MainActivity extends AppCompatActivity {
 
             findViewById(R.id.sign_in_button).setVisibility(View.VISIBLE);
             findViewById(R.id.go_to_home).setVisibility(View.GONE);
+            findViewById(R.id.sign_out_and_disconnect).setVisibility(View.GONE);
         }
     }
 
@@ -167,6 +169,7 @@ public class MainActivity extends AppCompatActivity {
             //mDetailTextView.setText(getString(R.string.firebase_status_fmt, user.getUid()));
             findViewById(R.id.sign_in_button).setVisibility(View.GONE);
             findViewById(R.id.go_to_home).setVisibility(View.VISIBLE);
+            findViewById(R.id.sign_out_and_disconnect).setVisibility(View.VISIBLE);
         }
 
         else {
@@ -175,6 +178,7 @@ public class MainActivity extends AppCompatActivity {
 
             findViewById(R.id.sign_in_button).setVisibility(View.VISIBLE);
             findViewById(R.id.go_to_home).setVisibility(View.GONE);
+            findViewById(R.id.sign_out_and_disconnect).setVisibility(View.GONE);
         }
     }
 
@@ -209,6 +213,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         // ...
+                        mAuth.signOut();
                     }
                 });
     }

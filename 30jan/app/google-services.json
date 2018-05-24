@@ -15,12 +15,72 @@
       },
       "oauth_client": [
         {
-          "client_id": "880942969254-rvrb4hs2kh80ffbk3500j82p671lolmu.apps.googleusercontent.com",
+          "client_id": "880942969254-ek0t44kg7i17db2gui1nub0amu3ehejq.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.edwin.fyp",
             "certificate_hash": "e92c31a85a03f295d1e302287a4153403eda4f09"
           }
+        },
+        {
+          "client_id": "880942969254-gj382tmtbhfdau6rnrlqtl11vvk4a62s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.edwin.fyp",
+            "certificate_hash": "cd865f61138e8f458e030b6a8c1c5d64e53a7e31"
+          }
+        },
+        {
+          "client_id": "880942969254-68nueltvhp3cngkj0e6jfdun4kk1v3kv.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "880942969254-68nueltvhp3cngkj0e6jfdun4kk1v3kv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWMkFIsVVeQJGdLl_XLcTk9Vp620v1l_g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "880942969254-68nueltvhp3cngkj0e6jfdun4kk1v3kv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:880942969254:android:884647b44d7a2a11",
+        "android_client_info": {
+          "package_name": "com.example.edwin.mycomsdriver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "880942969254-67ooefff424sbb73mh0i8rjf1igidjue.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.edwin.mycomsdriver",
+            "certificate_hash": "cd865f61138e8f458e030b6a8c1c5d64e53a7e31"
+          }
+        },
+        {
+          "client_id": "880942969254-68nueltvhp3cngkj0e6jfdun4kk1v3kv.apps.googleusercontent.com",
+          "client_type": 3
         },
         {
           "client_id": "880942969254-68nueltvhp3cngkj0e6jfdun4kk1v3kv.apps.googleusercontent.com",

@@ -48,6 +48,8 @@ public class DrivingInfoActivity extends Activity implements GPSCallback {
         } catch (Exception e){
             e.printStackTrace();
         }
+
+
     }
 
     @Override

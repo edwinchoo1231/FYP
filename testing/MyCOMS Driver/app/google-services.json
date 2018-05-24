@@ -15,12 +15,24 @@
       },
       "oauth_client": [
         {
-          "client_id": "880942969254-rvrb4hs2kh80ffbk3500j82p671lolmu.apps.googleusercontent.com",
+          "client_id": "880942969254-ek0t44kg7i17db2gui1nub0amu3ehejq.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.edwin.fyp",
             "certificate_hash": "e92c31a85a03f295d1e302287a4153403eda4f09"
           }
+        },
+        {
+          "client_id": "880942969254-gj382tmtbhfdau6rnrlqtl11vvk4a62s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.edwin.fyp",
+            "certificate_hash": "cd865f61138e8f458e030b6a8c1c5d64e53a7e31"
+          }
+        },
+        {
+          "client_id": "880942969254-68nueltvhp3cngkj0e6jfdun4kk1v3kv.apps.googleusercontent.com",
+          "client_type": 3
         },
         {
           "client_id": "880942969254-68nueltvhp3cngkj0e6jfdun4kk1v3kv.apps.googleusercontent.com",
@@ -59,12 +71,24 @@
       },
       "oauth_client": [
         {
-          "client_id": "880942969254-aa87hsseilqjcj1n5r2vgo0p11as1bqp.apps.googleusercontent.com",
+          "client_id": "880942969254-kim25eul6ibiogdfuj6qid5n1b2pch8e.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.edwin.mycomsdriver",
             "certificate_hash": "e92c31a85a03f295d1e302287a4153403eda4f09"
           }
+        },
+        {
+          "client_id": "880942969254-67ooefff424sbb73mh0i8rjf1igidjue.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.edwin.mycomsdriver",
+            "certificate_hash": "cd865f61138e8f458e030b6a8c1c5d64e53a7e31"
+          }
+        },
+        {
+          "client_id": "880942969254-68nueltvhp3cngkj0e6jfdun4kk1v3kv.apps.googleusercontent.com",
+          "client_type": 3
         },
         {
           "client_id": "880942969254-68nueltvhp3cngkj0e6jfdun4kk1v3kv.apps.googleusercontent.com",
