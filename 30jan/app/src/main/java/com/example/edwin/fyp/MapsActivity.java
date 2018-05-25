@@ -42,42 +42,28 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         float zoomLevel = 16.0f;
         mMap = googleMap;
 
-        // Add a marker in Sydney and move the camera
-        //LatLng sydney = new LatLng(-34, 151);
-        //mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        //mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
-
-
         LatLng C1 = new LatLng(3.0061, 101.7199);
-        //mMap.addMarker(new MarkerOptions().position(C1).title("C1"));
+
         mMap.addMarker(new MarkerOptions()
                 .title("C1")
-                //.snippet("Check out this place.")
                 .position(C1).icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("mycoms",75,75))));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(C1, zoomLevel));
 
         LatLng C2 = new LatLng(3.0061, 101.7199);
-        //mMap.addMarker(new MarkerOptions().position(C2).title("C2"));
         mMap.addMarker(new MarkerOptions()
                 .title("C2")
-                //.snippet("Check out this place.")
                 .position(C2).icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("mycoms",75,75))));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(C2, zoomLevel));
 
         LatLng C3 = new LatLng(2.999652, 101.708264);
-        //mMap.addMarker(new MarkerOptions().position(C3).title("C3"));
         mMap.addMarker(new MarkerOptions()
                 .title("C3")
-                //.snippet("Check out this place.")
                 .position(C3).icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("mycoms",75,75))));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(C3, zoomLevel));
 
         LatLng C4 = new LatLng(3.0102375, 101.7202033);
-        ////MarkerOptions marker = new MarkerOptions().position(C4).title("C4");
-        //marker.icon(BitmapDescriptorFactory.fromBitmap(R.drawable.mycoms));
         mMap.addMarker(new MarkerOptions()
                 .title("C4")
-                //.snippet("Check out this place.")
                 .position(C4).icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("mycoms",75,75))));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(C4, zoomLevel));
     }

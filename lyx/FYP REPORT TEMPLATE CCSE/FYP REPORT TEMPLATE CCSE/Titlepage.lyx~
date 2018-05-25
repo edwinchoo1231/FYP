@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass report
 \use_default_options true
 \begin_modules
@@ -12,16 +14,16 @@ enumitem
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -99,7 +101,7 @@ begin{center}
 
 \series bold
 \size large
-PROJECT TITLE
+SECURED IN CAMPUS RIDE SHARING
 \end_layout
 
 \begin_layout Standard
@@ -113,11 +115,11 @@ PROJECT TITLE
 
 \series bold
 \size large
-STUDENT'S NAME 
+CHOO HONG YEE 
 \begin_inset Newline newline
 \end_inset
 
-MATRIC NO
+179435
 \end_layout
 
 \begin_layout Standard
@@ -156,7 +158,7 @@ Project report submitted in partial fulfillment of the requirement for the
 
 
 \size large
-2016
+2018
 \end_layout
 
 \begin_layout Standard

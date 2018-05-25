@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass report
 \use_default_options true
 \begin_modules
@@ -12,16 +14,16 @@ enumitem
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -80,7 +82,29 @@ ACKNOWLEDGEMENTS
 \end_layout
 
 \begin_layout Standard
-Write here...
+First and foremost, I would like to express my utmost appreciation and gratitude
+ to my beloved supervisor, Puan Siti Mariam bt.
+ Shafie@Musa for relentlessly giving me guideline, suggestion, encouragement
+ and support in completing my project.
+ She has enlightened me with many useful ideas and information in writing
+ the thesis.
+ A million thanks given to her in making this project successful.
+\end_layout
+
+\begin_layout Standard
+Besides that, I would like to extend my appreciation to all the lecturers
+ and staffs of Department of Computer and Communication Systems for helping
+ me throughout my project.
+ Their commitments to professionalism has provide me a lot of knowledge
+ about the project.
+ Kind comments and constructive suggestions were given which has directly
+ help me managed to complete this project.
+\end_layout
+
+\begin_layout Standard
+Last but not least, I would like to thank my family and friends for giving
+ unconditional love, care, prayers, encouragement and continuing support
+ during my difficult times.
 \end_layout
 
 \end_body

@@ -49,10 +49,6 @@ public class BookRideActivity extends AppCompatActivity {
         int num = random.nextInt(100000);
         final String formatted_id = String.format("%05d", num);
 
-
-
-        String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
-        path = "booking/"+date;
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
         if (account != null) {
             personName = account.getDisplayName();
@@ -63,6 +59,10 @@ public class BookRideActivity extends AppCompatActivity {
             personPhoto = account.getPhotoUrl();
         }
 
+        String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
+        path = "booking/"+date+"/"+personId;
+
+
 
         mbook_ride_button.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -72,8 +72,6 @@ public class BookRideActivity extends AppCompatActivity {
                 mConditionRef.setValue(formatted_id);
                 mConditionRef = mRootRef.child("booking_id/"+personId);
                 mConditionRef.setValue(formatted_id);
-                mConditionRef = mRootRef.child(path+"/ID");
-                mConditionRef.setValue(personId);
                 mConditionRef = mRootRef.child(path+"/Name");
                 mConditionRef.setValue(personName);
                 String a_details = ArrivalHolder;
@@ -121,15 +119,9 @@ public class BookRideActivity extends AppCompatActivity {
     }
 
     public void GetDataFromEditText(){
-
         ArrivalHolder = marrival.getText().toString().trim();
-
         DepartureHolder = mdeparture.getText().toString().trim();
-
     }
-
-
-
 
 }
 

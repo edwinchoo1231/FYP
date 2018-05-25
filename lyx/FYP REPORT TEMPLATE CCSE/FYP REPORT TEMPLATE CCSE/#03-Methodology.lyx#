@@ -1,0 +1,1953 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass report
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+METHODOLOGY
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+The main ideas to be carried out, development process and cycle, hardware
+ and software needed will be discussed in this chapter.
+ This project is targeted to create a ride-sharing application in Android,
+ which is suitable for staffs and students in UPM Serdang campus, in travelling
+ in between faculties and major location point using MyCOMS.
+ This application will be developed using Android OS, and will be installed
+ in an Android smartphone or tablet.
+ The project development cycle is represented graphically in figure 3.1,
+ as it shows the overall flow of the project is developed.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/3/1.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The flowchart of the proposed project
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The first stage of the project is to carry out planning.
+ It is carefully plan and a scope of work is detailed out in order to efficientl
+y handle the project.
+ Problem statement, aim and objectives are identified so that goal is clearly
+ defined, and the project will be stay focus on track through the process
+ of development.
+ Timeline and Gantt chart is drawn in order to track and plan the project
+ progress in order to complete it within the given time period.
+ 
+\end_layout
+
+\begin_layout Standard
+After the goals are set, design is carried out together with the teams that
+ is involved with the MyCOMS application development project.
+ Rounds of discussion and decision have been made in order to achieve the
+ targeted functionality of the application.
+ Based on that, the software and hardware requirement are discussed and
+ decided.
+ Choices of programming language and IDE is done, which is Java as the main
+ language of development, on Android Studio, which to deploy the Android
+ application on an Android compatible devices.
+ 
+\end_layout
+
+\begin_layout Standard
+During project implementation, the application will be installed on devices,
+ and real time data must be captured in order to evaluate the system performance.
+ Testing and debugging is done to ensure that minimal bug activity is supervised.
+ If there is no modification to the project, it will advance to the last
+ stage where it is discussion of result and conclusion.
+ 
+\end_layout
+
+\begin_layout Section
+Software and Hardware Requirement
+\end_layout
+
+\begin_layout Standard
+The software required for this project is Android Studio and Adobe Experience
+ Design.
+ The following section explains the roles of having these software for the
+ development for the project.
+\end_layout
+
+\begin_layout Subsection
+Software Requirement
+\end_layout
+
+\begin_layout Subsubsection
+Android Studio
+\end_layout
+
+\begin_layout Standard
+Android Studio is an open source IDE and free software which is released
+ by Google, mainly targeted for developers which aims to create application
+ for Android platform.
+ It has pre-installed library, sample code, tools and etc.
+ required in creating an application.
+ It has workspace and extendible plug-ins available to allow customization
+ for Java application development.
+ 
+\color black
+The Android studio version used in this project is Android Studio 3.1.2, JRE:
+ 1.8.0_152-release-1024-b02 amd64, with SDK version of 27 and Gradle Build
+ 3.1.2.
+\end_layout
+
+\begin_layout Subsubsection
+Adobe Experience Design (Adobe XD)
+\end_layout
+
+\begin_layout Standard
+Adobe XD is a user experience design software developed by Adobe Systems.
+ It is a pay to use software, and offers 7 days of free trial.
+ It allow users to do design and customization on the user interface of
+ an application, and allow the interface to be modelled into an application
+ with limited function of interface.
+ It supports vector design and wire framing, and allow users in creating
+ simple interactive click-through prototypes.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Android Virtual Device (AVD)
+\end_layout
+
+\begin_layout Standard
+AVD is a built-in emulator by Android Studio, which allow users to create
+ a mock Android device without having it in real life.
+ Customizable RAM, OS and pixel setting can be done to simulate the created
+ application before deploying it on the real-time devices.
+ It is used in testing and debugging phase of the project as the codes must
+ be tested out frequently to check the functionality, and several model
+ of Android devices can be tested in order to know the flaw of the software
+ before deploying it on market.
+\end_layout
+
+\begin_layout Subsection
+Hardware Requirement
+\end_layout
+
+\begin_layout Standard
+For the project, computer and smartphone is a must as it is the basic tools
+ needed in developing the application.
+ MyCOMS electric vehicle will be involved once the application is ready
+ to deploy, in order to get real time data to evaluate the system performance.
+ 
+\end_layout
+
+\begin_layout Standard
+A system block diagram is shown as in Figure 3.2 in order to visualize the
+ relationship between each component.
+ It is illustrate as below.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/3/2.png
+	width 14.4cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+System block diagram of the project.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The application will be linked to computer and database through internet
+ and server.
+ User will be using the application, while the administrator is able to
+ view the activity through the server, and analyses the data through the
+ database.
+ This step is important as it allow the administrator to evaluate the system
+ performance.
+\end_layout
+
+\begin_layout Section
+Application Design and Development
+\end_layout
+
+\begin_layout Standard
+For the design of the application, a flow of required function is detailed,
+ with the targeted group of users.
+ The flow is represented in Figure 3.3.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/3/3.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Use case diagram for the application.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Firstly, the main screen of the application will prompt user input of identify,
+ such as matric number and password for security purposes.
+ New sign up user will have to register themselves, while registered user
+ have to log in just once, unless the user log out after every session.
+ The application will have selection where user is able to book the vehicle
+ and check the availability with real-time synchronization of database.
+ Once the booking is done, user will be able to start the application as
+ a navigation application, where it will route between the starting and
+ the ending point of the trip.
+ System will alert the user if the route is detected to be out of course
+ from the targeted location.
+ Abnormal activity of the application by user will be recorded and uploaded
+ to the database for reference purposes.
+\end_layout
+
+\begin_layout Subsection
+Firebase Database
+\end_layout
+
+\begin_layout Standard
+Firebase is an online database that is released by Google, to allow more
+ control of Android application.
+ This database allow android application to store and synchronize data in
+ real time.
+ Firebase allow encryption of 2048-bit SSL for the protection of the data.
+ It has custom authentication and access control for developers to suit
+ their application development specification.
+ 
+\end_layout
+
+\begin_layout Standard
+Firebase can be used in cross platform development, such as iOS, Android
+ and also Web development.
+ User will need to sign up an account in Firebase, the API can be easily
+ embedded into the application and to create connection to the server.
+ Firebase saves time as it does not require extra scripting on server-side.
+ 
+\end_layout
+
+\begin_layout Standard
+Figure 3.4 shows the entity relationship diagramrelationship between the
+ elements in the database.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/3/4.png
+	width 14.4cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Relationship between elements in database.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Application Design and Development
+\end_layout
+
+\begin_layout Standard
+For the design of the application, a block diagram for the application overview
+ is shown as below.
+ The system flowchart is represented graphically in figure 3.5, where it
+ shows the overall activity and functions to be carried out in the application.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/3/5.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The flowchart of the system
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+User will be prompted to register or log in to the system at the main interface
+ of the application.
+ Once the user’s identity is confirmed which is a student or staff of UPM,
+ the user will be lead to the home interface where all the functions are
+ located.
+ User will be able to choose between viewing the location of the vehicle,
+ booking the vehicle, viewing and managing the status of the booked vehicle,
+ and also view user details.
+ User can choose to log out from the application, or stay in the session
+ until next launch of the application.
+ 
+\end_layout
+
+\begin_layout Standard
+User can see the real time location of the vehicles so that they can know
+ when and where to book the available vehicles.
+ User can also delete and authenticate the booked vehicle by going to the
+ managing booking activity.
+ 
+\end_layout
+
+\begin_layout Section
+Testing and Debugging
+\end_layout
+
+\begin_layout Standard
+AVD emulator will play important role for this stage of development.
+ It will allow the application development process into easier and more
+ convenient.
+ Customization of Android devices can be done so that developer can predict
+ and observe the errors that might happen if the application is deployed
+ real-time.
+ 
+\end_layout
+
+\begin_layout Standard
+For final stage of the development, application will be tested on several
+ Android devices such as Samsung J7, and emulated device in terms of resolution.
+ 
+\end_layout
+
+\begin_layout Section
+System Requirement
+\end_layout
+
+\begin_layout Subsection
+Functional Requirement
+\end_layout
+
+\begin_layout Standard
+System is defined by a group of functions which is required to run.
+ A system requirement consists of functional and non-functional requirements
+ which has constraints to the design and implementation.
+ 
+\end_layout
+
+\begin_layout Standard
+Below shows the table in displaying functional requirements, labelled by
+ ID.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Functional Requirements.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="11" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="6cm">
+<column alignment="center" valignment="top" width="6cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ID
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Description
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Explaination
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FR1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Users must be able to sign up.
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The user must be able to sign up with relevant matric number, name, email
+ and password.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FR2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Users must be able to sign in.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The user must be able to log in using matric number and password.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FR3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Users must be able to log out from the system.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The user must be able to log out from the session.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FR4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Users must be able to change their profile details.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The user must be able to change profile details such as password, email,
+ name and matric number (if there is no duplicate).
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FR5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Users must be able to book a ride.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+User must be able to view availability of ride and book it.
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FR6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Users must be able to cancel a ride.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+User must be able to remove the booking from the ride list.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FR7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Users must be able to launch the driving mode of the ride.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+User must be able to start the tracking and monitoring features of the applicati
+on.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FR8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Users must be able to end the driving mode of the ride.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+User must be able to end the tracking and monitoring session.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FR9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Users must be able to view the location of vehicle.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+User must be able to see the current whereabouts of the vehicle to decide
+ on booking.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FR910
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+System must be able to generate error message.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+System must be able to recognize faulty process throughout the launching
+ of application.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Non-Functional Requirement
+\end_layout
+
+\begin_layout Standard
+A non-functional requirement of a system will define what a system will
+ do, but not the way the system will do it.
+ Several parameters such as system performance requirement, design constraint
+ and software quality attributes are one of the example of non-functional
+ requirement.
+ 
+\end_layout
+
+\begin_layout Standard
+The system’s related non-functional requirements are given below: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Non-Functional Requirements
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="6cm">
+<column alignment="center" valignment="top" width="6cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ID
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Description
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Explanation
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NFR1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The graphic user interface should be user friendly, and maintain a style
+ for all screens.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The buttons, menus and layout should maintain the same design for all screens
+ so that user will not be confuse with different design of buttons.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NFR2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Notification message should be display clear and concise to the user.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+System will display message in pop up window in informing user.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NFR3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The application must not be affected by bugs, and will inform user on wrong
+ steps taken using the application.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+System must be checked in possible of bugs, and only be released when no
+ harmful bugs are found.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NFR4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The application will have fast response time.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The system should provide operation and react to instruction very fast.
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Station Level Demand Prediction
+\end_layout
+
+\begin_layout Subsection
+Design Flowchart/Diagram And Processes
+\end_layout
+
+\begin_layout Standard
+Fuzzy logic is used in predicting the station level demand, and a basic
+ flow of work is needed in ensuring the process of data is smooth with the
+ use of fuzzy logic.
+ To use the fuzzy logic, it must at least have the basic of several input
+ variables, and is then fuzzified with the input membership function.
+ Fuzzy rules are constructed to create interference with the fuzzy membership
+ function, and together with the output membership function.
+ Defuzzification is then done to obtain the center of gravity for the output,
+ in our case which is the demand level.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/3/6.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fuzzy Logic flowchart
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To complete the steps, parameters and inputs are then determined based on
+ the case studies and literature review.
+ It must be done carefully so that the output obtained will have better
+ accuracy and consistency.
+ The fuzzy rules must be done precisely according to the input and output
+ so that the decision making will match and par with the expected outcome
+ set earlier.
+ A flowchart is constructed so that the flow of the whole process can be
+ supervised and referred to, to ensure that the steps taken will generate
+ the best outcome after the process of fuzzy logic of the input data.
+ Python 3.6 is used in processing the data.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/3/7.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The flowchart of the process.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is expected that the whole process will not require hardware connectivity
+ as the data will be generated randomly.
+ The whole project will be done using Python and SciKit Fuzzy Logic library
+ as the input are easily process using these two medium.
+\end_layout
+
+\begin_layout Subsection
+Pseudocode
+\end_layout
+
+\begin_layout Standard
+A simple set of pseudo code is used to demonstrate the flow of the program
+ with fuzzy logic.
+ There is two cases involved in determining the demand level, where both
+ of them are explained at the following section.
+\end_layout
+
+\begin_layout Standard
+Case 1 (fixed input variables to find out demand level): 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+Begin Initialize input variable with desired data 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+Calculate demand level Print demand level 
+\end_layout
+
+\begin_layout Standard
+End 
+\end_layout
+
+\begin_layout Standard
+Case 2 (fixed demand level to get values of input variable): 
+\end_layout
+
+\begin_layout Standard
+Begin 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+Initialize demand level 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+Loop
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+Random generate input variables
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+Compare demand level with the pre-defined demand level 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+While calculated demand level >= pre-defined demand level 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+Print input variables 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+Print generated demand level 
+\end_layout
+
+\begin_layout Standard
+End 
+\end_layout
+
+\begin_layout Subsection
+Dataset
+\end_layout
+
+\begin_layout Standard
+As there is no real application at the simulation of the fuzzy logic prediction,
+ random data is generated as input in order for the fuzzy logic interference
+ to occur.
+ It is to simulate user’s impression and it is hope that the random generation
+ will have the result that has high accuracy consistency as compared to
+ real time data.
+ The collection of data must be done daily once there is a steady application
+ launched to the targeted user.
+ The daily searching of the vehicles is retrieved and processed again to
+ find out the demand for each location.
+ The real time data must be tested to make sure that the searches is reaching
+ the expectation of the artificial intelligent processes.
+\end_layout
+
+\begin_layout Subsubsection
+Input
+\end_layout
+
+\begin_layout Standard
+The input are divided into 4 categories, which are:
+\end_layout
+
+\begin_layout Itemize
+Location of station
+\end_layout
+
+\begin_layout Itemize
+Population of station
+\end_layout
+
+\begin_layout Itemize
+Time of travel 
+\end_layout
+
+\begin_layout Itemize
+Temperature of the day 
+\end_layout
+
+\begin_layout Standard
+The inputs is then further categories in order to plot the membership function.
+ The parameters are pre-defined.
+ 
+\end_layout
+
+\begin_layout Itemize
+Location:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/3/8.PNG
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The stations based on location
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The station locations are plotted on the map with 15 predicted locations.
+ It is based on the faculties and the colleges location which has the higher
+ population compared to every other location in the campus.
+ The region is separated with blue lines, into northern, central and southern
+ region.
+ Membership function is plotted as below.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/3/9.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Membership function of location.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Population of station:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+The population of the station is predicted to have a sample size of 50 people
+ per station.
+ The number is then randomly generated for each stations, to find out the
+ demand level.
+ The membership function as below
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/3/10.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Membership function of population.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Time of travel
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+To ease the plotting of the membership function, the range of parameters
+ used will be the full clock hour, which is from midnight until midnight
+ (24 hours), and is further divided into 3 region for membership function
+ plotting
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Output
+\end_layout
+
+\begin_layout Subsubsection
+Fuzzy Rules
+\end_layout
+
+\begin_layout Standard
+There is 3 cases of fuzzy rules to be set, to make sure that the demand
+ level calculated will have high accuracy and consistency of data.
+\end_layout
+
+\begin_layout Itemize
+IF location is North OR population is Good OR temperature is Cool OR time
+ is in Morning,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+then demand will be Good
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+IF location is South OR population is Average OR temperature is Warm OR
+ time is in Afternoon,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+then demand will be Good • 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+IF location is Central OR population is Average OR temperature is Warm OR
+ time is in Afternoon,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+then demand will be Average 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+IF population is Poor OR temperature is Hot OR time is in Evening,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+then demand will be Poor 
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

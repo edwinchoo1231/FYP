@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass report
 \use_default_options true
 \begin_modules
@@ -12,16 +14,16 @@ enumitem
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -73,7 +75,7 @@ enumitem
 \begin_body
 
 \begin_layout Chapter
-CONCLUSIONS
+CONCLUSION
 \end_layout
 
 \begin_layout Section
@@ -81,34 +83,48 @@ Conclusion
 \end_layout
 
 \begin_layout Standard
-Write here ...
-\end_layout
-
-\begin_layout Standard
-Conclusions are the natural outcome of the results and discussions.
- These are essential parts of all reports even if the only possible conclusion
- that can be reached is no conclusion can be drawn from the project and
- that further work is necessary in a certain direction.
- There is a clear distinction between conclusions and comments.
- The student has really learnt from his project work if he can separate
- out the conclusions from the comments.
- Computer and Communication Systems Engineering (CCSE)
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "CCSE"
-description "Computer and Communication Systems Engineering"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
+In conclusion, an Android based single-seated vehicle booking and ride sharing
+ system is developed and presented in a form of Android mobile application,
+ MyCOMS.
+ MyCOMS application is developed with real time viewing and booking of vehicle
+ features.
+ With all the features developed in the application, users are able to interact
+ and experience high quality of user interface as well as minimal delays
+ in synchronizing data with the database.
+ Moreover, this MyCOMS application is able to increase the efficiency among
+ students and staff of UPM travelling in between faculties and colleges
+ with interactions made through the application.
+ 
 \end_layout
 
 \begin_layout Section
 Future Work
+\end_layout
+
+\begin_layout Standard
+The MyCOMS application still has a big room for improvements.
+ More advance features such as two-factor authentication, voice and sms
+ for emergency purpose can be studied and developed in the future.
+ Moreover, the user interface of the MyCOMS application can be improved
+ by having proper icons customized specially for the application.
+ 
+\end_layout
+
+\begin_layout Standard
+A website for admin should be developed in the future to ease admin in managing
+ multiple users’ account with ease.
+ With good design and layout, the website would reduce the trouble for admin
+ to search through the database to look for certain details.
+ The application for the vehicle can be developed and synchronized so that
+ the details of the vehicles such as battery level, speed and location will
+ be automatically updated to the database.
+ 
+\end_layout
+
+\begin_layout Standard
+More advanced features and better graphical user interface should be developed
+ and designed in the future.
+ 
 \end_layout
 
 \end_body

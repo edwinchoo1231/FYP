@@ -1,0 +1,788 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass report
+\use_default_options true
+\begin_modules
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{appendices}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+MainActivity.java
+\end_layout
+
+\begin_layout Standard
+package com.example.edwin.fyp;
+\end_layout
+
+\begin_layout Standard
+import android.content.Intent;
+\end_layout
+
+\begin_layout Standard
+import android.net.Uri;
+\end_layout
+
+\begin_layout Standard
+import android.os.Bundle;
+\end_layout
+
+\begin_layout Standard
+import android.support.annotation.NonNull; 
+\end_layout
+
+\begin_layout Standard
+import android.support.v7.app.AppCompatActivity; 
+\end_layout
+
+\begin_layout Standard
+import android.util.Log;
+\end_layout
+
+\begin_layout Standard
+import android.view.View; 
+\end_layout
+
+\begin_layout Standard
+import android.view.Window; 
+\end_layout
+
+\begin_layout Standard
+import android.widget.Button;
+\end_layout
+
+\begin_layout Standard
+import android.widget.TextView;
+\end_layout
+
+\begin_layout Standard
+import com.google.android.gms.auth.api.signin.GoogleSignIn; 
+\end_layout
+
+\begin_layout Standard
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount; 
+\end_layout
+
+\begin_layout Standard
+import com.google.android.gms.auth.api.signin.GoogleSignInClient; 
+\end_layout
+
+\begin_layout Standard
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions; 
+\end_layout
+
+\begin_layout Standard
+import com.google.android.gms.common.SignInButton;
+\end_layout
+
+\begin_layout Standard
+import com.google.android.gms.common.api.ApiException; 
+\end_layout
+
+\begin_layout Standard
+import com.google.android.gms.tasks.OnCompleteListener; 
+\end_layout
+
+\begin_layout Standard
+import com.google.android.gms.tasks.Task; 
+\end_layout
+
+\begin_layout Standard
+import com.google.firebase.auth.AuthCredential; 
+\end_layout
+
+\begin_layout Standard
+import com.google.firebase.auth.AuthResult; 
+\end_layout
+
+\begin_layout Standard
+import com.google.firebase.auth.FirebaseAuth; 
+\end_layout
+
+\begin_layout Standard
+import com.google.firebase.auth.FirebaseUser;
+\end_layout
+
+\begin_layout Standard
+import com.google.firebase.auth.GoogleAuthProvider; 
+\end_layout
+
+\begin_layout Standard
+import com.q42.android.scrollingimageview.ScrollingImageView;
+\end_layout
+
+\begin_layout Standard
+public class MainActivity extends AppCompatActivity {
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+private static final String TAG = MainActivity.class.getSimpleName(); 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+private FirebaseAuth mAuth; private static final int RC_SIGN_IN = 9001;
+ 
+\end_layout
+
+\begin_layout Standard
+TextView mStatusTextView,mDetailTextView; 
+\end_layout
+
+\begin_layout Standard
+Button mgoButton; 
+\end_layout
+
+\begin_layout Standard
+GoogleSignInClient mGoogleSignInClient; 
+\end_layout
+
+\begin_layout Standard
+String personName,personGivenName,personFamilyName,personEmail,personId;
+ 
+\end_layout
+
+\begin_layout Standard
+Uri personPhoto;
+\end_layout
+
+\begin_layout Standard
+@Override 
+\end_layout
+
+\begin_layout Standard
+protected void onCreate(Bundle savedInstanceState) { 
+\end_layout
+
+\begin_layout Standard
+this.requestWindowFeature(Window.FEATURE_NO_TITLE); 
+\end_layout
+
+\begin_layout Standard
+super.onCreate(savedInstanceState); setContentView(R.layout.activity_main);
+\end_layout
+
+\begin_layout Standard
+// scrolling for image 'van' ScrollingImageView scrollingBackground = findViewBy
+Id(R.id.scrolling_background); scrollingBackground.start();
+\end_layout
+
+\begin_layout Standard
+//to stop use below code 
+\end_layout
+
+\begin_layout Standard
+//scrollingBackground.stop();
+\end_layout
+
+\begin_layout Standard
+mAuth = FirebaseAuth.getInstance(); 
+\end_layout
+
+\begin_layout Standard
+mStatusTextView = findViewById(R.id.status); 
+\end_layout
+
+\begin_layout Standard
+mgoButton = findViewById(R.id.go_to_home);
+\end_layout
+
+\begin_layout Standard
+GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFA
+ULT_SIGN_IN) .requestIdToken(getString(R.string.default_web_client_id)) .requestEmai
+l() .build(); 
+\end_layout
+
+\begin_layout Standard
+mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+\end_layout
+
+\begin_layout Standard
+SignInButton signInButton = findViewById(R.id.sign_in_button);
+\end_layout
+
+\begin_layout Standard
+signInButton.setSize(SignInButton.SIZE_STANDARD); 
+\end_layout
+
+\begin_layout Standard
+findViewById(R.id.sign_in_button).setOnClickListener(signinOnclickListener);
+ 
+\end_layout
+
+\begin_layout Standard
+findViewById(R.id.sign_out_and_disconnect).setOnClickListener(signoutOnclickListene
+r); }
+\end_layout
+
+\begin_layout Standard
+private View.OnClickListener signinOnclickListener = new View.OnClickListener(){
+ 
+\end_layout
+
+\begin_layout Standard
+@Override 
+\end_layout
+
+\begin_layout Standard
+public void onClick(View v) { 
+\end_layout
+
+\begin_layout Standard
+switch (v.getId()) { 
+\end_layout
+
+\begin_layout Standard
+case R.id.sign_in_button: signIn();
+\end_layout
+
+\begin_layout Standard
+break;// ...
+ } } };
+\end_layout
+
+\begin_layout Standard
+private View.OnClickListener signoutOnclickListener = new View.OnClickListener(){
+\end_layout
+
+\begin_layout Standard
+@Override 
+\end_layout
+
+\begin_layout Standard
+public void onClick(View v) { 
+\end_layout
+
+\begin_layout Standard
+switch (v.getId()) { 
+\end_layout
+
+\begin_layout Standard
+case R.id.sign_out_and_disconnect: signOut();
+\end_layout
+
+\begin_layout Standard
+break; // ...
+ } 
+\end_layout
+
+\begin_layout Standard
+Intent homeIntent = new Intent(Intent.ACTION_MAIN); 
+\end_layout
+
+\begin_layout Standard
+homeIntent.addCategory( Intent.CATEGORY_HOME ); 
+\end_layout
+
+\begin_layout Standard
+homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); 
+\end_layout
+
+\begin_layout Standard
+startActivity(homeIntent); } };
+\end_layout
+
+\begin_layout Standard
+@Override 
+\end_layout
+
+\begin_layout Standard
+public void onStart() { 
+\end_layout
+
+\begin_layout Standard
+super.onStart(); 
+\end_layout
+
+\begin_layout Standard
+// Check if user is signed in (non-null) and update UI accordingly.
+ 
+\end_layout
+
+\begin_layout Standard
+FirebaseUser currentUser = mAuth.getCurrentUser(); 
+\end_layout
+
+\begin_layout Standard
+updateUIFire(currentUser); 
+\end_layout
+
+\begin_layout Standard
+GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+ 
+\end_layout
+
+\begin_layout Standard
+if (account != null) { 
+\end_layout
+
+\begin_layout Standard
+personName = account.getDisplayName(); 
+\end_layout
+
+\begin_layout Standard
+personGivenName = account.getGivenName(); 
+\end_layout
+
+\begin_layout Standard
+personFamilyName = account.getFamilyName(); 
+\end_layout
+
+\begin_layout Standard
+personEmail = account.getEmail(); 
+\end_layout
+
+\begin_layout Standard
+personId = account.getId(); 
+\end_layout
+
+\begin_layout Standard
+personPhoto = account.getPhotoUrl(); } 
+\end_layout
+
+\begin_layout Standard
+updateUI(account); }
+\end_layout
+
+\begin_layout Standard
+private void signIn() { 
+\end_layout
+
+\begin_layout Standard
+Intent signInIntent = mGoogleSignInClient.getSignInIntent(); 
+\end_layout
+
+\begin_layout Standard
+startActivityForResult(signInIntent, RC_SIGN_IN); }
+\end_layout
+
+\begin_layout Standard
+@Override
+\end_layout
+
+\begin_layout Standard
+public void onActivityResult(int requestCode, int resultCode, Intent data)
+ { 
+\end_layout
+
+\begin_layout Standard
+super.onActivityResult(requestCode, resultCode, data);
+\end_layout
+
+\begin_layout Standard
+// Result returned from launching the Intent from GoogleSignInClient.getSignInInt
+ent(...); 
+\end_layout
+
+\begin_layout Standard
+if (requestCode == RC_SIGN_IN) { 
+\end_layout
+
+\begin_layout Standard
+// The Task returned from this call is always completed, no need to attach
+ 
+\end_layout
+
+\begin_layout Standard
+// a listener.
+ 
+\end_layout
+
+\begin_layout Standard
+Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+ 
+\end_layout
+
+\begin_layout Standard
+handleSignInResult(task); } }
+\end_layout
+
+\begin_layout Standard
+private void handleSignInResult(Task<GoogleSignInAccount> completedTask)
+ { 
+\end_layout
+
+\begin_layout Standard
+try { GoogleSignInAccount account = completedTask.getResult(ApiException.class);
+ 
+\end_layout
+
+\begin_layout Standard
+firebaseAuthWithGoogle(account); 
+\end_layout
+
+\begin_layout Standard
+// Signed in successfully, show authenticated UI.
+ updateUI(account); } 
+\end_layout
+
+\begin_layout Standard
+catch (ApiException e) { 
+\end_layout
+
+\begin_layout Standard
+// The ApiException status code indicates the detailed failure reason.
+\end_layout
+
+\begin_layout Standard
+// Please refer to the GoogleSignInStatusCodes class reference for more
+ information.
+ 
+\end_layout
+
+\begin_layout Standard
+Log.w(TAG, "signInResult:failed code=" + e.getStatusCode()); 
+\end_layout
+
+\begin_layout Standard
+updateUI(null); } }
+\end_layout
+
+\begin_layout Standard
+private void updateUI(GoogleSignInAccount account) { 
+\end_layout
+
+\begin_layout Standard
+if (account != null) { 
+\end_layout
+
+\begin_layout Standard
+mStatusTextView.setText(getString(R.string.signed_in_fmt, account.getDisplayName()))
+;
+\end_layout
+
+\begin_layout Standard
+findViewById(R.id.sign_in_button).setVisibility(View.GONE); 
+\end_layout
+
+\begin_layout Standard
+findViewById(R.id.go_to_home).setVisibility(View.VISIBLE); 
+\end_layout
+
+\begin_layout Standard
+findViewById(R.id.sign_out_and_disconnect).setVisibility(View.VISIBLE); }
+\end_layout
+
+\begin_layout Standard
+else { 
+\end_layout
+
+\begin_layout Standard
+findViewById(R.id.sign_in_button).setVisibility(View.VISIBLE); 
+\end_layout
+
+\begin_layout Standard
+findViewById(R.id.go_to_home).setVisibility(View.GONE); 
+\end_layout
+
+\begin_layout Standard
+findViewById(R.id.sign_out_and_disconnect).setVisibility(View.GONE); } }
+\end_layout
+
+\begin_layout Standard
+private void updateUIFire(FirebaseUser user) { 
+\end_layout
+
+\begin_layout Standard
+if (user != null) { 
+\end_layout
+
+\begin_layout Standard
+mStatusTextView.setText(getString(R.string.signed_in_fmt, user.getEmail()));
+\end_layout
+
+\begin_layout Standard
+findViewById(R.id.sign_in_button).setVisibility(View.GONE); 
+\end_layout
+
+\begin_layout Standard
+findViewById(R.id.go_to_home).setVisibility(View.VISIBLE); 
+\end_layout
+
+\begin_layout Standard
+findViewById(R.id.sign_out_and_disconnect).setVisibility(View.VISIBLE); }
+\end_layout
+
+\begin_layout Standard
+else { 
+\end_layout
+
+\begin_layout Standard
+findViewById(R.id.sign_in_button).setVisibility(View.VISIBLE); 
+\end_layout
+
+\begin_layout Standard
+findViewById(R.id.go_to_home).setVisibility(View.GONE);
+\end_layout
+
+\begin_layout Standard
+findViewById(R.id.sign_out_and_disconnect).setVisibility(View.GONE); } }
+\end_layout
+
+\begin_layout Standard
+private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
+\end_layout
+
+\begin_layout Standard
+Log.d(TAG, "firebaseAuthWithGoogle:" + acct.getId());
+\end_layout
+
+\begin_layout Standard
+AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(),
+ null);
+\end_layout
+
+\begin_layout Standard
+mAuth.signInWithCredential(credential) .addOnCompleteListener(this, new OnComplete
+Listener<AuthResult>() { 
+\end_layout
+
+\begin_layout Standard
+@Override 
+\end_layout
+
+\begin_layout Standard
+public void onComplete(@NonNull Task<AuthResult> task) {
+\end_layout
+
+\begin_layout Standard
+if (task.isSuccessful()) { 
+\end_layout
+
+\begin_layout Standard
+// Sign in success, update UI with the signed-in user's information
+\end_layout
+
+\begin_layout Standard
+Log.d(TAG, "signInWithCredential:success"); 
+\end_layout
+
+\begin_layout Standard
+FirebaseUser user = mAuth.getCurrentUser(); 
+\end_layout
+
+\begin_layout Standard
+updateUIFire(user); } 
+\end_layout
+
+\begin_layout Standard
+else { 
+\end_layout
+
+\begin_layout Standard
+// If sign in fails, display a message to the user.
+ 
+\end_layout
+
+\begin_layout Standard
+Log.w(TAG, "signInWithCredential:failure", task.getException()); 
+\end_layout
+
+\begin_layout Standard
+updateUIFire(null); }
+\end_layout
+
+\begin_layout Standard
+// ...
+ } }); }
+\end_layout
+
+\begin_layout Standard
+private void signOut() {
+\end_layout
+
+\begin_layout Standard
+mGoogleSignInClient.signOut() .addOnCompleteListener(this, new OnCompleteListener<
+Void>() { 
+\end_layout
+
+\begin_layout Standard
+@Override 
+\end_layout
+
+\begin_layout Standard
+public void onComplete(@NonNull Task<Void> task) {
+\end_layout
+
+\begin_layout Standard
+// ...
+ mAuth.signOut(); } }); }
+\end_layout
+
+\begin_layout Standard
+public void onGoHome(View view) { 
+\end_layout
+
+\begin_layout Standard
+Intent intent = new Intent(this, HomeActivity.class); startActivity(intent);
+ }
+\end_layout
+
+\begin_layout Standard
+}
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{appendices}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

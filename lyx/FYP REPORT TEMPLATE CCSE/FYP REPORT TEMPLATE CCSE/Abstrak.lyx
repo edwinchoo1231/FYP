@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass report
 \use_default_options true
 \begin_modules
@@ -12,16 +14,16 @@ enumitem
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -80,7 +82,37 @@ ABSTRAK
 \end_layout
 
 \begin_layout Standard
-Dalam Bahasa Melayu
+Di antara idea-idea berkongsi maklumat, perkongsian perjalanan merupakan
+ salah satu trend yang berkembang pesat.
+ Ia dapat dibuktikan bahawa teknologi sedang dilaksanakan sebagai idea perniagaa
+n di seluruh dunia.
+ Masa yang diambil adalah tinggi untuk mengunjung fakulti-fakulti di sekitar
+ kampus, sedangkan pengangkutan awam telah pun disediakan.
+ Isu ini semakin teruk sewaktu ‘peak hour’ di sekitar kampus.
+ Di Kampus UPM Serdang ada 3 unit MyCOMS.
+ Aplikasi mudah alih telah direka untuk membolehkan pelajar dan kakitangan
+ kampus UPM Serdang untuk menggunakan MyCOMS.
+ Walau bagaimanapun, aplikasi mudah alih itu tidak digunakan pada masa ini,
+ dan beberapa kelemahan telah dijumpai dalam aplikasi tersebut.
+ Projek ini bertujuan untuk merekabentuk dan membangunkan aplikasi Android
+ untuk perkongsian perjalanan kereta di dalam kampus.
+ Selain itu, ramalan permintaan peringkat stesen juga boleh dilakukan berdasarka
+n simulasi dan data masa nyata.
+ Akhir sekali prestasi reka bentuk sistem dinilai.
+ Aplikasi ini dibina dengan menggunakan Android Studio.
+ API Peta Google digunakan untuk mendapatkan maklumat lokasi kedua-dua MyCOMS
+ dan pengguna.
+ Data yang diperoleh seperti lokasi MyCOMS dan butiran pengguna disimpan
+ dalam Firebase.
+ Aplikasi yang telah dibangunkan dapat mencari lokasi masa nyata MyCOMS,
+ tempat dan menguruskan tempahan kenderaan.
+ Logik kabur digunakan untuk meramalkan permintaan tahap stesen dengan simulasi
+ data yang merangkumi lokasi stesen, suhu hari, waktu perjalanan dan populasi
+ stesen.
+ Kesimpulannya, aplikasi Android ini boleh dilaksanakan sepenuhnya untuk
+ MyCOMS kerana ia mampu menyediakan kemudahan dan menyelesaikan sebahagian
+ daripada isu-isu dalam perjalanan di kampus untuk pelajar dan kakitangan
+ UPM.
 \end_layout
 
 \end_body

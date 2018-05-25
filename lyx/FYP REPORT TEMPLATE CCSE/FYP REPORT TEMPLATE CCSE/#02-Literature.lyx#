@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass report
 \use_default_options true
 \begin_modules
@@ -12,16 +14,16 @@ enumitem
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -81,56 +83,113 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-Write here ...
-\end_layout
-
-\begin_layout Standard
-There may be a preamble at the beginning of a chapter.
- The purpose may be to introduce the themes of the main headings.
- 
-\end_layout
-
-\begin_layout Standard
-Note that it is important that a student doing a certain project work should
- know what has already been done related to his project.
- Having done this reading, it is important that the main outlines be recorded
- and the reference to the work be made.
- The sections organization of each chapter are depend on student's and superviso
-r's preference.
+In this chapter, the case study of the operational model of ride-sharing
+ and bike-sharing application will be discussed thoroughly.
+ The existing system of the application is studied and discussed further
+ especially on features, limitations, advantages and disadvantages throughout
+ this chapter.
  
 \end_layout
 
 \begin_layout Section
-Main Heading No.1 (Primary Level Numbering)
+Ride Sharing
 \end_layout
 
 \begin_layout Standard
-Guideline of the report writing is in 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-hyperref[chap:Report-Template:-Guideline]{Appendix}
-\end_layout
-
-\end_inset
-
-  
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "chap:Report-Template:-Guideline"
+Public transportation plays a significant role in daily lives of Malaysian
+ citizens as it connects each other to the desired destination.
+ Some of the most common form of public transportation such as bus, train,
+ taxi and others, where one of the mode has occupancy lesser than 40% which
+ is taxi in the form of vehicle.
+ One of the reasons is that the service and cost of hiring a taxi is not
+ proportional as customer feel there is unfairness in it 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "1"
 
 \end_inset
 
 .
+ Monopolized and bad behavior of driver are also the reason for the low
+ using rate of taxi.
+ As compared to the other transportation, taxi carries the highest mobility
+ and flexibility, with no tracks needed as compared to trains, and wider
+ roads for busses, it is simply the best mode of transportation for short
+ distance around a certain area.
+\end_layout
+
+\begin_layout Standard
+But since the occupancy rate of taxi is low, and special infrastructure
+ needed for trains and bus, families with higher purchasing power can afford
+ to buy a vehicle for daily travelling purpose.
+ With that the cars on the road increases gradually which leads to high
+ traffic on daily commute.
+ Cars are not fully utilize if it carries only one passenger, and leads
+ to the main reason for creating traffic jam commuting from one place to
+ another.
+ This can be solved by pairing users together with the same destination
+ up to the maximum capacity of the car, the traffic condition could be reduced
+ at least 4 times as compared to the worst case scenario mentioned earlier.
+ But how do people solve that by knowing who is the exact person that has
+ the same destination with the departing location within a close range?
+ Analyzing the field of software development integrating with social media,
+ this is made possible when information is shared on a platform which is
+ to be viewed publicly, and user with high similarity will be known and
+ paired which makes up to solving the case earlier.
+ Crowdsourcing the data would automates the whole process and reduce the
+ effort in exploring potential user in the domain of traffic and transportation
  
+\begin_inset CommandInset citation
+LatexCommand cite
+key "2"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+These sharing economy business is built not only on the technology advancement,
+ but also in a sense of “trust” among each other 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "3"
+
+\end_inset
+
+.
+ The sharing of object among strangers solely rely on trust, is the key
+ of success to the service provided, and it can be provided with a little
+ help from technology.
+ Building of platform ease the communication among each other.
+ Tracking of whereabouts and usage rate can be monitored and viewed, in
+ order to prevent unwanted events to happen.
+ User will not be easily affected by words and saying from another user,
+ and instead it will be affected by mainly the service provider’s performance
+ and reputation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "4"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Bike Sharing
+\end_layout
+
+\begin_layout Section
+COMS
+\end_layout
+
+\begin_layout Section
+Android
 \end_layout
 
 \begin_layout Subsection
-Subheading No.1 (Secondary Level Numbering)
+Android Architecture
 \end_layout
 
 \begin_layout Standard
@@ -138,7 +197,7 @@ There should be at least two subheadings to justify having subheadings.
 \end_layout
 
 \begin_layout Subsection
-Subheading No.2 (Secondary Level Numbering)
+Android Application Development
 \end_layout
 
 \begin_layout Standard
@@ -146,29 +205,115 @@ All first letters of principal words are capitalised and the subheadings
  is left justified.
 \end_layout
 
-\begin_layout Subsubsection
-Tertiary Heading No.1 (Under Subheading No.2)
+\begin_layout Section
+Google Map
 \end_layout
 
 \begin_layout Standard
-There should be at least two tertiary headings to justify having tertiary
- headings.
-\end_layout
+Google has released the API, which is developed to allow interaction between
+ google services with internet content into web or mobile application.
+ It acts as a black box, in receiving input of user, and process it, and
+ is able to return the query with a Street view scene.
+ Researcher have use the combination of Google Maps together with GSM modem,
+ in providing tracking and locating services of vehicle 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "22"
 
-\begin_layout Subsubsection
-Tertiary Heading No.2 (Under Subheading No.2)
-\end_layout
+\end_inset
 
-\begin_layout Standard
-Tertiary and subsequent headings should not be listed in the Table of Contents.
+.
+ Usage of smartphone which has both of the function, will allow the tracking
+ and locating vehicle for monitoring purpose more convenient.
+ According to this paper, the vehicle fleet management system can be polished
+ with the tracking using GPS
+\begin_inset CommandInset citation
+LatexCommand cite
+key "23"
+
+\end_inset
+
+.
+ A software is created for the tracking purposes as data is retrieved from
+ the real-time update of the system.
+ The system can be even be more advance with the implantation of GPS system
+ on a System-On-Chip, and built in into the vehicle 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "24"
+
+\end_inset
+
+.
+ The same tracking method is also applied in this project, and it is fully
+ deployed to evaluate the system performance
+\begin_inset CommandInset citation
+LatexCommand cite
+key "25"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Section
-Main Heading No.2 (Primary Level Numbering)
+Review of Similar Application
+\end_layout
+
+\begin_layout Subsection
+oBike
 \end_layout
 
 \begin_layout Standard
+oBike originates from Singapore, provides the security features between
+ user and the bicycle, by having the user to scan QR code via the oBike
+ app or enter the bike ID found on the bike.
+ The application also allow bike booking, and is reserved under the user’s
+ name for at most 10 mins.
+ The sign up process requires phone number, and requires the user to allow
+ permission on location so that nearest oBike can be found on the map via
+ the oBike app.
+ Payment can be done via Credit and Debit cards, and more payment option
+ will be available later.
+ It also has the Bluetooth technology to allow the users in locating the
+ bicycle for a higher accuracy, and to identify the bicycle if there is
+ a lot of them.
+ 
+\end_layout
 
+\begin_layout Subsection
+MoBike
+\end_layout
+
+\begin_layout Standard
+Mobike that originates from China, has a lot similarities in terms of applicatio
+n as compared to oBike.
+ The difference between these two companies is that the location of deployment
+ is different, and the infrastructure of the bicycle is different as well.
+ The application allow user to book for 15 minutes, and is able to view
+ the final location of bicycle when the trip is ended.
+ 
+\end_layout
+
+\begin_layout Section
+Summary
+\end_layout
+
+\begin_layout Standard
+As outlined in the previous section, there are several application that
+ can be referred to, and the features in it such as QR code scanning, Bluetooth
+ location detecting and GPS location identifying can be adapted into MyCOMS
+ application.
+ The overall architecture of the developing structure of Android is explained
+ and outlined to have more insight on the functionalities of the components.
+ Several studies on the ride sharing and bike sharing system is done, and
+ is relatable to MyCOMS application as it requires sharing of vehicles and
+ time of usage optimized between desired users.
+ Therefore, a hybrid version of ride-sharing which is MyCOMS application
+ is needed in order to tackle the targeted vehicle, and improve the overall
+ deliveries to the users.
+ 
 \end_layout
 
 \end_body

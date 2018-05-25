@@ -1,0 +1,1287 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass report
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+METHODOLOGY
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+Write here ...
+\end_layout
+
+\begin_layout Standard
+This chapter should contain an accurate description of the equipment used
+ and the experiments carried out.
+ It should be sufficiently detailed for the reader to be able to repeat
+ the work if necessary and know exactly the circumstances under which it
+ was done.
+ While only representative successful experiments need to be described in
+ detail, it is often described in detail, it is often desirable to mention
+ briefly the unsuccessful experiments and wrong turnings which occur for
+ the benefit of the reader.
+ include flowchart, experiment setup, pseudocode or function listing, simulation
+ setting and schematic diagram.
+ Other supporting documents such as a complete program and data listing
+ are provided as Appendix.
+\end_layout
+
+\begin_layout Section
+Report Template: Guideline
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Report-Template:-Guideline"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This report is written using Lyx 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "lyx"
+
+\end_inset
+
+ and will be used as a template for final year students of Computer and
+ Communication Systems Engineering (CCSE)
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "CCSE"
+description "Computer and Communication Systems Engineering"
+
+\end_inset
+
+.
+ To install, download Lyx 'bundle' package which includes Miktex distribution
+ (for windows) at 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.lyx.org/Download
+\end_layout
+
+\end_inset
+
+.
+ Once installed, you can go to the menu 
+\family sans
+Help
+\family default
+ \SpecialChar \menuseparator
+
+\family sans
+Tutorial
+\family default
+ to learn how to use Lyx in writing your document.
+ 
+\end_layout
+
+\begin_layout Standard
+The template is written in separate files.
+ Do not change the setting of the 'Main Template FYP A.lyx' or 'Main Template
+ FYP B.lyx' and do not modify its content.
+ You can update the content of the other files or replace the content where
+ necessary.
+ All files are compiled in the main file which is 'Main Template FYP B.lyx'
+ to generate a complete report.
+ To compile the whole document, open main template (eg: Main Template FYP
+ A.lyx) then go to the menu 
+\family sans
+Document \SpecialChar \menuseparator
+ View [PDF (PdfLatex)]
+\family default
+ or 
+\family sans
+Ctrl + R
+\family default
+.
+ Follows are the files:
+\end_layout
+
+\begin_layout Itemize
+Main Template FYP A.lyx 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+noitemsep
+\end_layout
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+This template is used for FYP A only.
+ Note that the item list is single spacing.
+ You should use this template for all list in your report.
+ You must set the Customisable Lists (enumitem) module at document setting.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Main Template FYP B.lyx
+\end_layout
+
+\begin_layout Itemize
+Titlepage.lyx
+\end_layout
+
+\begin_layout Itemize
+Approval.lyx
+\end_layout
+
+\begin_layout Itemize
+Acknow.lyx
+\end_layout
+
+\begin_layout Itemize
+Abstract.lyx
+\end_layout
+
+\begin_layout Itemize
+Abstrak.lyx
+\end_layout
+
+\begin_layout Itemize
+Appendix.lyx
+\end_layout
+
+\begin_layout Itemize
+01 - Intro.lyx
+\end_layout
+
+\begin_layout Itemize
+02 - Literature.lyx
+\end_layout
+
+\begin_layout Itemize
+03 - Methodology.lyx
+\end_layout
+
+\begin_layout Itemize
+04 - Results and Discussion.lyx
+\end_layout
+
+\begin_layout Itemize
+05 - Conclusions.lyx
+\end_layout
+
+\begin_layout Section
+Citations
+\end_layout
+
+\begin_layout Standard
+All references in the report must be cited.
+ You need to store all citation information in .bib database file.
+ The bib file link to this template is called 
+\family sans
+references.bib
+\family default
+.
+ To cite references, go to menu 
+\family sans
+Insert \SpecialChar \menuseparator
+Citation.
+ 
+\end_layout
+
+\begin_layout Standard
+The references style used in this report is IEEE style.
+ Refer to 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.ieee.org/documents/ieeecitationref.pdf
+\end_layout
+
+\end_inset
+
+ for the format of different types of sources and 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#Citations
+\end_layout
+
+\end_inset
+
+ on how to use that in the bib file.
+ Following are the examples:
+\end_layout
+
+\begin_layout Itemize
+Book 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "IEEEexample:book_typical"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Journal 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "IEEEexample:articlelargepages"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Figures
+\end_layout
+
+\begin_layout Standard
+To insert a figure, first you need to insert float figure and then insert
+ graphics inside the float.
+ Go to the menu 
+\family sans
+Insert
+\family default
+ \SpecialChar \menuseparator
+
+\family sans
+Float
+\family default
+ \SpecialChar \menuseparator
+
+\family sans
+Figure
+\family default
+ or you can use the toolbar button 
+\begin_inset Info
+type  "icon"
+arg   "float-insert figure"
+\end_inset
+
+.
+ Then put a cursor inside the float before the caption and go to the menu
+ 
+\family sans
+Insert
+\family default
+ \SpecialChar \menuseparator
+
+\family sans
+Graphics
+\family default
+.
+ Note that the figure must appear above the caption of the figure.
+ The detail including examples can be found in the menu 
+\family sans
+Help
+\family default
+ \SpecialChar \menuseparator
+
+\family sans
+EmbeddedObjects.
+ 
+\family default
+If you want to put citation inside a figure or a table, you need to replace
+ the default caption.
+ Go to 
+\family sans
+Insert
+\family default
+ \SpecialChar \menuseparator
+
+\family sans
+Tex Code
+\family default
+ or press Ctrl + L and type in the following:
+\end_layout
+
+\begin_layout Standard
+
+\backslash
+caption[Caption for list entry]{the content 
+\backslash
+cite{lyx} 
+\backslash
+label{fig:XXX}}
+\end_layout
+
+\begin_layout Subsection
+Image Formats
+\end_layout
+
+\begin_layout Standard
+You can use different image formats.
+ However, the best format is eps format based on the comparison as shown
+ in Figures 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:pdfformat"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:jpgformat"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:epsformat"
+
+\end_inset
+
+.
+ Note that the figures have been scaled down to 35% to fit onto one page.
+ The figures are created using Matlab plot function and saved as in the
+ respective formats.
+ You can use any free softwares such as GIMP to convert any image formats
+ to eps.
+ You can change the placement of figures by right click the float figure
+ and choose 
+\family sans
+Settings
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/pdfformat.pdf
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+pdf format
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:pdfformat"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/jpgformat.jpg
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+jpg format
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:jpgformat"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/epsformat.eps
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+eps format
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:epsformat"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Matlab Plot.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Tables
+\end_layout
+
+\begin_layout Standard
+You can insert a table using either the toolbar button 
+\begin_inset Info
+type  "icon"
+arg   "tabular-insert"
+\end_inset
+
+ or the menu 
+\family sans
+Insert\SpecialChar \menuseparator
+Table
+\family default
+.
+ The detail including examples can be found in the menu 
+\family sans
+Help
+\family default
+ \SpecialChar \menuseparator
+
+\family sans
+EmbeddedObjects
+\family default
+.
+ If your table is written in Microsoft Excel, you can convert it to Latex(plain)
+ and then import to Lyx using 
+\family sans
+Excel2LaTeX.
+ 
+\family default
+To align the table to center, inside the table float, right click, choose
+ 
+\family sans
+Paragraph settings
+\family default
+, and set the Alignment to Centered.
+ The example of table rotate to sideways is shown in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Table-Example"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways true
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Table Example (Setting to Rotate sideways if you have wide table) 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Table-Example"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+D
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+View Latex Source
+\end_layout
+
+\begin_layout Standard
+Go to the menu 
+\family sans
+View
+\family default
+ \SpecialChar \menuseparator
+ 
+\family sans
+Source Pane
+\end_layout
+
+\begin_layout Standard
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Lyx"
+
+\end_inset
+
+ shows the example of source code shown in the bottom panel of Lyx.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Lyx"
+
+\end_inset
+
+ ....
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/lyx3.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+caption[The caption]{The caption 
+\backslash
+cite{lyx}}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Create clickable URLs/hyperlinks in a PDF file 
+\end_layout
+
+\begin_layout Standard
+Example:
+\end_layout
+
+\begin_layout Standard
+Go to the menu 
+\family sans
+Insert \SpecialChar \menuseparator
+ URL
+\family default
+ :
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://developer.android.com/index.html
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Go to the menu 
+\family sans
+Insert \SpecialChar \menuseparator
+ Hyperlink
+\family default
+ : 
+\begin_inset space \space{}
+\end_inset
+
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "ocw91@hotmail.com "
+type "mailto:"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/lyx3.pdf
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+gdfdfgdfg
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Equations 
+\end_layout
+
+\begin_layout Standard
+Detail explanation on Mathematical formulas can be found in menu 
+\family sans
+Help \SpecialChar \menuseparator
+User's Guide
+\family default
+.
+ Example of numbered formula: 
+\end_layout
+
+\begin_layout Standard
+Go to the menu 
+\family sans
+Insert \SpecialChar \menuseparator
+Math\SpecialChar \menuseparator
+Numbered Formula
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+x=\left[\begin{array}{c}
+x_{1}\\
+\vdots\\
+x_{10}
+\end{array}\right],Z=\left[\begin{array}{ccc}
+z_{1,1} & \cdots & z_{1,10}\\
+\vdots & \ddots & \vdots\\
+z_{10,1} & \cdots & z_{10,10}
+\end{array}\right],f=\left[\begin{array}{c}
+f_{1}\\
+\vdots\\
+f_{10}
+\end{array}\right]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Code Program
+\end_layout
+
+\begin_layout Standard
+Go to the menu 
+\family sans
+Insert \SpecialChar \menuseparator
+Tex Code.
+ 
+\family default
+The detail including examples can be found in the menu 
+\family sans
+Help
+\family default
+ \SpecialChar \menuseparator
+
+\family sans
+EmbeddedObjects.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout LyX-Code
+#include <stdio.h>
+\end_layout
+
+\begin_layout LyX-Code
+ 
+\end_layout
+
+\begin_layout LyX-Code
+int main(void)
+\end_layout
+
+\begin_layout LyX-Code
+{
+\end_layout
+
+\begin_layout LyX-Code
+    printf("Hello World!
+\backslash
+n");
+\end_layout
+
+\begin_layout LyX-Code
+    return 0;
+\end_layout
+
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Algorithm of ...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout LyX-Code
+#include <stdio.h>
+\end_layout
+
+\begin_layout LyX-Code
+ 
+\end_layout
+
+\begin_layout LyX-Code
+int main(void)
+\end_layout
+
+\begin_layout LyX-Code
+{
+\end_layout
+
+\begin_layout LyX-Code
+    printf("Hello World!
+\backslash
+n");
+\end_layout
+
+\begin_layout LyX-Code
+    return 0;
+\end_layout
+
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Algorithm of ...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If you have a long code program, you can insert it as a file.
+ Go to 
+\family sans
+Insert
+\family default
+ \SpecialChar \menuseparator
+
+\family sans
+File
+\family default
+ \SpecialChar \menuseparator
+
+\family sans
+Child Document
+\family default
+ \SpecialChar \menuseparator
+
+\family sans
+Browse.
+ Set Include type to Program Listing and then Fill in the caption and label.
+ At More parameters type in language=Matlab or any other languages.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+let
+\backslash
+cleardoublepage
+\backslash
+clearpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+phantomsection
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Evaluation Criteria
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Evaluation-Criteria"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Sem 1
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename images/EVALUATION - SEM 1.pdf
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Sem 2
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename images/EVALUATION - SEM 2.pdf
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Disediakan oleh:
+\end_layout
+
+\begin_layout Standard
+Siti Mariam Shafie
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\end_body
+\end_document

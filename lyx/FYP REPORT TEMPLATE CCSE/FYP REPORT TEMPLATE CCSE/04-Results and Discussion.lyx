@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass report
 \begin_preamble
 \usepackage{ifpdf} % part of the hyperref bundle
@@ -32,16 +34,16 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -113,40 +115,1103 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-Write here ...
+This chapter presents the result of the user interface of the developed
+ application.
+ The features and performance testing of the application is discussed in
+ this chapter too.
+ In addition, the problems and obstacles faced during the application developmen
+t are discussed and reviewed in this chapter.
+ This ride sharing application will enable user to book EV rides to travel
+ within UPM Serdang campus.
+ Other basic features such as managing and editing the booking, viewing
+ the user and EV’s location are also included.
+ 
+\end_layout
+
+\begin_layout Section
+Main Screen
 \end_layout
 
 \begin_layout Standard
-This is the heart of the project work and distinguishes a project report
- from references or description.
- This is the place where the results of experimentation are reported and
- appraisal of what has been written before.
- A place where comparisons are made.
- Describe your results in figures or tables clearly.
- Discuss the results on performance of your design abd give justification
- of the findings.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "ohhashi1998human"
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
 
-\end_inset
-
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "jabbari2007electrodermal"
-
-\end_inset
-
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "seaquist2013hypoglycemia"
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/4/1.png
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Main Screen of the application.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Main screen is the first screen shown when user activate or runs the application
+ by clicking onto the app.
+ In the main screen, the name of the app is shown on the action bar, as
+ shown in figure 4.1.
+ 
+\end_layout
+
+\begin_layout Section
+User Authentication
+\end_layout
+
+\begin_layout Standard
+There is only a standardized button for Google account sign in and sign
+ up for new users.
+ User is suggested to sign in and register account using UPM email address
+ only, so that the information about the user which related to UPM can be
+ obtained easily.
+ Figure 4.2 shows the action to select email address for registration and
+ figure 3 shows authentication process, and figure 4.4 shows the interaction
+ with database.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/4/2.1.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Log in or registration of user.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/4/2.2.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Display of user details on main screen.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/4/2.3.png
+	width 14.4cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+User details captured in database.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Home Screen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/4/3.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Home screen of the app
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Once user completed user authentication process by having entering credentials,
+ user will be brought to home screen as shown in figure 4.5.
+ The home screen is the main interface after the user verification, as it
+ acts as the central for navigation of functions of the app.
+ There are 4 buttons on the screen such as “Start Driving”, “Book a Ride”,
+ “Manage Booking” and “User and Driving Info”.
+\end_layout
+
+\begin_layout Subsection
+Start Driving
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/4/4.1.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Marker shows real time location of MyCOMS
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/4/4.2.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Google Maps navigation calculating best route.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/4/4.3.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Generated navigation by Google Maps.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+User will be directed to google maps where to show the location of the available
+ EVs as shown in figure 4.6.
+ User can press the button on the screen of the maps to navigate to the
+ exact location of the EV by using Google Maps navigation as shown in figure
+ 4.7 and figure 4.8.
+ 
+\end_layout
+
+\begin_layout Subsection
+Book A Ride
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/4/5.1.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Time picker for user to book timing for MyCOMS.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/4/5.2.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Display of booking detail in booking screen.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/4/5.3.png
+	width 14.4cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Booking details captured in database.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Figure 4.9 and figure 4.10 shows the screen for book a ride button.
+ User will be able to book the EV’s slot using this button.
+ User will be prompt to enter departure and arrival location, including
+ the desired booking time.
+ All the data will be recorded in database as shown in figure 4.11, and can
+ be view by admin for monitoring purpose.
+\end_layout
+
+\begin_layout Subsection
+Manage Booking
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/4/6.1.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Manage booking screen shows status and details of booking.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/4/6.2.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Confirm button appears after booking is confirmed by admin.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/4/6.3.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Details captured in database.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Figure 4.12 shows the manage booking screen of the application.
+ It allows user to view the bookings made earlier, and views the status
+ of the booking.
+ Once admin approve the booking, a confirmation button will appear for user
+ to acknowledge the confirmation as shown in figure 4.13.
+ The record of the acknowledgment and approval of rides are recorded in
+ the database as shown in figure 4.14.
+\end_layout
+
+\begin_layout Subsection
+User and Driving Info
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/4/7.1.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Buttons shown in user and driving info screen.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/4/7.2.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Application waiting for details of coordinate from GPS.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/4/7.3.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+User's coordinate and speed is captured using GPS.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/4/7.4.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+MyCOMS application sending GPS details to database.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/4/7.5.png
+	width 14.4cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Details captured by database.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Figure 4.15 shows the interface of driving info screen.
+ When user does not need navigation by google maps, user can access this
+ button to find out the location in GPS-coordinates, speed and also the
+ mileage travelled when the app is active as shown in figure 4.16 and figure
+ 4.17.
+ User will be prompt to activate the GPS function in the phone to ensure
+ that the data is captured as shown in figure 4.18.
+ The data retrieved from this activity will be tabled into database for
+ administrative purpose as shown in figure 4.19.
+ Admin can refer to the database to track the whereabouts of the user, to
+ ensure that user does not go out of bounds of UPM Serdang campus.
+ Algorithm is imposed to act as geo-fencing to notify user whenever user
+ is using the app outside the campus area.
+\end_layout
+
+\begin_layout Section
+Station Level Demand Prediction 
+\end_layout
+
+\begin_layout Subsection
+Case 1
+\end_layout
+
+\begin_layout Standard
+The range of input as below: 
+\end_layout
+
+\begin_layout Itemize
+location = 11 (central region) 
+\end_layout
+
+\begin_layout Itemize
+population = 37 
+\end_layout
+
+\begin_layout Itemize
+temperature = 33℃ 
+\end_layout
+
+\begin_layout Itemize
+time = 8pm
+\end_layout
+
+\begin_layout Standard
+The defuzzified result obtained is shown in a graph: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/4/8.png
+	width 14.4cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Defuzzified result of the output.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The figure 4.20 shows with the input as above, it will have a demand level
+ of 4.5, which signifies that it has an average demand for the station.
+\end_layout
+
+\begin_layout Subsection
+Case 2
+\end_layout
+
+\begin_layout Standard
+The demand level is set at 7.5, which act as a barrier to find out the best
+ condition of all inputs, and the result is shown in figure 4.21.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/4/9.png
+	width 14.4cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Defuzzified result of the output after loops.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+After the run of the loops for the 2384th time, the system has able to generate
+ the randomize input of:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Location
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+: 12 (Central Region)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Population
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+: 48 (out of 50 sample size)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Temperature of the day
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+: 35 (high region)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Time of travel
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+: 0 (morning region)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is observed that the readings does not seems logical, as Malaysia at
+ midnight 12am is not recommended to stay out in campus.
+ It is obvious that the system will require a real-time dataset in order
+ for it to improve.
+ The other ways for improvement is that the system must improves its fuzzy
+ rule in making a more detailed and precise rule which fits the system better
+ to the real-time dataset.
+\end_layout
+
+\begin_layout Section
+Performance Testing
+\end_layout
+
+\begin_layout Standard
+The MyCOMS app is tested in different type of Android devices, which are
+ Samsung Galaxy J7, Redmi Note 4 and Asus Zenfone 5.
+ All the features in the application are working well.
+ However there is slight difference in the accuracy of the GPS coordinate
+ as different devices has different sensitivity of GPS and different modules
+ are used.
+ User will have to wait for a few moment for the GPS sensor to calibrate
+ the accuracy of the coordinate.
+ 
+\end_layout
+
+\begin_layout Standard
+Smart phone’s OS and the version of the google play services will affect
+ the deployment of the application, as certain functions and user interface
+ of the application is based on the SDK version of 27, which some of it
+ might not be applicable to the previous versions.
+ User’s smartphone must be updated in terms of OS and the google play services
+ in order for the application to run normally.
+ 
+\end_layout
+
+\begin_layout Section
+Summarize
+\end_layout
+
+\begin_layout Standard
+The GPS coordinate and speed obtained from the driving info component is
+ the latitude and longitude of the user, and estimated speed of the user
+ based on the calculation from built-in GPS module.
+ The location coordinate is updated constantly in database repeatedly to
+ maintain latest information of the user and EV.
+ The location is tracked real-time and is displayed on the map.
+ 
+\end_layout
+
+\begin_layout Section
+Limitation
+\end_layout
+
+\begin_layout Standard
+This EV booking app is restricted to Android based smart phone only.
+ This application will work when there is connection to the internet.
+ The navigation, user info collection and also booking managing and selection
+ requires internet access to send the data to the database.
+ User will need internet connection to retrieve the constant update of the
+ location of the EV before creating booking request.
+ The location of the user can only be estimated due to the sensitivity of
+ the GPS module from the Android mobile phone.
+ 
 \end_layout
 
 \end_body

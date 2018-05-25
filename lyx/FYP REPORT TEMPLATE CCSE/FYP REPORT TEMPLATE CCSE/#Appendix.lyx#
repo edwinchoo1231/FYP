@@ -1,0 +1,6143 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass report
+\use_default_options true
+\begin_modules
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{appendices}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+MainActivity.java
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+package com.example.edwin.fyp;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.content.Intent;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.net.Uri;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.os.Bundle;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.support.annotation.NonNull; 
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.support.v7.app.AppCompatActivity; 
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.util.Log;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.view.View; 
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.view.Window; 
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.widget.Button;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.widget.TextView;
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.android.gms.auth.api.signin.GoogleSignIn; 
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount; 
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.android.gms.auth.api.signin.GoogleSignInClient; 
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions; 
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.android.gms.common.SignInButton;
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.android.gms.common.api.ApiException; 
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.android.gms.tasks.OnCompleteListener; 
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.android.gms.tasks.Task; 
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.firebase.auth.AuthCredential; 
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.firebase.auth.AuthResult; 
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.firebase.auth.FirebaseAuth; 
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.firebase.auth.FirebaseUser;
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.firebase.auth.GoogleAuthProvider; 
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.q42.android.scrollingimageview.ScrollingImageView;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public class MainActivity extends AppCompatActivity {
+\end_layout
+
+\begin_layout Plain Layout
+
+	private static final String TAG = MainActivity.class.getSimpleName(); 
+\end_layout
+
+\begin_layout Plain Layout
+
+	private FirebaseAuth mAuth; private static final int RC_SIGN_IN = 9001;
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	TextView mStatusTextView,mDetailTextView; 
+\end_layout
+
+\begin_layout Plain Layout
+
+	Button mgoButton; 
+\end_layout
+
+\begin_layout Plain Layout
+
+	GoogleSignInClient mGoogleSignInClient; 
+\end_layout
+
+\begin_layout Plain Layout
+
+	String personName,personGivenName,personFamilyName,personEmail,personId;
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	Uri personPhoto;
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override 
+\end_layout
+
+\begin_layout Plain Layout
+
+	protected void onCreate(Bundle savedInstanceState) { 
+\end_layout
+
+\begin_layout Plain Layout
+
+		this.requestWindowFeature(Window.FEATURE_NO_TITLE); 
+\end_layout
+
+\begin_layout Plain Layout
+
+		super.onCreate(savedInstanceState); setContentView(R.layout.activity_main);
+\end_layout
+
+\begin_layout Plain Layout
+
+		// scrolling for image 'van' ScrollingImageView scrollingBackground =
+ findViewById(R.id.scrolling_background); scrollingBackground.start();
+\end_layout
+
+\begin_layout Plain Layout
+
+		//to stop use below code 
+\end_layout
+
+\begin_layout Plain Layout
+
+		//scrollingBackground.stop();
+\end_layout
+
+\begin_layout Plain Layout
+
+		mAuth = FirebaseAuth.getInstance(); 
+\end_layout
+
+\begin_layout Plain Layout
+
+		mStatusTextView = findViewById(R.id.status); 
+\end_layout
+
+\begin_layout Plain Layout
+
+		mgoButton = findViewById(R.id.go_to_home);
+\end_layout
+
+\begin_layout Plain Layout
+
+		GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DE
+FAULT_SIGN_IN) 
+\end_layout
+
+\begin_layout Plain Layout
+
+			.requestIdToken(getString(R.string.default_web_client_id)) 
+\end_layout
+
+\begin_layout Plain Layout
+
+			.requestEmail() 
+\end_layout
+
+\begin_layout Plain Layout
+
+			.build(); 
+\end_layout
+
+\begin_layout Plain Layout
+
+		mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+\end_layout
+
+\begin_layout Plain Layout
+
+		SignInButton signInButton = findViewById(R.id.sign_in_button);
+\end_layout
+
+\begin_layout Plain Layout
+
+		signInButton.setSize(SignInButton.SIZE_STANDARD); 
+\end_layout
+
+\begin_layout Plain Layout
+
+		findViewById(R.id.sign_in_button).setOnClickListener(signinOnclickListener);
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+		findViewById(R.id.sign_out_and_disconnect).setOnClickListener(signoutOnclickListe
+ner); }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	private View.OnClickListener signinOnclickListener = new View.OnClickListener(){
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+		@Override 
+\end_layout
+
+\begin_layout Plain Layout
+
+		public void onClick(View v) { 
+\end_layout
+
+\begin_layout Plain Layout
+
+			switch (v.getId()) { 
+\end_layout
+
+\begin_layout Plain Layout
+
+			case R.id.sign_in_button: signIn();
+\end_layout
+
+\begin_layout Plain Layout
+
+			break;// ...
+ } } };
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	private View.OnClickListener signoutOnclickListener = new View.OnClickListener(){
+\end_layout
+
+\begin_layout Plain Layout
+
+		@Override 
+\end_layout
+
+\begin_layout Plain Layout
+
+		public void onClick(View v) { 
+\end_layout
+
+\begin_layout Plain Layout
+
+			switch (v.getId()) { 
+\end_layout
+
+\begin_layout Plain Layout
+
+			case R.id.sign_out_and_disconnect: signOut();
+\end_layout
+
+\begin_layout Plain Layout
+
+			break; // ...
+ } 
+\end_layout
+
+\begin_layout Plain Layout
+
+			Intent homeIntent = new Intent(Intent.ACTION_MAIN); 
+\end_layout
+
+\begin_layout Plain Layout
+
+			homeIntent.addCategory( Intent.CATEGORY_HOME ); 
+\end_layout
+
+\begin_layout Plain Layout
+
+			homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); 
+\end_layout
+
+\begin_layout Plain Layout
+
+			startActivity(homeIntent); } };
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override 
+\end_layout
+
+\begin_layout Plain Layout
+
+	public void onStart() { 
+\end_layout
+
+\begin_layout Plain Layout
+
+		super.onStart(); 
+\end_layout
+
+\begin_layout Plain Layout
+
+		// Check if user is signed in (non-null) and update UI accordingly.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+		FirebaseUser currentUser = mAuth.getCurrentUser(); 
+\end_layout
+
+\begin_layout Plain Layout
+
+		updateUIFire(currentUser); 
+\end_layout
+
+\begin_layout Plain Layout
+
+		GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+		if (account != null) { 
+\end_layout
+
+\begin_layout Plain Layout
+
+		personName = account.getDisplayName(); 
+\end_layout
+
+\begin_layout Plain Layout
+
+		personGivenName = account.getGivenName(); 
+\end_layout
+
+\begin_layout Plain Layout
+
+		personFamilyName = account.getFamilyName(); 
+\end_layout
+
+\begin_layout Plain Layout
+
+		personEmail = account.getEmail(); 
+\end_layout
+
+\begin_layout Plain Layout
+
+		personId = account.getId(); 
+\end_layout
+
+\begin_layout Plain Layout
+
+		personPhoto = account.getPhotoUrl(); } 
+\end_layout
+
+\begin_layout Plain Layout
+
+		updateUI(account); }
+\end_layout
+
+\begin_layout Plain Layout
+
+	private void signIn() { 
+\end_layout
+
+\begin_layout Plain Layout
+
+		Intent signInIntent = mGoogleSignInClient.getSignInIntent(); 
+\end_layout
+
+\begin_layout Plain Layout
+
+		startActivityForResult(signInIntent, RC_SIGN_IN); }
+\end_layout
+
+\begin_layout Plain Layout
+
+	@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+	public void onActivityResult(int requestCode, int resultCode, Intent data)
+ { 
+\end_layout
+
+\begin_layout Plain Layout
+
+		super.onActivityResult(requestCode, resultCode, data);
+\end_layout
+
+\begin_layout Plain Layout
+
+		// Result returned from launching the Intent from GoogleSignInClient.getSignInI
+ntent(...); 
+\end_layout
+
+\begin_layout Plain Layout
+
+		if (requestCode == RC_SIGN_IN) { 
+\end_layout
+
+\begin_layout Plain Layout
+
+			// The Task returned from this call is always completed, no need to attach
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+			// a listener.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+			Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(dat
+a); 
+\end_layout
+
+\begin_layout Plain Layout
+
+			handleSignInResult(task); } }
+\end_layout
+
+\begin_layout Plain Layout
+
+	private void handleSignInResult(Task<GoogleSignInAccount> completedTask)
+ { 
+\end_layout
+
+\begin_layout Plain Layout
+
+		try { GoogleSignInAccount account = completedTask.getResult(ApiException.class);
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+			firebaseAuthWithGoogle(account); 
+\end_layout
+
+\begin_layout Plain Layout
+
+			// Signed in successfully, show authenticated UI.
+ updateUI(account); } 
+\end_layout
+
+\begin_layout Plain Layout
+
+		catch (ApiException e) { 
+\end_layout
+
+\begin_layout Plain Layout
+
+			// The ApiException status code indicates the detailed failure reason.
+\end_layout
+
+\begin_layout Plain Layout
+
+			// Please refer to the GoogleSignInStatusCodes class reference for more
+ information.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+			Log.w(TAG, "signInResult:failed code=" + e.getStatusCode()); 
+\end_layout
+
+\begin_layout Plain Layout
+
+			updateUI(null); } }
+\end_layout
+
+\begin_layout Plain Layout
+
+	private void updateUI(GoogleSignInAccount account) { 
+\end_layout
+
+\begin_layout Plain Layout
+
+		if (account != null) { 
+\end_layout
+
+\begin_layout Plain Layout
+
+			mStatusTextView.setText(getString(R.string.signed_in_fmt, account.getDisplayName(
+)));
+\end_layout
+
+\begin_layout Plain Layout
+
+			findViewById(R.id.sign_in_button).setVisibility(View.GONE); 
+\end_layout
+
+\begin_layout Plain Layout
+
+			findViewById(R.id.go_to_home).setVisibility(View.VISIBLE); 
+\end_layout
+
+\begin_layout Plain Layout
+
+			findViewById(R.id.sign_out_and_disconnect).setVisibility(View.VISIBLE); }
+\end_layout
+
+\begin_layout Plain Layout
+
+		else { 
+\end_layout
+
+\begin_layout Plain Layout
+
+			findViewById(R.id.sign_in_button).setVisibility(View.VISIBLE); 
+\end_layout
+
+\begin_layout Plain Layout
+
+			findViewById(R.id.go_to_home).setVisibility(View.GONE); 
+\end_layout
+
+\begin_layout Plain Layout
+
+			findViewById(R.id.sign_out_and_disconnect).setVisibility(View.GONE); } }
+\end_layout
+
+\begin_layout Plain Layout
+
+	private void updateUIFire(FirebaseUser user) { 
+\end_layout
+
+\begin_layout Plain Layout
+
+		if (user != null) { 
+\end_layout
+
+\begin_layout Plain Layout
+
+			mStatusTextView.setText(getString(R.string.signed_in_fmt, user.getEmail()));
+\end_layout
+
+\begin_layout Plain Layout
+
+			findViewById(R.id.sign_in_button).setVisibility(View.GONE); 
+\end_layout
+
+\begin_layout Plain Layout
+
+			findViewById(R.id.go_to_home).setVisibility(View.VISIBLE); 
+\end_layout
+
+\begin_layout Plain Layout
+
+			findViewById(R.id.sign_out_and_disconnect).setVisibility(View.VISIBLE); }
+\end_layout
+
+\begin_layout Plain Layout
+
+		else { 
+\end_layout
+
+\begin_layout Plain Layout
+
+			findViewById(R.id.sign_in_button).setVisibility(View.VISIBLE); 
+\end_layout
+
+\begin_layout Plain Layout
+
+			findViewById(R.id.go_to_home).setVisibility(View.GONE);
+\end_layout
+
+\begin_layout Plain Layout
+
+			findViewById(R.id.sign_out_and_disconnect).setVisibility(View.GONE); } }
+\end_layout
+
+\begin_layout Plain Layout
+
+	private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		Log.d(TAG, "firebaseAuthWithGoogle:" + acct.getId());
+\end_layout
+
+\begin_layout Plain Layout
+
+		AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(),
+ null);
+\end_layout
+
+\begin_layout Plain Layout
+
+		mAuth.signInWithCredential(credential) .addOnCompleteListener(this, new
+ OnCompleteListener<AuthResult>() { 
+\end_layout
+
+\begin_layout Plain Layout
+
+			@Override 
+\end_layout
+
+\begin_layout Plain Layout
+
+			public void onComplete(@NonNull Task<AuthResult> task) {
+\end_layout
+
+\begin_layout Plain Layout
+
+				if (task.isSuccessful()) { 
+\end_layout
+
+\begin_layout Plain Layout
+
+					// Sign in success, update UI with the signed-in user's information
+\end_layout
+
+\begin_layout Plain Layout
+
+					Log.d(TAG, "signInWithCredential:success"); 
+\end_layout
+
+\begin_layout Plain Layout
+
+					FirebaseUser user = mAuth.getCurrentUser(); 
+\end_layout
+
+\begin_layout Plain Layout
+
+					updateUIFire(user); } 
+\end_layout
+
+\begin_layout Plain Layout
+
+				else { 
+\end_layout
+
+\begin_layout Plain Layout
+
+					// If sign in fails, display a message to the user.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+					Log.w(TAG, "signInWithCredential:failure", task.getException()); 
+\end_layout
+
+\begin_layout Plain Layout
+
+					updateUIFire(null); }
+\end_layout
+
+\begin_layout Plain Layout
+
+					// ...
+ } }); }
+\end_layout
+
+\begin_layout Plain Layout
+
+	private void signOut() {
+\end_layout
+
+\begin_layout Plain Layout
+
+		mGoogleSignInClient.signOut() .addOnCompleteListener(this, new OnCompleteListene
+r<Void>() { 
+\end_layout
+
+\begin_layout Plain Layout
+
+		@Override 
+\end_layout
+
+\begin_layout Plain Layout
+
+			public void onComplete(@NonNull Task<Void> task) {
+\end_layout
+
+\begin_layout Plain Layout
+
+			// ...
+ mAuth.signOut(); } }); }
+\end_layout
+
+\begin_layout Plain Layout
+
+	public void onGoHome(View view) { 
+\end_layout
+
+\begin_layout Plain Layout
+
+		Intent intent = new Intent(this, HomeActivity.class); startActivity(intent);
+ }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series bold
+HomeActivity.java
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+package com.example.edwin.fyp;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.content.Intent; 
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.support.v7.app.AppCompatActivity; 
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.os.Bundle; import android.view.View;
+\end_layout
+
+\begin_layout Plain Layout
+
+public class HomeActivity extends AppCompatActivity {
+\end_layout
+
+\begin_layout Plain Layout
+
+    @Override     
+\end_layout
+
+\begin_layout Plain Layout
+
+	protected void onCreate(Bundle savedInstanceState) {         
+\end_layout
+
+\begin_layout Plain Layout
+
+		super.onCreate(savedInstanceState);         
+\end_layout
+
+\begin_layout Plain Layout
+
+		setContentView(R.layout.activity_home);     }
+\end_layout
+
+\begin_layout Plain Layout
+
+    public void onStartDriving(View view) {         
+\end_layout
+
+\begin_layout Plain Layout
+
+		Intent intent = new Intent(this, MapsActivity.class);         
+\end_layout
+
+\begin_layout Plain Layout
+
+		startActivity(intent);     }
+\end_layout
+
+\begin_layout Plain Layout
+
+    public void onBookARide(View view) {         
+\end_layout
+
+\begin_layout Plain Layout
+
+		Intent intent = new Intent(this, BookRideActivity.class);         
+\end_layout
+
+\begin_layout Plain Layout
+
+		startActivity(intent);     }
+\end_layout
+
+\begin_layout Plain Layout
+
+    public void onViewBooking(View view) {         
+\end_layout
+
+\begin_layout Plain Layout
+
+		Intent intent = new Intent(this, ViewBookingActivity.class);        
+\end_layout
+
+\begin_layout Plain Layout
+
+		startActivity(intent);     }
+\end_layout
+
+\begin_layout Plain Layout
+
+    public void onDrivingInfo(View view) {        
+\end_layout
+
+\begin_layout Plain Layout
+
+		Intent intent = new Intent(this, DrivingInfoActivity.class);       
+\end_layout
+
+\begin_layout Plain Layout
+
+		startActivity(intent);     } } 
+\end_layout
+
+\end_inset
+
+
+\series bold
+MapsActivity.java
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+package com.example.edwin.fyp;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.graphics.Bitmap;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.graphics.BitmapFactory;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.os.Bundle;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.support.v4.app.FragmentActivity;
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.android.gms.maps.CameraUpdateFactory;
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.android.gms.maps.GoogleMap;
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.android.gms.maps.OnMapReadyCallback;
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.android.gms.maps.SupportMapFragment;
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.android.gms.maps.model.LatLng;
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.android.gms.maps.model.MarkerOptions;
+\end_layout
+
+\begin_layout Plain Layout
+
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
+ {
+\end_layout
+
+\begin_layout Plain Layout
+
+private GoogleMap mMap;
+\end_layout
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+protected void onCreate(Bundle savedInstanceState) {
+\end_layout
+
+\begin_layout Plain Layout
+
+super.onCreate(savedInstanceState);
+\end_layout
+
+\begin_layout Plain Layout
+
+setContentView(R.layout.activity_maps);
+\end_layout
+
+\begin_layout Plain Layout
+
+// Obtain the SupportMapFragment and get notified when the map is ready
+ to be used.
+\end_layout
+
+\begin_layout Plain Layout
+
+SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager(
+)
+\end_layout
+
+\begin_layout Plain Layout
+
+.findFragmentById(R.id.map);
+\end_layout
+
+\begin_layout Plain Layout
+
+mapFragment.getMapAsync(this);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+/**
+\end_layout
+
+\begin_layout Plain Layout
+
+* Manipulates the map once available.
+\end_layout
+
+\begin_layout Plain Layout
+
+* This callback is triggered when the map is ready to be used.
+\end_layout
+
+\begin_layout Plain Layout
+
+* This is where we can add markers or lines, add listeners or move the camera.
+ In this case,
+\end_layout
+
+\begin_layout Plain Layout
+
+* we just add a marker near Sydney, Australia.
+\end_layout
+
+\begin_layout Plain Layout
+
+* If Google Play services is not installed on the device, the user will
+ be prompted to install
+\end_layout
+
+\begin_layout Plain Layout
+
+* it inside the SupportMapFragment.
+ This method will only be triggered once the user has
+\end_layout
+
+\begin_layout Plain Layout
+
+* installed Google Play services and returned to the app.
+\end_layout
+
+\begin_layout Plain Layout
+
+*/
+\end_layout
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+public void onMapReady(GoogleMap googleMap) {
+\end_layout
+
+\begin_layout Plain Layout
+
+float zoomLevel = 16.0f;
+\end_layout
+
+\begin_layout Plain Layout
+
+mMap = googleMap;
+\end_layout
+
+\begin_layout Plain Layout
+
+LatLng C1 = new LatLng(3.0061, 101.7199);
+\end_layout
+
+\begin_layout Plain Layout
+
+mMap.addMarker(new MarkerOptions()
+\end_layout
+
+\begin_layout Plain Layout
+
+.title("C1")
+\end_layout
+
+\begin_layout Plain Layout
+
+.position(C1).icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("mycoms",75,75
+))));
+\end_layout
+
+\begin_layout Plain Layout
+
+mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(C1, zoomLevel));
+\end_layout
+
+\begin_layout Plain Layout
+
+LatLng C2 = new LatLng(3.0061, 101.7199);
+\end_layout
+
+\begin_layout Plain Layout
+
+mMap.addMarker(new MarkerOptions()
+\end_layout
+
+\begin_layout Plain Layout
+
+.title("C2")
+\end_layout
+
+\begin_layout Plain Layout
+
+.position(C2).icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("mycoms",75,75
+))));
+\end_layout
+
+\begin_layout Plain Layout
+
+mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(C2, zoomLevel));
+\end_layout
+
+\begin_layout Plain Layout
+
+LatLng C3 = new LatLng(2.999652, 101.708264);
+\end_layout
+
+\begin_layout Plain Layout
+
+mMap.addMarker(new MarkerOptions()
+\end_layout
+
+\begin_layout Plain Layout
+
+.title("C3")
+\end_layout
+
+\begin_layout Plain Layout
+
+.position(C3).icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("mycoms",75,75
+))));
+\end_layout
+
+\begin_layout Plain Layout
+
+mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(C3, zoomLevel));
+\end_layout
+
+\begin_layout Plain Layout
+
+LatLng C4 = new LatLng(3.0102375, 101.7202033);
+\end_layout
+
+\begin_layout Plain Layout
+
+mMap.addMarker(new MarkerOptions()
+\end_layout
+
+\begin_layout Plain Layout
+
+.title("C4")
+\end_layout
+
+\begin_layout Plain Layout
+
+.position(C4).icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("mycoms",75,75
+))));
+\end_layout
+
+\begin_layout Plain Layout
+
+mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(C4, zoomLevel));
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+public Bitmap resizeMapIcons(String iconName, int width, int height){
+\end_layout
+
+\begin_layout Plain Layout
+
+Bitmap imageBitmap = BitmapFactory.decodeResource(getResources(),getResources().ge
+tIdentifier(iconName, "drawable", getPackageName()));
+\end_layout
+
+\begin_layout Plain Layout
+
+Bitmap resizedBitmap = Bitmap.createScaledBitmap(imageBitmap, width, height,
+ false);
+\end_layout
+
+\begin_layout Plain Layout
+
+return resizedBitmap;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+BookRideActivity.java
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+package com.example.edwin.fyp;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.app.DialogFragment;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.content.Intent;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.net.Uri;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.os.Bundle;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.support.v7.app.AppCompatActivity;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.view.Menu;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.view.MenuItem;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.view.View;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.widget.Button;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.widget.EditText;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.widget.TextView;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.widget.Toast;
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.firebase.database.DatabaseReference;
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.firebase.database.FirebaseDatabase;
+\end_layout
+
+\begin_layout Plain Layout
+
+import java.security.SecureRandom;
+\end_layout
+
+\begin_layout Plain Layout
+
+import java.text.SimpleDateFormat;
+\end_layout
+
+\begin_layout Plain Layout
+
+import java.util.Date;
+\end_layout
+
+\begin_layout Plain Layout
+
+import java.util.Locale;
+\end_layout
+
+\begin_layout Plain Layout
+
+public class BookRideActivity extends AppCompatActivity {
+\end_layout
+
+\begin_layout Plain Layout
+
+TextView show_booking_time;
+\end_layout
+
+\begin_layout Plain Layout
+
+Button timeBtn, mbook_ride_button;
+\end_layout
+
+\begin_layout Plain Layout
+
+EditText marrival, mdeparture;
+\end_layout
+
+\begin_layout Plain Layout
+
+String ArrivalHolder, DepartureHolder;
+\end_layout
+
+\begin_layout Plain Layout
+
+String personName,personGivenName,personFamilyName,personEmail,personId;
+\end_layout
+
+\begin_layout Plain Layout
+
+Uri personPhoto;
+\end_layout
+
+\begin_layout Plain Layout
+
+String path;
+\end_layout
+
+\begin_layout Plain Layout
+
+DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
+\end_layout
+
+\begin_layout Plain Layout
+
+DatabaseReference mConditionRef;
+\end_layout
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+protected void onCreate(Bundle savedInstanceState) {
+\end_layout
+
+\begin_layout Plain Layout
+
+super.onCreate(savedInstanceState);
+\end_layout
+
+\begin_layout Plain Layout
+
+setContentView(R.layout.activity_book_ride);
+\end_layout
+
+\begin_layout Plain Layout
+
+mbook_ride_button = findViewById(R.id.book_ride_button);
+\end_layout
+
+\begin_layout Plain Layout
+
+marrival = findViewById(R.id.arrival);
+\end_layout
+
+\begin_layout Plain Layout
+
+mdeparture = findViewById(R.id.departure);
+\end_layout
+
+\begin_layout Plain Layout
+
+SecureRandom random = new SecureRandom();
+\end_layout
+
+\begin_layout Plain Layout
+
+int num = random.nextInt(100000);
+\end_layout
+
+\begin_layout Plain Layout
+
+final String formatted_id = String.format("%05d", num);
+\end_layout
+
+\begin_layout Plain Layout
+
+GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+\end_layout
+
+\begin_layout Plain Layout
+
+if (account != null) {
+\end_layout
+
+\begin_layout Plain Layout
+
+personName = account.getDisplayName();
+\end_layout
+
+\begin_layout Plain Layout
+
+personGivenName = account.getGivenName();
+\end_layout
+
+\begin_layout Plain Layout
+
+personFamilyName = account.getFamilyName();
+\end_layout
+
+\begin_layout Plain Layout
+
+personEmail = account.getEmail();
+\end_layout
+
+\begin_layout Plain Layout
+
+personId = account.getId();
+\end_layout
+
+\begin_layout Plain Layout
+
+personPhoto = account.getPhotoUrl();
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new
+ Date());
+\end_layout
+
+\begin_layout Plain Layout
+
+path = "booking/"+date+"/"+personId;
+\end_layout
+
+\begin_layout Plain Layout
+
+mbook_ride_button.setOnClickListener(new View.OnClickListener(){
+\end_layout
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+public void onClick(View view){
+\end_layout
+
+\begin_layout Plain Layout
+
+GetDataFromEditText();
+\end_layout
+
+\begin_layout Plain Layout
+
+mConditionRef = mRootRef.child(path+"/booking_id");
+\end_layout
+
+\begin_layout Plain Layout
+
+mConditionRef.setValue(formatted_id);
+\end_layout
+
+\begin_layout Plain Layout
+
+mConditionRef = mRootRef.child("booking_id/"+personId);
+\end_layout
+
+\begin_layout Plain Layout
+
+mConditionRef.setValue(formatted_id);
+\end_layout
+
+\begin_layout Plain Layout
+
+mConditionRef = mRootRef.child(path+"/Name");
+\end_layout
+
+\begin_layout Plain Layout
+
+mConditionRef.setValue(personName);
+\end_layout
+
+\begin_layout Plain Layout
+
+String a_details = ArrivalHolder;
+\end_layout
+
+\begin_layout Plain Layout
+
+mConditionRef = mRootRef.child(path+"/arrival");
+\end_layout
+
+\begin_layout Plain Layout
+
+mConditionRef.setValue(a_details);
+\end_layout
+
+\begin_layout Plain Layout
+
+String d_details = DepartureHolder;
+\end_layout
+
+\begin_layout Plain Layout
+
+mConditionRef = mRootRef.child(path+"/departure");
+\end_layout
+
+\begin_layout Plain Layout
+
+mConditionRef.setValue(d_details);
+\end_layout
+
+\begin_layout Plain Layout
+
+mConditionRef = mRootRef.child(path+"/status");
+\end_layout
+
+\begin_layout Plain Layout
+
+mConditionRef.setValue("pending");
+\end_layout
+
+\begin_layout Plain Layout
+
+Toast.makeText(BookRideActivity.this,"Data Inserted Successfully into Firebase
+ Database", Toast.LENGTH_LONG).show();
+\end_layout
+
+\begin_layout Plain Layout
+
+startActivity(new Intent(BookRideActivity.this, HomeActivity.class));
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+});
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+public boolean onCreateOptionsMenu(Menu menu) {
+\end_layout
+
+\begin_layout Plain Layout
+
+// Inflate the menu; this adds items to the action bar if it is present.
+\end_layout
+
+\begin_layout Plain Layout
+
+//getMenuInflater().inflate(R.menu.menu_main, menu);
+\end_layout
+
+\begin_layout Plain Layout
+
+return false;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+public boolean onOptionsItemSelected(MenuItem item) {
+\end_layout
+
+\begin_layout Plain Layout
+
+// Handle action bar item clicks here.
+ The action bar will
+\end_layout
+
+\begin_layout Plain Layout
+
+// automatically handle clicks on the Home/Up button, so long
+\end_layout
+
+\begin_layout Plain Layout
+
+// as you specify a parent activity in AndroidManifest.xml.
+\end_layout
+
+\begin_layout Plain Layout
+
+int id = item.getItemId();
+\end_layout
+
+\begin_layout Plain Layout
+
+//noinspection SimplifiableIfStatement
+\end_layout
+
+\begin_layout Plain Layout
+
+if (id == R.id.action_settings) {
+\end_layout
+
+\begin_layout Plain Layout
+
+return true;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+return super.onOptionsItemSelected(item);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+public void showTimePickerDialog(View v){
+\end_layout
+
+\begin_layout Plain Layout
+
+DialogFragment newFragment = new TimePickerFragment();
+\end_layout
+
+\begin_layout Plain Layout
+
+newFragment.show(getFragmentManager(),"timePicker");
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+public void GetDataFromEditText(){
+\end_layout
+
+\begin_layout Plain Layout
+
+ArrivalHolder = marrival.getText().toString().trim();
+\end_layout
+
+\begin_layout Plain Layout
+
+DepartureHolder = mdeparture.getText().toString().trim();
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series bold
+TimePickerFragment.java
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+package com.example.edwin.fyp;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.app.Dialog;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.app.DialogFragment;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.app.TimePickerDialog;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.os.Bundle;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.text.format.DateFormat;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.widget.Button;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.widget.TextView;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.widget.TimePicker;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.firebase.database.DatabaseReference;
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.firebase.database.FirebaseDatabase;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import java.text.SimpleDateFormat;
+\end_layout
+
+\begin_layout Plain Layout
+
+import java.util.Calendar;
+\end_layout
+
+\begin_layout Plain Layout
+
+import java.util.Date;
+\end_layout
+
+\begin_layout Plain Layout
+
+import java.util.Locale;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public class TimePickerFragment extends DialogFragment implements TimePickerDial
+og.OnTimeSetListener{
+\end_layout
+
+\begin_layout Plain Layout
+
+String show_booking_time_on_app;
+\end_layout
+
+\begin_layout Plain Layout
+
+Button timeBtn;
+\end_layout
+
+\begin_layout Plain Layout
+
+OnTimePickedListener mCallback;
+\end_layout
+
+\begin_layout Plain Layout
+
+DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
+\end_layout
+
+\begin_layout Plain Layout
+
+DatabaseReference mConditionRef = mRootRef.child("booking/time");
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public interface OnTimePickedListener {
+\end_layout
+
+\begin_layout Plain Layout
+
+public void onTimePicked(int hour, int minute);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+public Dialog onCreateDialog(Bundle savedInstanceState) {
+\end_layout
+
+\begin_layout Plain Layout
+
+final Calendar c = Calendar.getInstance();
+\end_layout
+
+\begin_layout Plain Layout
+
+int hour = c.get(Calendar.HOUR_OF_DAY);
+\end_layout
+
+\begin_layout Plain Layout
+
+int minute = c.get(Calendar.MINUTE);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+return new TimePickerDialog(getActivity(),this,hour,minute, DateFormat.is24HourFo
+rmat(getActivity()));
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+\end_layout
+
+\begin_layout Plain Layout
+
+TextView tv1= getActivity().findViewById(R.id.show_booking_time);
+\end_layout
+
+\begin_layout Plain Layout
+
+tv1.setText(getString(R.string.booking_time_is, "Hour: " + view.getCurrentHour()
+ + " Minute: " + view.getCurrentMinute()));
+\end_layout
+
+\begin_layout Plain Layout
+
+show_booking_time_on_app = "Hour: " + view.getCurrentHour() + " Minute: "
+ + view.getCurrentMinute();
+\end_layout
+
+\begin_layout Plain Layout
+
+String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new
+ Date());
+\end_layout
+
+\begin_layout Plain Layout
+
+String path = "booking/"+date;
+\end_layout
+
+\begin_layout Plain Layout
+
+mConditionRef = mRootRef.child(path+"/Time");
+\end_layout
+
+\begin_layout Plain Layout
+
+mConditionRef.setValue(show_booking_time_on_app);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series bold
+ViewBookingActivity.java
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+package com.example.edwin.fyp;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.content.Intent;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.net.Uri;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.os.Bundle;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.support.v7.app.AppCompatActivity;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.view.View;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.widget.Button;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.widget.TextView;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.widget.Toast;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.firebase.database.DataSnapshot;
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.firebase.database.DatabaseError;
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.firebase.database.DatabaseReference;
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.firebase.database.FirebaseDatabase;
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.firebase.database.Query;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import java.text.SimpleDateFormat;
+\end_layout
+
+\begin_layout Plain Layout
+
+import java.util.Date;
+\end_layout
+
+\begin_layout Plain Layout
+
+import java.util.Locale;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public class ViewBookingActivity extends AppCompatActivity {
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
+\end_layout
+
+\begin_layout Plain Layout
+
+DatabaseReference mDepartureRef,mArrivalRef,mshow_booking_timeRef,mStatusRef,mDe
+leteRef;//= mRootRef.child("condition");
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+TextView mDeparture, mArrival, mshow_booking_time,mstatus_view;
+\end_layout
+
+\begin_layout Plain Layout
+
+Button mConfirm,mDelete;
+\end_layout
+
+\begin_layout Plain Layout
+
+String personName,personGivenName,personFamilyName,personEmail,personId;
+\end_layout
+
+\begin_layout Plain Layout
+
+Uri personPhoto;
+\end_layout
+
+\begin_layout Plain Layout
+
+String path;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+protected void onCreate(Bundle savedInstanceState) {
+\end_layout
+
+\begin_layout Plain Layout
+
+super.onCreate(savedInstanceState);
+\end_layout
+
+\begin_layout Plain Layout
+
+setContentView(R.layout.activity_view_booking);
+\end_layout
+
+\begin_layout Plain Layout
+
+final String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format
+(new Date());
+\end_layout
+
+\begin_layout Plain Layout
+
+path = "booking/"+date;
+\end_layout
+
+\begin_layout Plain Layout
+
+mDeparture = findViewById(R.id.departure);
+\end_layout
+
+\begin_layout Plain Layout
+
+mArrival = findViewById(R.id.arrival);
+\end_layout
+
+\begin_layout Plain Layout
+
+mshow_booking_time = findViewById(R.id.show_booking_time);
+\end_layout
+
+\begin_layout Plain Layout
+
+mstatus_view = findViewById(R.id.status_view);
+\end_layout
+
+\begin_layout Plain Layout
+
+mConfirm = findViewById(R.id.confirm);
+\end_layout
+
+\begin_layout Plain Layout
+
+mDelete = findViewById(R.id.delete_book);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+\end_layout
+
+\begin_layout Plain Layout
+
+if (account != null) {
+\end_layout
+
+\begin_layout Plain Layout
+
+personName = account.getDisplayName();
+\end_layout
+
+\begin_layout Plain Layout
+
+personGivenName = account.getGivenName();
+\end_layout
+
+\begin_layout Plain Layout
+
+personFamilyName = account.getFamilyName();
+\end_layout
+
+\begin_layout Plain Layout
+
+personEmail = account.getEmail();
+\end_layout
+
+\begin_layout Plain Layout
+
+personId = account.getId();
+\end_layout
+
+\begin_layout Plain Layout
+
+personPhoto = account.getPhotoUrl();
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+mConfirm.setOnClickListener(new View.OnClickListener(){
+\end_layout
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+public void onClick(View view){
+\end_layout
+
+\begin_layout Plain Layout
+
+Toast.makeText(ViewBookingActivity.this,"You have confirmed your ride.
+ Enjoy your drive!", Toast.LENGTH_LONG).show();
+\end_layout
+
+\begin_layout Plain Layout
+
+startActivity(new Intent(ViewBookingActivity.this, HomeActivity.class));
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+});
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+mDelete.setOnClickListener(new View.OnClickListener(){
+\end_layout
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+public void onClick(View view){
+\end_layout
+
+\begin_layout Plain Layout
+
+mDeleteRef =mRootRef.child("booking/date");
+\end_layout
+
+\begin_layout Plain Layout
+
+mDeleteRef.removeValue();
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Toast.makeText(ViewBookingActivity.this,"You have deleted your ride.
+ Please book again!!", Toast.LENGTH_LONG).show();
+\end_layout
+
+\begin_layout Plain Layout
+
+startActivity(new Intent(ViewBookingActivity.this, HomeActivity.class));
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+});
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+protected void onStart() {
+\end_layout
+
+\begin_layout Plain Layout
+
+super.onStart();
+\end_layout
+
+\begin_layout Plain Layout
+
+Query mIDRef = mRootRef.child(path+"/ID").equalTo(personId);
+\end_layout
+
+\begin_layout Plain Layout
+
+mIDRef.addListenerForSingleValueEvent(new com.google.firebase.database.ValueEventList
+ener() {
+\end_layout
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+public void onDataChange(DataSnapshot dataSnapshot) {
+\end_layout
+
+\begin_layout Plain Layout
+
+//String text = dataSnapshot.getValue(String.class);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+mDepartureRef = mRootRef.child(path+"/departure");
+\end_layout
+
+\begin_layout Plain Layout
+
+mDepartureRef.addValueEventListener(new com.google.firebase.database.ValueEventListen
+er() {
+\end_layout
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+public void onDataChange(DataSnapshot dataSnapshot) {
+\end_layout
+
+\begin_layout Plain Layout
+
+String text = dataSnapshot.getValue(String.class);
+\end_layout
+
+\begin_layout Plain Layout
+
+mDeparture.setText(getString(R.string.departure_view,text));
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+public void onCancelled(DatabaseError databaseError) {
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+});
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+mArrivalRef = mRootRef.child(path+"/arrival");
+\end_layout
+
+\begin_layout Plain Layout
+
+mArrivalRef.addValueEventListener(new com.google.firebase.database.ValueEventListener
+() {
+\end_layout
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+public void onDataChange(DataSnapshot dataSnapshot) {
+\end_layout
+
+\begin_layout Plain Layout
+
+String text = dataSnapshot.getValue(String.class);
+\end_layout
+
+\begin_layout Plain Layout
+
+mArrival.setText(getString(R.string.arrival_view,text));
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+public void onCancelled(DatabaseError databaseError) {
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+});
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+mshow_booking_timeRef = mRootRef.child(path+"/Time");
+\end_layout
+
+\begin_layout Plain Layout
+
+mshow_booking_timeRef.addValueEventListener(new com.google.firebase.database.ValueEve
+ntListener() {
+\end_layout
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+public void onDataChange(DataSnapshot dataSnapshot) {
+\end_layout
+
+\begin_layout Plain Layout
+
+String text = dataSnapshot.getValue(String.class);
+\end_layout
+
+\begin_layout Plain Layout
+
+mshow_booking_time.setText(getString(R.string.booking_time_view,text));
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+public void onCancelled(DatabaseError databaseError) {
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+});
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+mStatusRef = mRootRef.child(path+"/status");
+\end_layout
+
+\begin_layout Plain Layout
+
+mStatusRef.addValueEventListener(new com.google.firebase.database.ValueEventListener(
+) {
+\end_layout
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+public void onDataChange(DataSnapshot dataSnapshot) {
+\end_layout
+
+\begin_layout Plain Layout
+
+String text = dataSnapshot.getValue(String.class);
+\end_layout
+
+\begin_layout Plain Layout
+
+mstatus_view.setText(getString(R.string.booking_status,text));
+\end_layout
+
+\begin_layout Plain Layout
+
+if (text.equals("approved")){
+\end_layout
+
+\begin_layout Plain Layout
+
+findViewById(R.id.confirm).setVisibility(View.VISIBLE);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+if (text.equals("pending")){
+\end_layout
+
+\begin_layout Plain Layout
+
+findViewById(R.id.confirm).setVisibility(View.GONE);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+public void onCancelled(DatabaseError databaseError) {
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+});
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+public void onCancelled(DatabaseError databaseError) {
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+});
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public void onBack(View view) {
+\end_layout
+
+\begin_layout Plain Layout
+
+Intent intent = new Intent(this, HomeActivity.class);
+\end_layout
+
+\begin_layout Plain Layout
+
+startActivity(intent);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series bold
+DrivingInfoActivity.java
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+package com.example.edwin.fyp;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.app.Activity;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.content.Intent;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.content.pm.PackageManager;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.location.Location;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.location.LocationManager;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.os.Bundle;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.support.v4.app.ActivityCompat;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.support.v4.content.ContextCompat;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.view.View;
+\end_layout
+
+\begin_layout Plain Layout
+
+import android.widget.TextView;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.firebase.database.DataSnapshot;
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.firebase.database.DatabaseError;
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.firebase.database.DatabaseReference;
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.firebase.database.FirebaseDatabase;
+\end_layout
+
+\begin_layout Plain Layout
+
+import com.google.firebase.database.ValueEventListener;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+import java.math.BigDecimal;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public class DrivingInfoActivity extends Activity implements GPSCallback
+ {
+\end_layout
+
+\begin_layout Plain Layout
+
+private GPSManager gpsManager = null;
+\end_layout
+
+\begin_layout Plain Layout
+
+private double speed = 0.0,longitude = 0.0,latitude = 0.0;
+\end_layout
+
+\begin_layout Plain Layout
+
+Boolean isGPSEnabled=false;
+\end_layout
+
+\begin_layout Plain Layout
+
+LocationManager locationManager;
+\end_layout
+
+\begin_layout Plain Layout
+
+double currentSpeed,kmphSpeed,newlatitude, newlongitude,msSpeed, distance_travel
+led = 0.0;
+\end_layout
+
+\begin_layout Plain Layout
+
+TextView txtview,txtview2,txtview3;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+// Write a message to the database
+\end_layout
+
+\begin_layout Plain Layout
+
+FirebaseDatabase database = FirebaseDatabase.getInstance();
+\end_layout
+
+\begin_layout Plain Layout
+
+DatabaseReference mRootRef = database.getReference();
+\end_layout
+
+\begin_layout Plain Layout
+
+DatabaseReference mLocationRef = mRootRef.child("Location");
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+public void onCreate(Bundle savedInstanceState) {
+\end_layout
+
+\begin_layout Plain Layout
+
+super.onCreate(savedInstanceState);
+\end_layout
+
+\begin_layout Plain Layout
+
+setContentView(R.layout.activity_driving_info);
+\end_layout
+
+\begin_layout Plain Layout
+
+txtview= findViewById(R.id.info);
+\end_layout
+
+\begin_layout Plain Layout
+
+txtview2 = findViewById(R.id.info2);
+\end_layout
+
+\begin_layout Plain Layout
+
+txtview3 = findViewById(R.id.info3);
+\end_layout
+
+\begin_layout Plain Layout
+
+try {
+\end_layout
+
+\begin_layout Plain Layout
+
+if (ContextCompat.checkSelfPermission(getApplicationContext(), android.Manifest.per
+mission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED ) {
+\end_layout
+
+\begin_layout Plain Layout
+
+ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACC
+ESS_FINE_LOCATION}, 101);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+} catch (Exception e){
+\end_layout
+
+\begin_layout Plain Layout
+
+e.printStackTrace();
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+protected void onStart() {
+\end_layout
+
+\begin_layout Plain Layout
+
+super.onStart();
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+ValueEventListener valueEventListener = mLocationRef.addValueEventListener(new
+ ValueEventListener() {
+\end_layout
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+public void onDataChange(DataSnapshot dataSnapshot) {
+\end_layout
+
+\begin_layout Plain Layout
+
+//Double text = dataSnapshot.getValue(newlatitude);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+public void onCancelled(DatabaseError databaseError) {
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+});
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public void getCurrentSpeed(View view){
+\end_layout
+
+\begin_layout Plain Layout
+
+txtview.setText(getString(R.string.info));
+\end_layout
+
+\begin_layout Plain Layout
+
+locationManager = (LocationManager)getSystemService(LOCATION_SERVICE);
+\end_layout
+
+\begin_layout Plain Layout
+
+gpsManager = new GPSManager(DrivingInfoActivity.this);
+\end_layout
+
+\begin_layout Plain Layout
+
+isGPSEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+\end_layout
+
+\begin_layout Plain Layout
+
+if(isGPSEnabled) {
+\end_layout
+
+\begin_layout Plain Layout
+
+gpsManager.startListening(getApplicationContext());
+\end_layout
+
+\begin_layout Plain Layout
+
+gpsManager.setGPSCallback(this);
+\end_layout
+
+\begin_layout Plain Layout
+
+} else {
+\end_layout
+
+\begin_layout Plain Layout
+
+gpsManager.showSettingsAlert();
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+public void onGPSUpdate(Location location) {
+\end_layout
+
+\begin_layout Plain Layout
+
+speed = location.getSpeed();
+\end_layout
+
+\begin_layout Plain Layout
+
+latitude = location.getLatitude();
+\end_layout
+
+\begin_layout Plain Layout
+
+longitude = location.getLongitude();
+\end_layout
+
+\begin_layout Plain Layout
+
+currentSpeed = round(speed, 3, BigDecimal.ROUND_HALF_UP);
+\end_layout
+
+\begin_layout Plain Layout
+
+kmphSpeed = round((currentSpeed * 3.6), 3, BigDecimal.ROUND_HALF_UP);
+\end_layout
+
+\begin_layout Plain Layout
+
+//txtview.setText(kmphSpeed+"km/h");
+\end_layout
+
+\begin_layout Plain Layout
+
+newlatitude = round(latitude, 6, BigDecimal.ROUND_HALF_UP);
+\end_layout
+
+\begin_layout Plain Layout
+
+newlongitude = round(longitude, 6, BigDecimal.ROUND_HALF_UP);
+\end_layout
+
+\begin_layout Plain Layout
+
+msSpeed = kmphSpeed * 1000 / 3600;
+\end_layout
+
+\begin_layout Plain Layout
+
+msSpeed = round(msSpeed,3,BigDecimal.ROUND_HALF_UP);
+\end_layout
+
+\begin_layout Plain Layout
+
+distance_travelled += msSpeed;
+\end_layout
+
+\begin_layout Plain Layout
+
+distance_travelled = round(distance_travelled,3,BigDecimal.ROUND_HALF_UP);
+\end_layout
+
+\begin_layout Plain Layout
+
+txtview.setText(newlatitude + " lat, " + newlongitude + " lon");
+\end_layout
+
+\begin_layout Plain Layout
+
+txtview2.setText(kmphSpeed + "km/h, " + msSpeed + "m/s");
+\end_layout
+
+\begin_layout Plain Layout
+
+txtview3.setText("distance travelled: "+distance_travelled+"m");
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@Override
+\end_layout
+
+\begin_layout Plain Layout
+
+protected void onDestroy() {
+\end_layout
+
+\begin_layout Plain Layout
+
+gpsManager.stopListening();
+\end_layout
+
+\begin_layout Plain Layout
+
+gpsManager.setGPSCallback(null);
+\end_layout
+
+\begin_layout Plain Layout
+
+gpsManager = null;
+\end_layout
+
+\begin_layout Plain Layout
+
+super.onDestroy();
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public static double round(double unrounded, int precision, int roundingMode)
+ {
+\end_layout
+
+\begin_layout Plain Layout
+
+BigDecimal bd = new BigDecimal(unrounded);
+\end_layout
+
+\begin_layout Plain Layout
+
+BigDecimal rounded = bd.setScale(precision, roundingMode);
+\end_layout
+
+\begin_layout Plain Layout
+
+return rounded.doubleValue();
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+public void onTrackerActivity(View view) {
+\end_layout
+
+\begin_layout Plain Layout
+
+Intent intent = new Intent(this, TrackerActivity.class);
+\end_layout
+
+\begin_layout Plain Layout
+
+startActivity(intent);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series bold
+GPSManager
+\series default
+.
+\series bold
+java
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+package com.example.edwin.fyp;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+import android.Manifest;
+\end_layout
+
+\begin_layout Plain Layout
+import android.app.Activity;
+\end_layout
+
+\begin_layout Plain Layout
+import android.app.AlertDialog;
+\end_layout
+
+\begin_layout Plain Layout
+import android.content.Context;
+\end_layout
+
+\begin_layout Plain Layout
+import android.content.DialogInterface;
+\end_layout
+
+\begin_layout Plain Layout
+import android.content.Intent;
+\end_layout
+
+\begin_layout Plain Layout
+import android.content.pm.PackageManager;
+\end_layout
+
+\begin_layout Plain Layout
+import android.location.Criteria;
+\end_layout
+
+\begin_layout Plain Layout
+import android.location.GpsSatellite;
+\end_layout
+
+\begin_layout Plain Layout
+import android.location.Location;
+\end_layout
+
+\begin_layout Plain Layout
+import android.location.LocationListener;
+\end_layout
+
+\begin_layout Plain Layout
+import android.location.LocationManager;
+\end_layout
+
+\begin_layout Plain Layout
+import android.os.Bundle;
+\end_layout
+
+\begin_layout Plain Layout
+import android.provider.Settings;
+\end_layout
+
+\begin_layout Plain Layout
+import android.support.v4.app.ActivityCompat;
+\end_layout
+
+\begin_layout Plain Layout
+import android.util.Log;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+import java.util.List;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+public class GPSManager implements android.location.GpsStatus.Listener{
+\end_layout
+
+\begin_layout Plain Layout
+    private static final int gpsMinTime = 500;
+\end_layout
+
+\begin_layout Plain Layout
+    private static final int gpsMinDistance = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    private static LocationManager locationManager = null;
+\end_layout
+
+\begin_layout Plain Layout
+    private static LocationListener locationListener = null;
+\end_layout
+
+\begin_layout Plain Layout
+    private static GPSCallback gpsCallback = null;
+\end_layout
+
+\begin_layout Plain Layout
+    Context mcontext;
+\end_layout
+
+\begin_layout Plain Layout
+    public GPSManager(Context context) {
+\end_layout
+
+\begin_layout Plain Layout
+        mcontext=context;
+\end_layout
+
+\begin_layout Plain Layout
+        GPSManager.locationListener = new LocationListener() {
+\end_layout
+
+\begin_layout Plain Layout
+            @Override
+\end_layout
+
+\begin_layout Plain Layout
+            public void onLocationChanged(final Location location) {
+\end_layout
+
+\begin_layout Plain Layout
+                if (GPSManager.gpsCallback != null) {
+\end_layout
+
+\begin_layout Plain Layout
+                    GPSManager.gpsCallback.onGPSUpdate(location);
+\end_layout
+
+\begin_layout Plain Layout
+                }
+\end_layout
+
+\begin_layout Plain Layout
+            }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+            @Override
+\end_layout
+
+\begin_layout Plain Layout
+            public void onProviderDisabled(final String provider) {
+\end_layout
+
+\begin_layout Plain Layout
+            }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+            @Override
+\end_layout
+
+\begin_layout Plain Layout
+            public void onProviderEnabled(final String provider) {
+\end_layout
+
+\begin_layout Plain Layout
+            }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+            @Override
+\end_layout
+
+\begin_layout Plain Layout
+            public void onStatusChanged(final String provider, final int
+ status, final Bundle extras) {
+\end_layout
+
+\begin_layout Plain Layout
+            }
+\end_layout
+
+\begin_layout Plain Layout
+        };
+\end_layout
+
+\begin_layout Plain Layout
+    }
+\end_layout
+
+\begin_layout Plain Layout
+    public void showSettingsAlert(){
+\end_layout
+
+\begin_layout Plain Layout
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(mcontext);
+\end_layout
+
+\begin_layout Plain Layout
+        // Setting Dialog Title
+\end_layout
+
+\begin_layout Plain Layout
+        alertDialog.setTitle("GPS is settings");
+\end_layout
+
+\begin_layout Plain Layout
+        // Setting Dialog Message
+\end_layout
+
+\begin_layout Plain Layout
+        alertDialog.setMessage("GPS is not enabled.
+ Do you want to go to settings menu?");
+\end_layout
+
+\begin_layout Plain Layout
+        // On pressing Settings button
+\end_layout
+
+\begin_layout Plain Layout
+        alertDialog.setPositiveButton("Settings", new DialogInterface.OnClickListe
+ner() {
+\end_layout
+
+\begin_layout Plain Layout
+            public void onClick(DialogInterface dialog,int which) {
+\end_layout
+
+\begin_layout Plain Layout
+                Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTIN
+GS);
+\end_layout
+
+\begin_layout Plain Layout
+                mcontext.startActivity(intent);
+\end_layout
+
+\begin_layout Plain Layout
+            }
+\end_layout
+
+\begin_layout Plain Layout
+        });
+\end_layout
+
+\begin_layout Plain Layout
+        // on pressing cancel button
+\end_layout
+
+\begin_layout Plain Layout
+        alertDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListene
+r() {
+\end_layout
+
+\begin_layout Plain Layout
+            public void onClick(DialogInterface dialog, int which) {
+\end_layout
+
+\begin_layout Plain Layout
+                dialog.cancel();
+\end_layout
+
+\begin_layout Plain Layout
+            }
+\end_layout
+
+\begin_layout Plain Layout
+        });
+\end_layout
+
+\begin_layout Plain Layout
+        // Showing Alert Message
+\end_layout
+
+\begin_layout Plain Layout
+        alertDialog.show();
+\end_layout
+
+\begin_layout Plain Layout
+    }
+\end_layout
+
+\begin_layout Plain Layout
+    public GPSCallback getGPSCallback()
+\end_layout
+
+\begin_layout Plain Layout
+    {
+\end_layout
+
+\begin_layout Plain Layout
+        return GPSManager.gpsCallback;
+\end_layout
+
+\begin_layout Plain Layout
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    public void setGPSCallback(final GPSCallback gpsCallback) {
+\end_layout
+
+\begin_layout Plain Layout
+        GPSManager.gpsCallback = gpsCallback;
+\end_layout
+
+\begin_layout Plain Layout
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    public void startListening(final Context context) {
+\end_layout
+
+\begin_layout Plain Layout
+        if (GPSManager.locationManager == null) {
+\end_layout
+
+\begin_layout Plain Layout
+            GPSManager.locationManager = (LocationManager) context.getSystemServic
+e(Context.LOCATION_SERVICE);
+\end_layout
+
+\begin_layout Plain Layout
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+        final Criteria criteria = new Criteria();
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+        criteria.setAccuracy(Criteria.ACCURACY_FINE);
+\end_layout
+
+\begin_layout Plain Layout
+        criteria.setSpeedRequired(true);
+\end_layout
+
+\begin_layout Plain Layout
+        criteria.setAltitudeRequired(false);
+\end_layout
+
+\begin_layout Plain Layout
+        criteria.setBearingRequired(false);
+\end_layout
+
+\begin_layout Plain Layout
+        criteria.setCostAllowed(true);
+\end_layout
+
+\begin_layout Plain Layout
+        criteria.setPowerRequirement(Criteria.POWER_LOW);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+        final String bestProvider = GPSManager.locationManager.getBestProvider(cri
+teria, true);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+        if (ActivityCompat.checkSelfPermission(context, android.Manifest.permission.
+ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.check
+SelfPermission(context, android.Manifest.permission.ACCESS_COARSE_LOCATION)
+ != PackageManager.PERMISSION_GRANTED) {
+\end_layout
+
+\begin_layout Plain Layout
+            ActivityCompat.requestPermissions((Activity) context, new String[]{an
+droid.Manifest.permission.ACCESS_FINE_LOCATION, android.Manifest.permission.ACCESS_COA
+RSE_LOCATION}, 101);
+\end_layout
+
+\begin_layout Plain Layout
+        }
+\end_layout
+
+\begin_layout Plain Layout
+        if (bestProvider != null && bestProvider.length() > 0) {
+\end_layout
+
+\begin_layout Plain Layout
+            GPSManager.locationManager.requestLocationUpdates(bestProvider,
+ GPSManager.gpsMinTime,
+\end_layout
+
+\begin_layout Plain Layout
+                    GPSManager.gpsMinDistance, GPSManager.locationListener);
+\end_layout
+
+\begin_layout Plain Layout
+        }
+\end_layout
+
+\begin_layout Plain Layout
+        else {
+\end_layout
+
+\begin_layout Plain Layout
+            final List<String> providers = GPSManager.locationManager.getProviders
+(true);
+\end_layout
+
+\begin_layout Plain Layout
+            for (final String provider : providers)
+\end_layout
+
+\begin_layout Plain Layout
+            {
+\end_layout
+
+\begin_layout Plain Layout
+                GPSManager.locationManager.requestLocationUpdates(provider,
+ GPSManager.gpsMinTime,
+\end_layout
+
+\begin_layout Plain Layout
+                        GPSManager.gpsMinDistance, GPSManager.locationListener);
+\end_layout
+
+\begin_layout Plain Layout
+            }
+\end_layout
+
+\begin_layout Plain Layout
+        }
+\end_layout
+
+\begin_layout Plain Layout
+    }
+\end_layout
+
+\begin_layout Plain Layout
+    public void stopListening() {
+\end_layout
+
+\begin_layout Plain Layout
+        try
+\end_layout
+
+\begin_layout Plain Layout
+        {
+\end_layout
+
+\begin_layout Plain Layout
+            if (GPSManager.locationManager != null && GPSManager.locationListener
+ != null) {
+\end_layout
+
+\begin_layout Plain Layout
+                GPSManager.locationManager.removeUpdates(GPSManager.locationListene
+r);
+\end_layout
+
+\begin_layout Plain Layout
+            }
+\end_layout
+
+\begin_layout Plain Layout
+            GPSManager.locationManager = null;
+\end_layout
+
+\begin_layout Plain Layout
+        }
+\end_layout
+
+\begin_layout Plain Layout
+        catch (final Exception ex) {
+\end_layout
+
+\begin_layout Plain Layout
+            ex.printStackTrace();
+\end_layout
+
+\begin_layout Plain Layout
+        }
+\end_layout
+
+\begin_layout Plain Layout
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    public void onGpsStatusChanged(int event) {
+\end_layout
+
+\begin_layout Plain Layout
+        int Satellites = 0;
+\end_layout
+
+\begin_layout Plain Layout
+        int SatellitesInFix = 0;
+\end_layout
+
+\begin_layout Plain Layout
+        if (ActivityCompat.checkSelfPermission(mcontext, android.Manifest.permissio
+n.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.chec
+kSelfPermission(mcontext, android.Manifest.permission.ACCESS_COARSE_LOCATION)
+ != PackageManager.PERMISSION_GRANTED) {
+\end_layout
+
+\begin_layout Plain Layout
+            ActivityCompat.requestPermissions((Activity) mcontext, new String[]{a
+ndroid.Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LO
+CATION}, 101);
+\end_layout
+
+\begin_layout Plain Layout
+        }
+\end_layout
+
+\begin_layout Plain Layout
+        int timetofix = locationManager.getGpsStatus(null).getTimeToFirstFix();
+\end_layout
+
+\begin_layout Plain Layout
+        Log.i("GPs", "Time to first fix = "+String.valueOf(timetofix));
+\end_layout
+
+\begin_layout Plain Layout
+        for (GpsSatellite sat : locationManager.getGpsStatus(null).getSatellites()
+) {
+\end_layout
+
+\begin_layout Plain Layout
+            if(sat.usedInFix()) {
+\end_layout
+
+\begin_layout Plain Layout
+                SatellitesInFix++;
+\end_layout
+
+\begin_layout Plain Layout
+            }
+\end_layout
+
+\begin_layout Plain Layout
+            Satellites++;
+\end_layout
+
+\begin_layout Plain Layout
+        }
+\end_layout
+
+\begin_layout Plain Layout
+        Log.i("GPS", String.valueOf(Satellites) + " Used In Last Fix ("+Satellites
+InFix+")");
+\end_layout
+
+\begin_layout Plain Layout
+    }
+\end_layout
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\series bold
+GPSCallBack.java
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+package com.example.edwin.fyp;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+import android.location.Location;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+public interface GPSCallback {
+\end_layout
+
+\begin_layout Plain Layout
+    void onGPSUpdate(Location location);
+\end_layout
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\series bold
+TrackerActivity.java
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+package com.example.edwin.fyp;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+import android.Manifest;
+\end_layout
+
+\begin_layout Plain Layout
+import android.app.Activity;
+\end_layout
+
+\begin_layout Plain Layout
+import android.content.Intent;
+\end_layout
+
+\begin_layout Plain Layout
+import android.content.pm.PackageManager;
+\end_layout
+
+\begin_layout Plain Layout
+import android.location.LocationManager;
+\end_layout
+
+\begin_layout Plain Layout
+import android.os.Bundle;
+\end_layout
+
+\begin_layout Plain Layout
+import android.support.v4.app.ActivityCompat;
+\end_layout
+
+\begin_layout Plain Layout
+import android.support.v4.content.ContextCompat;
+\end_layout
+
+\begin_layout Plain Layout
+import android.widget.Toast;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+public class TrackerActivity extends Activity {
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    private static final int PERMISSIONS_REQUEST = 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    @Override
+\end_layout
+
+\begin_layout Plain Layout
+    protected void onCreate(Bundle savedInstanceState) {
+\end_layout
+
+\begin_layout Plain Layout
+        super.onCreate(savedInstanceState);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+        // Check GPS is enabled
+\end_layout
+
+\begin_layout Plain Layout
+        LocationManager lm = (LocationManager) getSystemService(LOCATION_SERVICE
+);
+\end_layout
+
+\begin_layout Plain Layout
+        if (!lm.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+\end_layout
+
+\begin_layout Plain Layout
+            Toast.makeText(this, "Please enable location services", Toast.LENGTH_S
+HORT).show();
+\end_layout
+
+\begin_layout Plain Layout
+            finish();
+\end_layout
+
+\begin_layout Plain Layout
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+        // Check location permission is granted - if it is, start
+\end_layout
+
+\begin_layout Plain Layout
+        // the service, otherwise request the permission
+\end_layout
+
+\begin_layout Plain Layout
+        int permission = ContextCompat.checkSelfPermission(this,
+\end_layout
+
+\begin_layout Plain Layout
+                Manifest.permission.ACCESS_FINE_LOCATION);
+\end_layout
+
+\begin_layout Plain Layout
+        if (permission == PackageManager.PERMISSION_GRANTED) {
+\end_layout
+
+\begin_layout Plain Layout
+            startTrackerService();
+\end_layout
+
+\begin_layout Plain Layout
+        } else {
+\end_layout
+
+\begin_layout Plain Layout
+            ActivityCompat.requestPermissions(this,
+\end_layout
+
+\begin_layout Plain Layout
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+\end_layout
+
+\begin_layout Plain Layout
+                    PERMISSIONS_REQUEST);
+\end_layout
+
+\begin_layout Plain Layout
+        }
+\end_layout
+
+\begin_layout Plain Layout
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    private void startTrackerService() {
+\end_layout
+
+\begin_layout Plain Layout
+        startService(new Intent(this, TrackerService.class));
+\end_layout
+
+\begin_layout Plain Layout
+        finish();
+\end_layout
+
+\begin_layout Plain Layout
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    @Override
+\end_layout
+
+\begin_layout Plain Layout
+    public void onRequestPermissionsResult(int requestCode, String[] permissions
+, int[]
+\end_layout
+
+\begin_layout Plain Layout
+            grantResults) {
+\end_layout
+
+\begin_layout Plain Layout
+        if (requestCode == PERMISSIONS_REQUEST && grantResults.length ==
+ 1
+\end_layout
+
+\begin_layout Plain Layout
+                && grantResults[0] == PackageManager.PERMISSION_GRANTED)
+ {
+\end_layout
+
+\begin_layout Plain Layout
+            // Start the service when the permission is granted
+\end_layout
+
+\begin_layout Plain Layout
+            startTrackerService();
+\end_layout
+
+\begin_layout Plain Layout
+        } else {
+\end_layout
+
+\begin_layout Plain Layout
+            finish();
+\end_layout
+
+\begin_layout Plain Layout
+        }
+\end_layout
+
+\begin_layout Plain Layout
+    }
+\end_layout
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\series bold
+TrackerService.java
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+package com.example.edwin.fyp;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+import android.Manifest;
+\end_layout
+
+\begin_layout Plain Layout
+import android.app.PendingIntent;
+\end_layout
+
+\begin_layout Plain Layout
+import android.app.Service;
+\end_layout
+
+\begin_layout Plain Layout
+import android.content.BroadcastReceiver;
+\end_layout
+
+\begin_layout Plain Layout
+import android.content.Context;
+\end_layout
+
+\begin_layout Plain Layout
+import android.content.Intent;
+\end_layout
+
+\begin_layout Plain Layout
+import android.content.IntentFilter;
+\end_layout
+
+\begin_layout Plain Layout
+import android.content.pm.PackageManager;
+\end_layout
+
+\begin_layout Plain Layout
+import android.location.Location;
+\end_layout
+
+\begin_layout Plain Layout
+import android.net.Uri;
+\end_layout
+
+\begin_layout Plain Layout
+import android.os.IBinder;
+\end_layout
+
+\begin_layout Plain Layout
+import android.support.annotation.NonNull;
+\end_layout
+
+\begin_layout Plain Layout
+import android.support.v4.app.NotificationCompat;
+\end_layout
+
+\begin_layout Plain Layout
+import android.support.v4.content.ContextCompat;
+\end_layout
+
+\begin_layout Plain Layout
+import android.util.Log;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+\end_layout
+
+\begin_layout Plain Layout
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+\end_layout
+
+\begin_layout Plain Layout
+import com.google.android.gms.location.FusedLocationProviderClient;
+\end_layout
+
+\begin_layout Plain Layout
+import com.google.android.gms.location.LocationCallback;
+\end_layout
+
+\begin_layout Plain Layout
+import com.google.android.gms.location.LocationRequest;
+\end_layout
+
+\begin_layout Plain Layout
+import com.google.android.gms.location.LocationResult;
+\end_layout
+
+\begin_layout Plain Layout
+import com.google.android.gms.location.LocationServices;
+\end_layout
+
+\begin_layout Plain Layout
+import com.google.android.gms.tasks.OnCompleteListener;
+\end_layout
+
+\begin_layout Plain Layout
+import com.google.android.gms.tasks.Task;
+\end_layout
+
+\begin_layout Plain Layout
+import com.google.firebase.auth.AuthCredential;
+\end_layout
+
+\begin_layout Plain Layout
+import com.google.firebase.auth.AuthResult;
+\end_layout
+
+\begin_layout Plain Layout
+import com.google.firebase.auth.FirebaseAuth;
+\end_layout
+
+\begin_layout Plain Layout
+import com.google.firebase.auth.FirebaseUser;
+\end_layout
+
+\begin_layout Plain Layout
+import com.google.firebase.auth.GoogleAuthProvider;
+\end_layout
+
+\begin_layout Plain Layout
+import com.google.firebase.database.DatabaseReference;
+\end_layout
+
+\begin_layout Plain Layout
+import com.google.firebase.database.FirebaseDatabase;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+public class TrackerService extends Service {
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    private static final String TAG = TrackerService.class.getSimpleName();
+\end_layout
+
+\begin_layout Plain Layout
+    String personName,personGivenName,personFamilyName,personEmail,personId;
+\end_layout
+
+\begin_layout Plain Layout
+    Uri personPhoto;
+\end_layout
+
+\begin_layout Plain Layout
+    private FirebaseAuth mAuth;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    @Override
+\end_layout
+
+\begin_layout Plain Layout
+    public IBinder onBind(Intent intent) {return null;}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    @Override
+\end_layout
+
+\begin_layout Plain Layout
+    public void onCreate() {
+\end_layout
+
+\begin_layout Plain Layout
+        super.onCreate();
+\end_layout
+
+\begin_layout Plain Layout
+        mAuth = FirebaseAuth.getInstance();
+\end_layout
+
+\begin_layout Plain Layout
+        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+\end_layout
+
+\begin_layout Plain Layout
+        if (account != null) {
+\end_layout
+
+\begin_layout Plain Layout
+            personName = account.getDisplayName();
+\end_layout
+
+\begin_layout Plain Layout
+            personGivenName = account.getGivenName();
+\end_layout
+
+\begin_layout Plain Layout
+            personFamilyName = account.getFamilyName();
+\end_layout
+
+\begin_layout Plain Layout
+            personEmail = account.getEmail();
+\end_layout
+
+\begin_layout Plain Layout
+            personId = account.getId();
+\end_layout
+
+\begin_layout Plain Layout
+            personPhoto = account.getPhotoUrl();
+\end_layout
+
+\begin_layout Plain Layout
+        }
+\end_layout
+
+\begin_layout Plain Layout
+        buildNotification();
+\end_layout
+
+\begin_layout Plain Layout
+        firebaseAuthWithGoogle();
+\end_layout
+
+\begin_layout Plain Layout
+        //loginToFirebase();
+\end_layout
+
+\begin_layout Plain Layout
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    private void buildNotification() {
+\end_layout
+
+\begin_layout Plain Layout
+        String stop = "stop";
+\end_layout
+
+\begin_layout Plain Layout
+        registerReceiver(stopReceiver, new IntentFilter(stop));
+\end_layout
+
+\begin_layout Plain Layout
+        PendingIntent broadcastIntent = PendingIntent.getBroadcast(
+\end_layout
+
+\begin_layout Plain Layout
+                this, 0, new Intent(stop), PendingIntent.FLAG_UPDATE_CURRENT);
+\end_layout
+
+\begin_layout Plain Layout
+        // Create the persistent notification
+\end_layout
+
+\begin_layout Plain Layout
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this)
+\end_layout
+
+\begin_layout Plain Layout
+                .setContentTitle(getString(R.string.app_name))
+\end_layout
+
+\begin_layout Plain Layout
+                .setContentText(getString(R.string.notification_text))
+\end_layout
+
+\begin_layout Plain Layout
+                .setOngoing(true)
+\end_layout
+
+\begin_layout Plain Layout
+                .setContentIntent(broadcastIntent)
+\end_layout
+
+\begin_layout Plain Layout
+                .setSmallIcon(R.drawable.ic_tracker);
+\end_layout
+
+\begin_layout Plain Layout
+        startForeground(1, builder.build());
+\end_layout
+
+\begin_layout Plain Layout
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    protected BroadcastReceiver stopReceiver = new BroadcastReceiver() {
+\end_layout
+
+\begin_layout Plain Layout
+        @Override
+\end_layout
+
+\begin_layout Plain Layout
+        public void onReceive(Context context, Intent intent) {
+\end_layout
+
+\begin_layout Plain Layout
+            Log.d(TAG, "received stop broadcast");
+\end_layout
+
+\begin_layout Plain Layout
+            // Stop the service when the notification is tapped
+\end_layout
+
+\begin_layout Plain Layout
+            unregisterReceiver(stopReceiver);
+\end_layout
+
+\begin_layout Plain Layout
+            stopSelf();
+\end_layout
+
+\begin_layout Plain Layout
+        }
+\end_layout
+
+\begin_layout Plain Layout
+    };
+\end_layout
+
+\begin_layout Plain Layout
+     private void firebaseAuthWithGoogle() {
+\end_layout
+
+\begin_layout Plain Layout
+         GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
+\end_layout
+
+\begin_layout Plain Layout
+         Log.d(TAG, "firebaseAuthWithGoogle:" + acct.getId());
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+         AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdTo
+ken(), null);
+\end_layout
+
+\begin_layout Plain Layout
+         mAuth.signInWithCredential(credential)
+\end_layout
+
+\begin_layout Plain Layout
+                 .addOnCompleteListener(new OnCompleteListener<AuthResult>()
+ {
+\end_layout
+
+\begin_layout Plain Layout
+                     @Override
+\end_layout
+
+\begin_layout Plain Layout
+                     public void onComplete(@NonNull Task<AuthResult> task)
+ {
+\end_layout
+
+\begin_layout Plain Layout
+                         if (task.isSuccessful()) {
+\end_layout
+
+\begin_layout Plain Layout
+                             // Sign in success, update UI with the signed-in
+ user's information
+\end_layout
+
+\begin_layout Plain Layout
+                             Log.d(TAG, "signInWithCredential:success");
+\end_layout
+
+\begin_layout Plain Layout
+                             FirebaseUser user = mAuth.getCurrentUser();
+\end_layout
+
+\begin_layout Plain Layout
+                             ////updateUIFire(user);
+\end_layout
+
+\begin_layout Plain Layout
+                             requestLocationUpdates();
+\end_layout
+
+\begin_layout Plain Layout
+                         } else {
+\end_layout
+
+\begin_layout Plain Layout
+                             // If sign in fails, display a message to the
+ user.
+\end_layout
+
+\begin_layout Plain Layout
+                             Log.w(TAG, "signInWithCredential:failure", task.getEx
+ception());
+\end_layout
+
+\begin_layout Plain Layout
+                             //updateUIFire(null);
+\end_layout
+
+\begin_layout Plain Layout
+                         }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+                         // ...
+\end_layout
+
+\begin_layout Plain Layout
+                     }
+\end_layout
+
+\begin_layout Plain Layout
+                 });
+\end_layout
+
+\begin_layout Plain Layout
+     }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    private void requestLocationUpdates() {
+\end_layout
+
+\begin_layout Plain Layout
+        LocationRequest request = new LocationRequest();
+\end_layout
+
+\begin_layout Plain Layout
+        request.setInterval(10000);
+\end_layout
+
+\begin_layout Plain Layout
+        request.setFastestInterval(5000);
+\end_layout
+
+\begin_layout Plain Layout
+        request.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+\end_layout
+
+\begin_layout Plain Layout
+        FusedLocationProviderClient client = LocationServices.getFusedLocationPro
+viderClient(this);
+\end_layout
+
+\begin_layout Plain Layout
+        final String path = getString(R.string.firebase_path) + "/" + personId;//g
+etString(R.string.transport_id);
+\end_layout
+
+\begin_layout Plain Layout
+        int permission = ContextCompat.checkSelfPermission(this,
+\end_layout
+
+\begin_layout Plain Layout
+                Manifest.permission.ACCESS_FINE_LOCATION);
+\end_layout
+
+\begin_layout Plain Layout
+        if (permission == PackageManager.PERMISSION_GRANTED) {
+\end_layout
+
+\begin_layout Plain Layout
+            // Request location updates and when an update is
+\end_layout
+
+\begin_layout Plain Layout
+            // received, store the location in Firebase
+\end_layout
+
+\begin_layout Plain Layout
+            client.requestLocationUpdates(request, new LocationCallback()
+ {
+\end_layout
+
+\begin_layout Plain Layout
+                @Override
+\end_layout
+
+\begin_layout Plain Layout
+                public void onLocationResult(LocationResult locationResult)
+ {
+\end_layout
+
+\begin_layout Plain Layout
+                    DatabaseReference ref = FirebaseDatabase.getInstance().getRefe
+rence(path);
+\end_layout
+
+\begin_layout Plain Layout
+                    Location location = locationResult.getLastLocation();
+\end_layout
+
+\begin_layout Plain Layout
+                    if (location != null) {
+\end_layout
+
+\begin_layout Plain Layout
+                        Log.d(TAG, "location update " + location);
+\end_layout
+
+\begin_layout Plain Layout
+                        ref.setValue(location);
+\end_layout
+
+\begin_layout Plain Layout
+                    }
+\end_layout
+
+\begin_layout Plain Layout
+                }
+\end_layout
+
+\begin_layout Plain Layout
+            }, null);
+\end_layout
+
+\begin_layout Plain Layout
+        }
+\end_layout
+
+\begin_layout Plain Layout
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    public int onStartCommand(Intent intent, int flags, int startId) {
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+        personName = intent.getStringExtra("EXTRA_DISPLAY_NAME");
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+        //do something
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+        return START_STICKY;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    }
+\end_layout
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\series bold
+AndroidManifest.xml
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+<?xml version="1.0" encoding="utf-8"?>
+\end_layout
+
+\begin_layout Plain Layout
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+\end_layout
+
+\begin_layout Plain Layout
+    package="com.example.edwin.fyp">
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    <!-- To auto-complete the email text field in the login form with the
+ user's emails -->
+\end_layout
+
+\begin_layout Plain Layout
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+\end_layout
+
+\begin_layout Plain Layout
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+\end_layout
+
+\begin_layout Plain Layout
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    <!--
+\end_layout
+
+\begin_layout Plain Layout
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to
+ use
+\end_layout
+
+\begin_layout Plain Layout
+         Google Maps Android API v2, but you must specify either coarse
+ or fine
+\end_layout
+
+\begin_layout Plain Layout
+         location permissions for the 'MyLocation' functionality.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+    -->
+\end_layout
+
+\begin_layout Plain Layout
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"
+ />
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    <application
+\end_layout
+
+\begin_layout Plain Layout
+        android:allowBackup="true"
+\end_layout
+
+\begin_layout Plain Layout
+        android:icon="@mipmap/ic_launcher"
+\end_layout
+
+\begin_layout Plain Layout
+        android:label="@string/app_name"
+\end_layout
+
+\begin_layout Plain Layout
+        android:roundIcon="@mipmap/ic_launcher_round"
+\end_layout
+
+\begin_layout Plain Layout
+        android:supportsRtl="true"
+\end_layout
+
+\begin_layout Plain Layout
+        android:theme="@style/AppTheme">
+\end_layout
+
+\begin_layout Plain Layout
+        <activity android:name=".MainActivity">
+\end_layout
+
+\begin_layout Plain Layout
+            <intent-filter>
+\end_layout
+
+\begin_layout Plain Layout
+                <action android:name="android.intent.action.MAIN" />
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+                <category android:name="android.intent.category.LAUNCHER" />
+\end_layout
+
+\begin_layout Plain Layout
+            </intent-filter>
+\end_layout
+
+\begin_layout Plain Layout
+        </activity>
+\end_layout
+
+\begin_layout Plain Layout
+        <activity
+\end_layout
+
+\begin_layout Plain Layout
+            android:name=".LoginActivitySample"
+\end_layout
+
+\begin_layout Plain Layout
+            android:label="@string/title_activity_login_sample" />
+\end_layout
+
+\begin_layout Plain Layout
+        <activity android:name=".SignUpActivity" />
+\end_layout
+
+\begin_layout Plain Layout
+        <activity android:name=".HomeActivity" />
+\end_layout
+
+\begin_layout Plain Layout
+        <!--
+\end_layout
+
+\begin_layout Plain Layout
+             The API key for Google Maps-based APIs is defined as a string
+ resource.
+\end_layout
+
+\begin_layout Plain Layout
+             (See the file "res/values/google_maps_api.xml").
+\end_layout
+
+\begin_layout Plain Layout
+             Note that the API key is linked to the encryption key used
+ to sign the APK.
+\end_layout
+
+\begin_layout Plain Layout
+             You need a different API key for each encryption key, including
+ the release key that is used to
+\end_layout
+
+\begin_layout Plain Layout
+             sign the APK for publishing.
+\end_layout
+
+\begin_layout Plain Layout
+             You can define the keys for the debug and release targets in
+ src/debug/ and src/release/.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+        -->
+\end_layout
+
+\begin_layout Plain Layout
+        <meta-data
+\end_layout
+
+\begin_layout Plain Layout
+            android:name="com.google.android.geo.API_KEY"
+\end_layout
+
+\begin_layout Plain Layout
+            android:value="@string/google_maps_key" />
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+        <activity
+\end_layout
+
+\begin_layout Plain Layout
+            android:name=".MapsActivity"
+\end_layout
+
+\begin_layout Plain Layout
+            android:label="@string/title_activity_maps" />
+\end_layout
+
+\begin_layout Plain Layout
+        <activity android:name=".BookRideActivity" />
+\end_layout
+
+\begin_layout Plain Layout
+        <activity android:name=".ViewBookingActivity" />
+\end_layout
+
+\begin_layout Plain Layout
+        <activity android:name=".DrivingInfoActivity" />
+\end_layout
+
+\begin_layout Plain Layout
+        <activity android:name=".TrackerActivity" />
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+        <service
+\end_layout
+
+\begin_layout Plain Layout
+            android:name=".TrackerService"
+\end_layout
+
+\begin_layout Plain Layout
+            android:enabled="true"
+\end_layout
+
+\begin_layout Plain Layout
+            android:exported="true"></service>
+\end_layout
+
+\begin_layout Plain Layout
+    </application>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+</manifest>
+\end_layout
+
+\end_inset
+
+
+\series bold
+strings.xml
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+<resources>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="app_name">MyCOMS</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="sign_in">Sign In</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="sign_up">Sign Up</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="lorem_ipsum">MyCOMS application ease your travel within
+ UPM Campus, anytime to anywhere!
+\end_layout
+
+\begin_layout Plain Layout
+        "
+\backslash
+n
+\backslash
+n"** Please sign in or sign up using your UPM email address.</string>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="title_activity_login">Sign in</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="title_activity_login_sample">Sign in</string>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    <!-- Strings related to login -->
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="prompt_email">Email</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="prompt_password">Password (optional)</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="action_sign_in">Sign in</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="action_sign_in_short">Sign in</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="error_invalid_email">This email address is invalid</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="error_invalid_password">This password is too short</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="error_incorrect_password">This password is incorrect</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="error_field_required">This field is required</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="permission_rationale">"Contacts permissions are needed
+ for providing email
+\end_layout
+
+\begin_layout Plain Layout
+        completions."
+\end_layout
+
+\begin_layout Plain Layout
+    </string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="action_sign_up">Sign Up</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="action_sign_up_short">Sign Up</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="confirm_password">Confirm Password</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="matrik">Matrik Number</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="first_name">First Name</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="last_name">Last Name</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="start_driving">Start Driving</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="book_a_ride">Book A Ride</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="title_activity_navigation">NavigationActivity</string>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="action_settings">Settings</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="title_activity_maps">Map</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="departure">Departure</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="arrival">Arrival</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="book_ride">Book Ride</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="Manage_booking">MANAGE BOOKING</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="booking_time">Booking Time</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="booking_time_is">Booking time is : %s</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="user_details">USER DETAILS</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="get_current_speed">Get Current Speed</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="info">Waiting for GPS...</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="signed_out">Sign Out</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="go_to_home">Go!</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="signed_in_fmt">Signed in as: %s</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="firebase_status_fmt">Firebase User: %s</string>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="notification_text">Tracking, tap to cancel</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="transport_id" translatable="false">123</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="firebase_path" translatable="false">locations</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="firebase_email" translatable="false">test@example.com</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="firebase_password" translatable="false">password</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="current_hour">00</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="current_minute">00</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="booking_status">Your booking status is %s</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="departure_view">d = %s</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="arrival_view">a = %s</string>
+\end_layout
+
+\begin_layout Plain Layout
+    <string name="booking_time_view">t = %s</string>
+\end_layout
+
+\begin_layout Plain Layout
+</resources>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\series bold
+Activity_book_ride.xml
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+<?xml version="1.0" encoding="utf-8"?>
+\end_layout
+
+\begin_layout Plain Layout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+\end_layout
+
+\begin_layout Plain Layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+\end_layout
+
+\begin_layout Plain Layout
+    xmlns:tools="http://schemas.android.com/tools"
+\end_layout
+
+\begin_layout Plain Layout
+    android:layout_width="match_parent"
+\end_layout
+
+\begin_layout Plain Layout
+    android:layout_height="match_parent"
+\end_layout
+
+\begin_layout Plain Layout
+    tools:context="com.example.edwin.fyp.BookRideActivity">
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    <ProgressBar
+\end_layout
+
+\begin_layout Plain Layout
+        android:id="@+id/book_ride_progress"
+\end_layout
+
+\begin_layout Plain Layout
+        style="?android:attr/progressBarStyleLarge"
+\end_layout
+
+\begin_layout Plain Layout
+        android:layout_width="wrap_content"
+\end_layout
+
+\begin_layout Plain Layout
+        android:layout_height="wrap_content"
+\end_layout
+
+\begin_layout Plain Layout
+        android:layout_marginBottom="8dp"
+\end_layout
+
+\begin_layout Plain Layout
+        android:visibility="gone" />
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    <ScrollView
+\end_layout
+
+\begin_layout Plain Layout
+        android:id="@+id/book_ride_Form"
+\end_layout
+
+\begin_layout Plain Layout
+        android:layout_width="match_parent"
+\end_layout
+
+\begin_layout Plain Layout
+        android:layout_height="match_parent">
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+        <LinearLayout
+\end_layout
+
+\begin_layout Plain Layout
+            android:id="@+id/book_ride_location_form"
+\end_layout
+
+\begin_layout Plain Layout
+            android:layout_width="match_parent"
+\end_layout
+
+\begin_layout Plain Layout
+            android:layout_height="wrap_content"
+\end_layout
+
+\begin_layout Plain Layout
+            android:orientation="vertical">
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+            <android.support.design.widget.TextInputLayout
+\end_layout
+
+\begin_layout Plain Layout
+                android:layout_width="match_parent"
+\end_layout
+
+\begin_layout Plain Layout
+                android:layout_height="wrap_content">
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+                <EditText
+\end_layout
+
+\begin_layout Plain Layout
+                    android:id="@+id/departure"
+\end_layout
+
+\begin_layout Plain Layout
+                    android:layout_width="match_parent"
+\end_layout
+
+\begin_layout Plain Layout
+                    android:layout_height="wrap_content"
+\end_layout
+
+\begin_layout Plain Layout
+                    android:hint="@string/departure"
+\end_layout
+
+\begin_layout Plain Layout
+                    android:inputType="textPersonName"
+\end_layout
+
+\begin_layout Plain Layout
+                    android:maxLines="1"
+\end_layout
+
+\begin_layout Plain Layout
+                    android:singleLine="true" />
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+            </android.support.design.widget.TextInputLayout>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+            <android.support.design.widget.TextInputLayout
+\end_layout
+
+\begin_layout Plain Layout
+                android:layout_width="match_parent"
+\end_layout
+
+\begin_layout Plain Layout
+                android:layout_height="wrap_content">
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+                <EditText
+\end_layout
+
+\begin_layout Plain Layout
+                    android:id="@+id/arrival"
+\end_layout
+
+\begin_layout Plain Layout
+                    android:layout_width="match_parent"
+\end_layout
+
+\begin_layout Plain Layout
+                    android:layout_height="wrap_content"
+\end_layout
+
+\begin_layout Plain Layout
+                    android:hint="@string/arrival"
+\end_layout
+
+\begin_layout Plain Layout
+                    android:inputType="textPersonName"
+\end_layout
+
+\begin_layout Plain Layout
+                    android:maxLines="1"
+\end_layout
+
+\begin_layout Plain Layout
+                    android:singleLine="true" />
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+            </android.support.design.widget.TextInputLayout>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+            <Button
+\end_layout
+
+\begin_layout Plain Layout
+                android:id="@+id/booking_time"
+\end_layout
+
+\begin_layout Plain Layout
+                style="?android:textAppearanceSmall"
+\end_layout
+
+\begin_layout Plain Layout
+                android:layout_width="match_parent"
+\end_layout
+
+\begin_layout Plain Layout
+                android:layout_height="wrap_content"
+\end_layout
+
+\begin_layout Plain Layout
+                android:layout_marginTop="16dp"
+\end_layout
+
+\begin_layout Plain Layout
+                android:text="@string/booking_time"
+\end_layout
+
+\begin_layout Plain Layout
+                android:textStyle="bold"
+\end_layout
+
+\begin_layout Plain Layout
+                android:onClick="showTimePickerDialog"/>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+            <Button
+\end_layout
+
+\begin_layout Plain Layout
+                android:id="@+id/book_ride_button"
+\end_layout
+
+\begin_layout Plain Layout
+                style="?android:textAppearanceSmall"
+\end_layout
+
+\begin_layout Plain Layout
+                android:layout_width="match_parent"
+\end_layout
+
+\begin_layout Plain Layout
+                android:layout_height="wrap_content"
+\end_layout
+
+\begin_layout Plain Layout
+                android:layout_marginTop="16dp"
+\end_layout
+
+\begin_layout Plain Layout
+                android:text="@string/book_ride"
+\end_layout
+
+\begin_layout Plain Layout
+                android:textStyle="bold" />
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+            <TextView
+\end_layout
+
+\begin_layout Plain Layout
+                android:id="@+id/show_booking_time"
+\end_layout
+
+\begin_layout Plain Layout
+                android:layout_width="match_parent"
+\end_layout
+
+\begin_layout Plain Layout
+                android:layout_height="wrap_content"
+\end_layout
+
+\begin_layout Plain Layout
+                android:text="@string/booking_time_is" />
+\end_layout
+
+\begin_layout Plain Layout
+        </LinearLayout>
+\end_layout
+
+\begin_layout Plain Layout
+    </ScrollView>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+</LinearLayout>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\series bold
+Activity_driving_info.xml
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+<?xml version="1.0" encoding="utf-8"?>
+\end_layout
+
+\begin_layout Plain Layout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+\end_layout
+
+\begin_layout Plain Layout
+    android:layout_width="match_parent"
+\end_layout
+
+\begin_layout Plain Layout
+    android:layout_height="match_parent"
+\end_layout
+
+\begin_layout Plain Layout
+    android:orientation="vertical"
+\end_layout
+
+\begin_layout Plain Layout
+    >
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    <Button
+\end_layout
+
+\begin_layout Plain Layout
+        android:id="@+id/getCurrentSpeed"
+\end_layout
+
+\begin_layout Plain Layout
+        android:layout_width="match_parent"
+\end_layout
+
+\begin_layout Plain Layout
+        android:layout_height="wrap_content"
+\end_layout
+
+\begin_layout Plain Layout
+        android:onClick="getCurrentSpeed"
+\end_layout
+
+\begin_layout Plain Layout
+        android:text="@string/get_current_speed" />
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    <TextView
+\end_layout
+
+\begin_layout Plain Layout
+        android:id="@+id/info"
+\end_layout
+
+\begin_layout Plain Layout
+        android:layout_width="match_parent"
+\end_layout
+
+\begin_layout Plain Layout
+        android:layout_height="wrap_content"
+\end_layout
+
+\begin_layout Plain Layout
+        android:textSize="30sp" />
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    <TextView
+\end_layout
+
+\begin_layout Plain Layout
+        android:id="@+id/info2"
+\end_layout
+
+\begin_layout Plain Layout
+        android:layout_width="match_parent"
+\end_layout
+
+\begin_layout Plain Layout
+        android:layout_height="wrap_content"
+\end_layout
+
+\begin_layout Plain Layout
+        android:textSize="30sp" />
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    <TextView
+\end_layout
+
+\begin_layout Plain Layout
+        android:id="@+id/info3"
+\end_layout
+
+\begin_layout Plain Layout
+        android:layout_width="match_parent"
+\end_layout
+
+\begin_layout Plain Layout
+        android:layout_height="wrap_content"
+\end_layout
+
+\begin_layout Plain Layout
+        android:textSize="30sp" />
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    <Button
+\end_layout
+
+\begin_layout Plain Layout
+        android:id="@+id/tracker"
+\end_layout
+
+\begin_layout Plain Layout
+        android:layout_width="match_parent"
+\end_layout
+
+\begin_layout Plain Layout
+        android:layout_height="wrap_content"
+\end_layout
+
+\begin_layout Plain Layout
+        android:onClick="onTrackerActivity"
+\end_layout
+
+\begin_layout Plain Layout
+        android:text="tracker" />
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+    <Button
+\end_layout
+
+\begin_layout Plain Layout
+        android:id="@+id/sign_out_and_disconnect"
+\end_layout
+
+\begin_layout Plain Layout
+        android:layout_width="match_parent"
+\end_layout
+
+\begin_layout Plain Layout
+        android:layout_height="wrap_content"
+\end_layout
+
+\begin_layout Plain Layout
+        android:text="Sign out" />
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+</LinearLayout>
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{appendices}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

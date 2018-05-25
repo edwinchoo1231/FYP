@@ -1,0 +1,231 @@
+@article{1,
+  title={The Taxi Service Review: Malaysia Context},
+  author={Amirul, Fahmi R and Hands, David},
+  journal={Mediterranean Journal of Social Sciences},
+  volume={7},
+  number={4},
+  pages={559},
+  year={2016}
+}
+
+@inproceedings{2,
+  title={Mining social media for open innovation in transportation systems},
+  author={Ulloa, Daniela and Saleiro, Pedro and Rossetti, Rosaldo JF and Silva, Elis Regina},
+  booktitle={Intelligent Transportation Systems (ITSC), 2016 IEEE 19th International Conference on},
+  pages={169--174},
+  year={2016},
+  organization={IEEE}
+}
+
+@article{3,
+  title={Uber Is Built on Trust [Ethics Opinion]},
+  author={MacDonald, Chris},
+  journal={IEEE Technology and Society Magazine},
+  volume={35},
+  number={2},
+  pages={38--39},
+  year={2016},
+  publisher={IEEE}
+}
+
+@inproceedings{4,
+  title={Analysis on effects of brand community on brand loyalty in the social media: A case study of an online transportation (UBER)},
+  author={Handayani, Putu Wuri and others},
+  booktitle={Advanced Computer Science and Information Systems (ICACSIS), 2016 International Conference on},
+  pages={239--244},
+  year={2016},
+  organization={IEEE}
+}
+
+@article{5,
+  title={Bikesharing in Europe, the Americas, and Asia: past, present, and future},
+  author={Shaheen, Susan and Guzman, Stacey and Zhang, Hua},
+  journal={Transportation Research Record: Journal of the Transportation Research Board},
+  number={2143},
+  pages={159--167},
+  year={2010},
+  publisher={Transportation Research Board of the National Academies}
+}
+
+@article{6,
+  title={Bike sharing: A review of evidence on impacts and processes of implementation and operation},
+  author={Ricci, Miriam},
+  journal={Research in Transportation Business \& Management},
+  volume={15},
+  pages={28--38},
+  year={2015},
+  publisher={Elsevier}
+}
+
+@inproceedings{7,
+  title={Forecasting Bike Sharing Demand Using Fuzzy Inference Mechanism},
+  author={Salaken, Syed Moshfeq and Hosen, Mohammad Anwar and Khosravi, Abbas and Nahavandi, Saeid},
+  booktitle={International Conference on Neural Information Processing},
+  pages={567--574},
+  year={2015},
+  organization={Springer}
+}
+
+@inproceedings{8,
+  title={Prediction of Future Trips Using Fuzzy Logic Based Trip Generation Model},
+  author={S. Pulugurta, M. Errampalli and K.Ravinder},
+  booktitle={CSIR-Central Road Research Institute},
+  pages={},
+  year={2012},
+  organization={}
+}
+
+@inproceedings{9,
+  title={Passenger's flow for a train's coach and dwelling time using fuzzy logic},
+  author={Alvarez, Aranzazu Berbey and Urrutia, Victor Jos{\'e} Sanchez and George, Rony Caballero and Poyo, Francisco Javier Calvo},
+  booktitle={Bio-inspired Intelligence (IWOBI), 2014 International Work Conference on},
+  pages={30--36},
+  year={2014},
+  organization={IEEE}
+}
+
+@article{10,
+  title={A fuzzy logic approach to modelling the passengers¡¯ flow and dwelling time},
+  author={Berbey, A and Galan, R and Sanz Bobi, JD and Caballero, R},
+  journal={WIT Trans Built Environ},
+  volume={128},
+  pages={359--369},
+  year={2012}
+}
+
+@inproceedings{11,
+  title={Simulation optimization for a large-scale bike-sharing system},
+  author={Jian, Nanjing and Freund, Daniel and Wiberg, Holly M and Henderson, Shane G},
+  booktitle={Winter Simulation Conference (WSC), 2016},
+  pages={602--613},
+  year={2016},
+  organization={IEEE}
+}
+
+@article{12,
+  title={Mining bicycle sharing data for generating insights into sustainable transport systems},
+  author={O¡¯brien, Oliver and Cheshire, James and Batty, Michael},
+  journal={Journal of Transport Geography},
+  volume={34},
+  pages={262--273},
+  year={2014},
+  publisher={Elsevier}
+}
+
+@inproceedings{13,
+  title={Large-Scale Trip Planning for Bike-Sharing Systems},
+  author={Li, Zhi and Zhang, Jianhui and Gan, Jiayu and Lu, Pengqian and Lin, Fei},
+  booktitle={2017 IEEE 14th International Conference on Mobile Ad Hoc and Sensor Systems (MASS)},
+  pages={328--332},
+  year={2017},
+  organization={IEEE}
+}
+
+@inproceedings{14,
+  title={An Improved GRASP for the Bike-Sharing Rebalancing Problem},
+  author={Xu, Haitao and Ying, Jing},
+  booktitle={Smart Grid and Electrical Automation (ICSGEA), 2017 International Conference on},
+  pages={324--328},
+  year={2017},
+  organization={IEEE}
+}
+
+@inproceedings{15,
+  title={Corporate Social Responsibility Report 2013},
+  author={Toyota Auto Body Japan},
+  booktitle={http://www.toyota-body.co.jp/english/csr/2013.html},
+  pages={},
+  year={2017},
+  organization={}
+}
+
+
+@inproceedings{16,
+  title={COMS-VR: Mobile virtual reality entertainment system using electric car and head-mounted display},
+  author={Kodama, Ryo and Koge, Masahiro and Taguchi, Shun and Kajimoto, Hiroyuki},
+  booktitle={3D User Interfaces (3DUI), 2017 IEEE Symposium on},
+  pages={130--133},
+  year={2017},
+  organization={IEEE}
+}
+
+@inproceedings{17,
+  title={Vehicle to vehicle communication and platooning for SEV COMS by wireless sensor network},
+  author={Wu, Nan and Ai, Di and Ogai, Harutoshi and Tateno, Shigeyuki},
+  booktitle={SICE Annual Conference (SICE), 2014 Proceedings of the},
+  pages={566--571},
+  year={2014},
+  organization={IEEE}
+}
+
+@inproceedings{18,
+  title={Automatic driving system by small electric vehicle for elderly person},
+  author={Wu, Nan and Lou, Yunfeng and Sun, Nan and Wang, Wei and Ogai, Harutoshi},
+  booktitle={SICE Annual Conference (SICE), 2012 Proceedings of},
+  pages={232--235},
+  year={2012},
+  organization={IEEE}
+}
+
+@article{19,
+  title={Tracking and managing real world electric vehicle power usage and supply},
+  author={Hill, GA and Blythe, PT and Suresh, V},
+  year={2012},
+  publisher={IET}
+}
+
+@inproceedings{20,
+  title={Get Started with Android},
+  author={C. Walls},
+  booktitle={https://www.ecnmag.com/article/2011/07/get-started-android},
+  pages={},
+  year={2017},
+  organization={}
+}
+
+@inproceedings{21,
+  title={Android Announces Support for Kotlin},
+  author={M. Cleron},
+  booktitle={https://android-developers.googleblog.com/2017/05/android-announces-support-for-kotlin.html},
+  pages={},
+  year={2017},
+  organization={}
+}
+
+
+@inproceedings{22,
+  title={Remote vehicle tracking system using GSM Modem and Google map},
+  author={Fuad, Muhammad Ridhwan Ahmad and Drieberg, Micheal},
+  booktitle={Sustainable Utilization and Development in Engineering and Technology (CSUDET), 2013 IEEE Conference on},
+  pages={15--19},
+  year={2013},
+  organization={IEEE}
+}
+
+@article{23,
+  title={GPS and GSM based Vehicle Tracing and Employee Security System},
+  author={Pethakar, SS and Srivastava, N and Suryawanshi, SD},
+  journal={International Journal of Computer Applications},
+  volume={62},
+  number={6},
+  year={2013},
+  publisher={Foundation of Computer Science}
+}
+
+@inproceedings{24,
+  title={Gps-based vehicle tracking system-on-chip},
+  author={Yaqzan, Adnan I and Damaj, Issam W and Zantout, Rached N},
+  booktitle={Proceedings of the world Congress on Engineering},
+  volume={1},
+  pages={2--4},
+  year={2008}
+}
+
+@inproceedings{25,
+  title={IIUM Bus on Campus Monitoring System},
+  author={Juhari, Muhammad Nur Zaki and Mansor, Hasmah},
+  booktitle={Computer and Communication Engineering (ICCCE), 2016 International Conference on},
+  pages={138--143},
+  year={2016},
+  organization={IEEE}
+}

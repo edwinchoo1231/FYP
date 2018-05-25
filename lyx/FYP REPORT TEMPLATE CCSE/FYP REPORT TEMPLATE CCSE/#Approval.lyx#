@@ -1,0 +1,368 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass report
+\use_default_options true
+\begin_modules
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter*
+
+\series bold
+\size large
+APPROVAL SHEET 
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+The project report entitled 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+bf{Lard Detection Sensor System}}
+\end_layout
+
+\end_inset
+
+ prepared and submitted by 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+bf{Rabi'atul 'Adawiyah Binti Rahim}}
+\end_layout
+
+\end_inset
+
+ in partial fulfilment of the requirement for the Degree of Bachelor of
+ (Computer and Communication Systems) Engineering is hereby accepted.
+ 
+\begin_inset VSpace 2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Approved by:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{singlespace}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Puan Siti Mariam Binti Shafie @ Musa, 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Replace the name of your supervisor
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Supervisor 
+\begin_inset space \hspace{}
+\length 95mm
+\end_inset
+
+.........................
+\end_layout
+
+\begin_layout Standard
+\noindent
+Department of Computer and Communication Systems
+\begin_inset Newline newline
+\end_inset
+
+ Engineering
+\begin_inset Newline newline
+\end_inset
+
+ Faculty of Engineering
+\begin_inset Newline newline
+\end_inset
+
+ Universiti Putra Malaysia
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace 2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Y.
+ Bhg.
+ Profesor Dr.
+ M.
+ Iqbal Bin Saripan, 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Replace the name of your examiner 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Examiner 1 
+\begin_inset space \hspace{}
+\length 95mm
+\end_inset
+
+........................
+\end_layout
+
+\begin_layout Standard
+\noindent
+Department of Computer and Communication Systems
+\begin_inset Newline newline
+\end_inset
+
+ Engineering
+\begin_inset Newline newline
+\end_inset
+
+ Faculty of Engineering
+\begin_inset Newline newline
+\end_inset
+
+ Universiti Putra Malaysia
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace 2mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Prof.
+ Madya Dr.
+ Syed Abdul Rahman Al-Haddad Syed MD, 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Replace the name of your examiner 2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Examiner 2 
+\begin_inset space \hspace{}
+\length 95mm
+\end_inset
+
+.......................
+\end_layout
+
+\begin_layout Standard
+\noindent
+Department of Computer and Communication Systems
+\begin_inset Newline newline
+\end_inset
+
+ Engineering
+\begin_inset Newline newline
+\end_inset
+
+ Faculty of Engineering
+\begin_inset Newline newline
+\end_inset
+
+ Universiti Putra Malaysia
+\begin_inset VSpace 4mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Date Approved: 
+\series bold
+7 July 2015
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{singlespace}
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace 5mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+DECLARATION
+\end_layout
+
+\begin_layout Standard
+\paragraph_spacing onehalf
+\noindent
+I hereby declare that the project report is based on my original work except
+ for quotations and citations which have been duly acknowledged.
+ I authorize Universiti Putra Malaysia to lend this thesis to other institutions
+ or individuals for the purpose of scholarly research.
+\begin_inset VSpace 10mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+.....................................
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+RABI'ATUL 'ADAWIYAH BINTI RAHIM 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Date: 7 July 2015
+\end_layout
+
+\end_body
+\end_document

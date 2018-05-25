@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass report
 \use_default_options true
 \begin_modules
@@ -12,16 +14,16 @@ enumitem
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -76,22 +78,79 @@ enumitem
 INTRODUCTION
 \end_layout
 
-\begin_layout Standard
-Write here ...
-\end_layout
-
-\begin_layout Standard
-This is an introduction to the project work as a whole, the problem, social,
- economic and technical reasons why the project is of importance, its significan
-ce on a limited front or its possible application to a wider field.
-\end_layout
-
 \begin_layout Section
 Project Background
 \end_layout
 
 \begin_layout Standard
-Specific area of work is discussed.
+With the rise of social media that promotes communication among personnel
+ over the internet has stimulate the innovation of utilizing the power of
+ connectivity among them.
+ Among the ideas of sharing information, ride-sharing is one of the promising
+ growing trends.
+ It is proven that the technology is currently being implemented as a business
+ idea all around the world.
+\end_layout
+
+\begin_layout Standard
+As the emergence of sharing economy gradually arise in this modern society,
+ the ride-sharing community and industry are further developing into different
+ segment, where it is divided into driver and driverless ride-sharing.
+ The examples of ride-sharing with driver are Uber and Grab, and the example
+ for driverless ride-sharing would be bike-sharing such as oBike and MoBike.
+ With these real world implementation of the concept of ride-sharing, the
+ sharing economy is proven successful, as it builds up a brand new wave
+ of investment into technology industry.
+\end_layout
+
+\begin_layout Standard
+There is difference of ride-sharing, which could be further categorized
+ into model that supplies both drivers and vehicles, or model that supplies
+ only transportation itself.
+ The example from industries for the model are stated above.
+ The method in running both system are different.
+ Navigation of the vehicles are different if the supplied vehicle has no
+ driver.
+ For this project, the model that only supplies transportation only and
+ without driver, will be taken in as the main case of investigation.
+\end_layout
+
+\begin_layout Standard
+With the model being stated, certain function must be carried out so that
+ the coordination and scheduling of the usage time by user could be synchronized
+, and functional at the same time.
+ By arranging the sequence in manual, everything could be done easily but
+ complicated and time consuming at the same time.
+ With that, certain intelligent system must be combined into the model to
+ enhance the automation so that manual operation can be replaced.
+ Artificial technologies are one of the exciting technology that is being
+ developed and paid attention on, so that it is able to be placed into the
+ system in making it more intelligent, as well as automating certain tasks
+ which reduces manpower and saves time in general.
+\end_layout
+
+\begin_layout Standard
+In relation to the case in UPM Serdang campus, MyCOMS is a type of electric
+ vehicle that only have one-seated, which provides difficulty in terms of
+ mobility.
+ When the car is being driven to some other place, it is hard to get the
+ car back to original place, unless there is someone who is responsible
+ in returning the vehicles to the desired location at the start.
+ The daily demand of the electric vehicle differs with stations, as the
+ number of student and staff that has different schedule to go to every
+ places in the campus.
+ Thus, the deployment of the vehicle is crucial, as it is best to place
+ the vehicle at stations which has the most traffic at the start of the
+ day, to ensure that it serves its purpose in providing mobility to students
+ and staffs.
+ With this it is hope that the overcrowded and the over-capacity issue of
+ the number of passenger for transportation currently provided.
+\end_layout
+
+\begin_layout Standard
+By combining both model and the technology specified above, it is hoped
+ that it can be transformed into a better and more intelligent system that
+ would benefit users, and the administration at the same time.
 \end_layout
 
 \begin_layout Section
@@ -99,7 +158,57 @@ Problem Statement
 \end_layout
 
 \begin_layout Standard
-Identify the problem and the motivation for you to solve that problem.
+The time taken travelling around the campus is high, and it is an issue
+ as public transport are provided around the campus.
+ With ride sharing among students, it is targeted to solve the over-crowded
+ issue with the limited mode of transportation.
+ Full utilization of networks within the students is expected to generate
+ and create a safe environment and community which makes every ride smooth.
+\end_layout
+
+\begin_layout Standard
+Students, staff and every personnel that is in UPM Serdang campus will face
+ traffic problem, when it comes to peak hour travel, and also certain ad-hoc
+ event and program hosted in the campus.
+ One of the most significant event that adds up to the traffic issue would
+ be annual convocation which will last for a week.
+ And weeks before the convocation ex-students will be returning to the campus
+ in retrieving their graduation robe and to submit documents.
+ This will even add up to the normal traffic volume.
+ This can be solved if there is a platform that can be used in coordinating
+ vehicles by demand.
+ User can expect the availability of vehicle and book it in advance, and
+ use it when they need it the most.
+\end_layout
+
+\begin_layout Standard
+In UPM Serdang Campus there are 3 units of single-seated MyCOMS.
+ Users must be able to utilize it fully, only through sharing of a pool
+ of same network.
+ The availability and whereabouts of the vehicle must be updated almost
+ instantly to allow everyone in the network to view its status, and decide
+ on the usage of it.
+ Certain limitation to the vehicle must be considered, such as battery level,
+ destination of journey, and usage demand.
+ The vehicle will be useless if there is not enough power to run.
+ The vehicle will have limited source of user if destination of a journey
+ is targeted at remote area of the campus.
+ The vehicle must be placed properly at stations where there is higher demand
+ to serve its purpose.
+\end_layout
+
+\begin_layout Standard
+There is an application developed for booking of the MyCOMS.
+ However, the previous application built for booking of MyCOMS is currently
+ not in service, and was not sufficient in servicing the capacity of students
+ and staff in UPM Serdang campus.
+ The application was also reviewed thoroughly from the framework used to
+ the type of database used in supporting the whole application.
+ It was found out that the application was made in Cordova framework and
+ uses relational database as the backbone.
+ In terms of scaling the numbers of concurrent user of the application,
+ certain modifications must be done in order to increase efficiency and
+ reduce breakdown or failure of the application in delivering the objectives.
 \end_layout
 
 \begin_layout Section
@@ -107,52 +216,32 @@ Aim and Objectives
 \end_layout
 
 \begin_layout Standard
-The aim of this project is to ...
+The aim of this project is to develop a fully working secured in campus
+ ride-sharing application.
 \end_layout
 
 \begin_layout Standard
-Following are the example of objectives
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-Objectives are processes to achieve aim of work.
- You must have more that one objective and should achieve level C6
+The objectives of this project are: 
 \end_layout
+
+\begin_layout Enumerate
+To design and create an EV
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "EV"
+description "Electric Vehicle"
 
 \end_inset
 
-: 
+ ride-sharing application in UPM Serdang campus.
 \end_layout
 
 \begin_layout Enumerate
-To study 
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-noitemsep
-\end_layout
-
-\end_inset
-
-
+To predict station level demand of EV.
 \end_layout
 
 \begin_layout Enumerate
-To design ...
-\end_layout
-
-\begin_layout Enumerate
-To implement ...
-\end_layout
-
-\begin_layout Enumerate
-etc ...
-\end_layout
-
-\begin_layout Standard
-
+To evaluate the system design performance.
 \end_layout
 
 \begin_layout Section
@@ -160,7 +249,66 @@ Project Scope
 \end_layout
 
 \begin_layout Standard
-The scope and limitation of your work.
+The project will be focusing on the development of a ride-sharing Android
+ application.
+ The main mode of transportation which is going to be used in this project
+ would be the Toyota Chotto Odekake Machimade Suisui (COMS
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "COMS"
+description "Chotto Odekake Machimade Suisui"
+
+\end_inset
+
+), which is later renamed as MyCOMS by Universiti Putra Malaysia (UPM
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "UPM"
+description "Universiti Putra Malaysia"
+
+\end_inset
+
+), in hopes to promote green technology in the Serdang Campus.
+ The COMS is a single-seated ultra-compact electric vehicle, which carry
+ the meanings of ‘smooth, short rides into town”.
+ Three COMS are received, and it represents the collaboration between UPM,
+ Toyota Auto Body Malaysia (TABM
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "TABM"
+description "Toyota Auto Body Malaysia"
+
+\end_inset
+
+), Toyota Auto Body Japan (TABJ
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "TABJ"
+description "Toyota Auto Body Japan"
+
+\end_inset
+
+) and also Kyushu Institute of Technology (Kyutech
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "Kyutech"
+description "Kyushu Institute of Technology"
+
+\end_inset
+
+), Japan.
+ This project will have high similarities of the model of bike-sharing,
+ as the COMS is a single-seated vehicle, and can only be transported whenever
+ there is driver on it.
+\end_layout
+
+\begin_layout Standard
+The proposed mobile application which specially created for mobile device
+ with platform of Android is expected to build to coordinate and monitor
+ the MyCOMS vehicle.
+ It is targeted to provide efficiency for users to manage the booking of
+ the MyCOMS, and also for the administration team to have full time monitoring
+ of the vehicle whenever it is.
 \end_layout
 
 \begin_layout Section
@@ -168,7 +316,96 @@ Report Outline
 \end_layout
 
 \begin_layout Standard
-The outline of this report ....
+The thesis consists of five chapters, which includes introduction, literature
+ review, methodology, result and discussion, and conclusion.
+\end_layout
+
+\begin_layout Standard
+• Chapter 1 - Introduction to the background of the involved EV which is
+ MyCOMS, and the targeted ride-sharing android application.
+ Problem statements are defined in this chapter.
+ The aims and main objectives of the project are also discussed in the chapter
+ too.
+ Project scope is declared at the end of the chapter.
+\end_layout
+
+\begin_layout Standard
+• Chapter 2 - Literature review of the related research on the ride-sharing
+ industries, including vehicles with driver, and also vehicles that are
+ driverless.
+ The existing ride-sharing application are studied, compared and discussed
+ in this chapter.
+ Main focus of the project which is the ride-sharing android application
+ is discussed in the chapter.
+ 
+\end_layout
+
+\begin_layout Standard
+• Chapter 3 - Methodology used in the overall flow, outline and the process
+ of the project.
+ The related materials and equipment such as hardware and software involved:
+ Android devices, Android Studio IDE and MyCOMS are discussed.
+ The architecture of the android system is further explained in this chapter.
+ The emerging idea of developing this ride-sharing application is further
+ discussed in the same section of the chapter.
+ 
+\end_layout
+
+\begin_layout Standard
+• Chapter 4 - The result and discussion which shows the screenshot, and
+ also the performance evaluation of the application.
+ The problem faced throughout the application development and project deployment
+ are discussed in this chapter.
+ 
+\end_layout
+
+\begin_layout Standard
+• Chapter 5 - Conclusion of the whole project in the last chapter of the
+ thesis.
+ This chapter will includes the application development, the evaluation
+ findings and also the future works possible for the application are discussed
+ in the chapter.
+ 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "SMS"
+description "Short Message Services"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "GSM"
+description "Global System for Mobile Communications"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "AVD"
+description "Android Virtual Device"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "RAM"
+description "Random-access memory"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "ERD"
+description "Entity Relationship Diagram"
+
+\end_inset
+
+
 \end_layout
 
 \end_body

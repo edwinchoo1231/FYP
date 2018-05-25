@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass report
 \use_default_options true
 \begin_modules
@@ -12,16 +14,16 @@ enumitem
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -81,47 +83,128 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-Write here ...
-\end_layout
-
-\begin_layout Standard
-There may be a preamble at the beginning of a chapter.
- The purpose may be to introduce the themes of the main headings.
- 
-\end_layout
-
-\begin_layout Standard
-Note that it is important that a student doing a certain project work should
- know what has already been done related to his project.
- Having done this reading, it is important that the main outlines be recorded
- and the reference to the work be made.
- The sections organization of each chapter are depend on student's and superviso
-r's preference.
+In this chapter, the case study of the operational model of ride-sharing
+ and bike-sharing application are discussed thoroughly.
+ The existing system of the application is studied and discussed further
+ especially on features, limitations, advantages and disadvantages throughout
+ this chapter.
  
 \end_layout
 
 \begin_layout Section
-Main Heading No.1 (Primary Level Numbering)
+Ride Sharing
 \end_layout
 
 \begin_layout Standard
-Guideline of the report writing is in 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-hyperref[chap:Report-Template:-Guideline]{Appendix}
-\end_layout
+Public transportation plays a significant role in daily lives of Malaysian
+ citizens as it connects each other to the desired destination.
+ Some of the most common form of public transportation such as bus, train,
+ taxi and others, where one of the mode has occupancy lesser than 40% which
+ is taxi in the form of vehicle.
+ One of the reasons is that the service and cost of hiring a taxi is not
+ proportional as customer feel there is unfairness in it 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "1"
 
 \end_inset
 
-  
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "chap:Report-Template:-Guideline"
+.
+ Monopolized and bad behavior of driver are also the reason for the low
+ using rate of taxi.
+ As compared to the other transportation, taxi carries the highest mobility
+ and flexibility, with no tracks needed as compared to trains, and wider
+ roads for busses, it is simply the best mode of transportation for short
+ distance around a certain area.
+\end_layout
+
+\begin_layout Standard
+But since the occupancy rate of taxi is low, and special infrastructure
+ needed for trains and bus, families with higher purchasing power can afford
+ to buy a vehicle for daily travelling purpose.
+ With that the cars on the road increases gradually which leads to high
+ traffic on daily commute.
+ Cars are not fully utilize if it carries only one passenger, and leads
+ to the main reason for creating traffic jam commuting from one place to
+ another.
+ This can be solved by pairing users together with the same destination
+ up to the maximum capacity of the car, the traffic condition could be reduced
+ at least 4 times as compared to the worst case scenario mentioned earlier.
+ But how do people solve that by knowing who is the exact person that has
+ the same destination with the departing location within a close range?
+ Analyzing the field of software development integrating with social media,
+ this is made possible when information is shared on a platform which is
+ to be viewed publicly, and user with high similarity will be known and
+ paired which makes up to solving the case earlier.
+ Crowdsourcing the data would automates the whole process and reduce the
+ effort in exploring potential user in the domain of traffic and transportation
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "2"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+These sharing economy business is built not only on the technology advancement,
+ but also in a sense of “trust” among each other 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "3"
+
+\end_inset
+
+.
+ The sharing of object among strangers solely rely on trust, is the key
+ of success to the service provided, and it can be provided with a little
+ help from technology.
+ Building of platform ease the communication among each other.
+ Tracking of whereabouts and usage rate can be monitored and viewed, in
+ order to prevent unwanted events to happen.
+ User will not be easily affected by words and saying from another user,
+ and instead it will be affected by mainly the service provider’s performance
+ and reputation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "4"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Bike Sharing
+\end_layout
+
+\begin_layout Standard
+Since the operational concept of the Android application of MyCOMS is roughly
+ similar to bike sharing system, the case studies done by researchers will
+ be discussed in this section to further differentiates the difference comparing
+ to ride-sharing application.
+ According to Shaheen, bike sharing system is currently one of the transportatio
+n system in major cities, in solving congestion problem, as well as the
+ ‘last mile problem’ which can be further defined as the distance between
+ home and the transit station, which can be too far to walk 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "5"
+
+\end_inset
+
+.
+ Most of the big cities are using bike sharing as the solution for users
+ in commuting between places where transit station is not available.
+ Ricci has stated that bike sharing has a network of bicycles which spread
+ across an area of strategically positioned ‘bike sharing station’, which
+ can be used by user for point-to-point journey purpose in a period of time
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "6"
 
 \end_inset
 
@@ -129,63 +212,338 @@ reference "chap:Report-Template:-Guideline"
  
 \end_layout
 
-\begin_layout Subsection
-Subheading No.1 (Secondary Level Numbering)
+\begin_layout Standard
+With the reference made, the similarities is shown between bike sharing
+ and MyCOMS application, where both of the application involves deployment
+ of vehicles at stations, and allow users to book and use it for a period
+ of time, for point-to-point travel purposes.
+ However the downside of both application is that the vehicles would require
+ rebalancing every day, as the demand will differs according to the factors
+ based on the stations.
+ The demand will fluctuate based on several aspect such as the weather,
+ time of travel, location of station, population of station and etc., where
+ every element plays important role in affecting the usage level of the
+ application.
+ 
 \end_layout
 
 \begin_layout Standard
-There should be at least two subheadings to justify having subheadings.
-\end_layout
+In order to rebalance the vehicle deployment, example and reference are
+ taken from bike sharing model.
+ Several research were done in predicting the demand as rebalancing of vehicles
+ is always an issue for the service provider, with various method used.
+ To avoid wastage of manpower in providing mobility in allocating the cars
+ at the desired location, artificial intelligence system is adapted into
+ the system.
+ According to Syed, their study in forecasting bike demand using fuzzy interfere
+nce mechanism has proved that the un-optimized fuzzy interference system
+ can outperform un-optimized traditional feed forward neural network, and
+ concludes that simple fuzzy interference based prediction is sufficient
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "7"
 
-\begin_layout Subsection
-Subheading No.2 (Secondary Level Numbering)
+\end_inset
+
+.
+ Author also uses input parameters such as weather, holidays and number
+ of user.
+ Randomize of input is first done, and the system is run 5 times to ensure
+ that the data obtain is accurate and consistent.
+ This paper shows that the prediction using fuzzy logic is feasible, and
+ is not limited only to using neural network for forecasting purpose.
+ 
 \end_layout
 
 \begin_layout Standard
-All first letters of principal words are capitalised and the subheadings
- is left justified.
-\end_layout
+Other than that, user’s trip can be predicted as well according to the research
+ which based on the fuzzy logic based trip generation model 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "8"
 
-\begin_layout Subsubsection
-Tertiary Heading No.1 (Under Subheading No.2)
+\end_inset
+
+.
+ The prediction on user’s trip is important as it affect the demand level
+ of each station in a whole.
+ A notification can be sent to user as an alert of vehicle availability
+ if the prediction data matched with the real-time data.
+ A similar research on the user’s journey prediction is done as well 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "9"
+
+\end_inset
+
+ train predict.
+ It predicts the passenger flow on journey from station to station.
+ From it the traffic management can be done effectively as it helps in providing
+ mobility to the vehicle in reaching stations which have high demand.
+ This paper models the flow with fuzzy logic, adding features of passenger
+ demand to the mode of transportation 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "10"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
-There should be at least two tertiary headings to justify having tertiary
- headings.
-\end_layout
+With the high number of bicycle in a network of bike sharing system, a group
+ of researcher did simulation optimization, to make sure that resources
+ of bike sharing are shared and used equally 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "11"
 
-\begin_layout Subsubsection
-Tertiary Heading No.2 (Under Subheading No.2)
-\end_layout
+\end_inset
 
-\begin_layout Standard
-Tertiary and subsequent headings should not be listed in the Table of Contents.
+.
+ A proper data retrieved from the network can be mined and analyzed for
+ future transportation improvements 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "12"
+
+\end_inset
+
+.
+ Collaboration between modes of transportation will improve the strength
+ and weakness of each other, which brings more benefits to the users.
+ However comparing on the artificial intelligence method that are involved
+ in prediction, several researchers have use different method such as planning
+ algorithm and searching algorithm 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "13,14"
+
+\end_inset
+
+.
+ Fuzzy logic will be used for this application as the data and number of
+ input which the system has to deal with, is not complicated compared to
+ the large network node in bike sharing system.
+ Simple system for daily prediction require several input is suffice.
+ 
 \end_layout
 
 \begin_layout Section
-Main Heading No.2 (Primary Level Numbering)
+COMS
 \end_layout
 
 \begin_layout Standard
-
-\end_layout
-
-\begin_layout Enumerate
-System 
+COMS is a single seated electric vehicle that is designed and manufactured
+ by Toyota.
+ According to the specification obtained from Toyota Auto Body Japan’s Corporate
+ Social Responsibility Report 2013, COMS is a fully electric powered vehicle,
+ that uses lead battery which can supply mileage of 50km per charge.
+ COMS is able to run at a maximum speed of 60km per hour, and it has noises
+ which is generated at below 71dB at acceleration, and even lower at 65dB
+ when it is constantly running 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "allen1998crop"
+key "15"
 
 \end_inset
 
-....
+.
+ It is targeted to serve user that would like to make short trip easier
+ and more convenient.
+ COMS has been deployed in several region of Japan, aiming to reduce carbon
+ emission, as well as navigating through the narrow roads in most area of
+ Japan.
+ Its performance has won itself a Nikkei MJ Outstanding Award, which further
+ strengthens its identity among community.
+\end_layout
+
+\begin_layout Standard
+Researchers have used COMS in various field, which ranges from entertainment
+ field to safety autonomous featured ride on the road.
+ A virtual reality (VR
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "VR"
+description "Virtual Reality"
+
+\end_inset
+
+) system is modeled based on motion car, which in this case COMS was used
+ as the platform 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "16"
+
+\end_inset
+
+.
+ The COMS was deployed as a motion platform, where it provides simulated
+ motion sensation to the VR user with autonomous driving.
+ User will control the car with VR controller and headset, where vision
+ through the headset will feel the motion when the car is synchronized.
+ It is mentioned that COMS is used as it is easy to control and modify,
+ which allow the developer to create more enhancement on the vehicle with
+ the application of the technology.
+\end_layout
+
+\begin_layout Standard
+Another group of researchers have tried to utilize communication between
+ vehicles by programming the vehicles to undergo platooning among each other
  
-\begin_inset Argument 1
-status open
+\begin_inset CommandInset citation
+LatexCommand cite
+key "17"
+
+\end_inset
+
+.
+ By having platooning and communication established among COMS, it is effective
+ to notify users on availability, and enhance security features as the vehicles
+ can communicate with each other.
+ Safe distance are maintained with this features installed, data can be
+ retrieved for analysis on the driver’s driving behavior.
+ With the autonomous driving system developed from the past, this feature
+ can be installed on COMS to provide more mobility around the campus 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "18"
+
+\end_inset
+
+.
+ Single-seated MyCOMS has a limitation where it will have limited access
+ when it is being driven to location which is not populated.
+ The vehicle is not able to be used by people from other station, if there
+ is no one to drive it from a remote station.
+ The deployment of vehicle every morning can be scheduled automatically
+ with autonomous driving, in arranging starting location of MyCOMS at a
+ more strategic location.
+\end_layout
+
+\begin_layout Standard
+The battery level can be monitored and tracked as previous researcher has
+ done the research in tracking and managing the electric demand and usage
+ for electric vehicle 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "19"
+
+\end_inset
+
+.
+ With this feature the battery level can be monitored and even predicted
+ daily, in order for the vehicle to function properly throughout the day
+ without having issue of user is stuck in the middle of the journey due
+ to low battery level.
+ A total number of trips can be counted and predicted in advance based on
+ the daily real-time data, and is then charged to prevent the stated issue
+ to happen.
+\end_layout
+
+\begin_layout Section
+Android
+\end_layout
+
+\begin_layout Standard
+Android is the software package chosen for developing the MyCOMS system,
+ where it includes several main components, such as operating system (OS
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "OS"
+description "Operating System"
+
+\end_inset
+
+), hardware drivers, middleware, and core applications 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "20"
+
+\end_inset
+
+.
+ The preferred programming language for Android was previously Java, and
+ it is now officially supporting Kotlin and Java from an official statement
+ from Google 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "21"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Android Architecture
+\end_layout
+
+\begin_layout Standard
+The architecture can be divided into 4 levels, which are Application, Applicatio
+n Framework, Libraries and Android Runtime, and Operating System as shown
+ in Figure 2.1.
+\end_layout
+
+\begin_layout Standard
+Level 1 - Application This layer has a set of core application provided
+ from the android develop and support team, which includes maps, email,
+ SMS, calendar, default web browser and others.
+ This layer provides interaction between user and the machine.
+ Customized software application can be used here for interaction between
+ users too.
+ It is the top most layer of the architecture, and can be written in Java
+ or Kotlin programming language.
+\end_layout
+
+\begin_layout Standard
+Level 2 - Application Framework This layer has multiple Activity Views which
+ is helpful in developing and building an application.
+ It includes grids, lists, Buttons, MapView and etc., which can be embedded
+ easily into application with certain lines of code.
+\end_layout
+
+\begin_layout Standard
+Level 3 - Libraries and Android Runtime This layer is the third layer and
+ it has a set of libraries which has most of the functionality in the core
+ libraries of Java programming language.
+\end_layout
+
+\begin_layout Standard
+Level 4- Operating System This layer implies that Android is run on a Linux
+ Kernel, where it uses several services such as memory management, security,
+ network stack and etc.
+ This layer serves as the interaction phase between the hardware and the
+ software in the machine.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
-noitemsep
+\align center
+\begin_inset Graphics
+	filename images/2/2.png
+	scale 200
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Android System Architecture
 \end_layout
 
 \end_inset
@@ -193,8 +551,176 @@ noitemsep
 
 \end_layout
 
-\begin_layout Enumerate
-ksadkc...
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Android Application Development
+\end_layout
+
+\begin_layout Standard
+Android application will be built using Android Software Development Kit
+ (SDK
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "SDK"
+description "Android Software Development Kit"
+
+\end_inset
+
+) and Android Studio Integrated Development Environment (IDE
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "IDE"
+description "Integrated Development Environment"
+
+\end_inset
+
+).
+ The IDE has all the tools required, and has support from the official Android
+ developing team on plugin and software updates.
+ 
+\end_layout
+
+\begin_layout Standard
+SDK provides software packages, software framework, sample code and application
+ software development tools.
+ It has Application Programming Interface (API
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "API"
+description "Application Programming Interface"
+
+\end_inset
+
+) and tools provided for development of application for Android platform
+ with the use of Java and Kotlin programming language.
+ Basic tools such as debugger, libraries, emulator, documentation and etc.
+ are included in the SDK 
+\end_layout
+
+\begin_layout Section
+Google Map
+\end_layout
+
+\begin_layout Standard
+Google has released the API, which is developed to allow interaction between
+ google services with internet content into web or mobile application.
+ It acts as a black box, in receiving input of user, and process it, and
+ is able to return the query with a Street view scene.
+ Researcher have use the combination of Google Maps together with GSM modem,
+ in providing tracking and locating services of vehicle 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "22"
+
+\end_inset
+
+.
+ Usage of smartphone which has both of the function, will allow the tracking
+ and locating vehicle for monitoring purpose more convenient.
+ According to this paper, the vehicle fleet management system can be polished
+ with the tracking using GPS
+\begin_inset CommandInset citation
+LatexCommand cite
+key "23"
+
+\end_inset
+
+.
+ A software is created for the tracking purposes as data is retrieved from
+ the real-time update of the system.
+ The system can be even be more advance with the implantation of GPS system
+ on a System-On-Chip, and built in into the vehicle 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "24"
+
+\end_inset
+
+.
+ The same tracking method is also applied in this project, and it is fully
+ deployed to evaluate the system performance
+\begin_inset CommandInset citation
+LatexCommand cite
+key "25"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Section
+Review of Similar Application
+\end_layout
+
+\begin_layout Subsection
+oBike
+\end_layout
+
+\begin_layout Standard
+oBike originates from Singapore, provides the security features between
+ user and the bicycle, by having the user to scan QR code via the oBike
+ app or enter the bike ID found on the bike.
+ The application also allow bike booking, and is reserved under the user’s
+ name for at most 10 mins.
+ The sign up process requires phone number, and requires the user to allow
+ permission on location so that nearest oBike can be found on the map via
+ the oBike app.
+ Payment can be done via Credit and Debit cards, and more payment option
+ will be available later.
+ It also has the Bluetooth technology to allow the users in locating the
+ bicycle for a higher accuracy, and to identify the bicycle if there is
+ a lot of them.
+ 
+\end_layout
+
+\begin_layout Subsection
+MoBike
+\end_layout
+
+\begin_layout Standard
+Mobike that originates from China, has a lot similarities in terms of applicatio
+n as compared to oBike.
+ The difference between these two companies is that the location of deployment
+ is different, and the infrastructure of the bicycle is different as well.
+ The application allow user to book for 15 minutes, and is able to view
+ the final location of bicycle when the trip is ended.
+ 
+\end_layout
+
+\begin_layout Section
+Summary
+\end_layout
+
+\begin_layout Standard
+As outlined in the previous section, there are several application that
+ can be referred to, and the features in it such as QR code scanning, Bluetooth
+ location detecting and GPS
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "GPS"
+description "Global Positioning System"
+
+\end_inset
+
+ location identifying can be adapted into MyCOMS application.
+ The overall architecture of the developing structure of Android is explained
+ and outlined to have more insight on the functionalities of the components.
+ Several studies on the ride sharing and bike sharing system is done, and
+ is relatable to MyCOMS application as it requires sharing of vehicles and
+ time of usage optimized between desired users.
+ Therefore, a hybrid version of ride-sharing which is MyCOMS application
+ is needed in order to tackle the targeted vehicle, and improve the overall
+ deliveries to the users.
+ 
 \end_layout
 
 \end_body

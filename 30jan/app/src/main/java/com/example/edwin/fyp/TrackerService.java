@@ -86,28 +86,6 @@ public class TrackerService extends Service {
             stopSelf();
         }
     };
- /*
-    private void loginToFirebase() {
-        // Authenticate with Firebase, and request location updates
-
-        String email = getString(R.string.firebase_email);
-        String password = getString(R.string.firebase_password);
-        FirebaseAuth.getInstance().signInWithEmailAndPassword(
-                email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>(){
-            @Override
-            public void onComplete(Task<AuthResult> task) {
-                if (task.isSuccessful()) {
-                    Log.d(TAG, "firebase auth success");
-                    requestLocationUpdates();
-                } else {
-                    Log.d(TAG, "firebase auth failed");
-                }
-            }
-        });
-
-
-
-    }*/
      private void firebaseAuthWithGoogle() {
          GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
          Log.d(TAG, "firebaseAuthWithGoogle:" + acct.getId());
@@ -169,18 +147,4 @@ public class TrackerService extends Service {
         return START_STICKY;
 
     }
-
-
 }
-/*
-    GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
-        if (account != null) {
-                personName = account.getDisplayName();
-                personGivenName = account.getGivenName();
-                personFamilyName = account.getFamilyName();
-                personEmail = account.getEmail();
-                personId = account.getId();
-                personPhoto = account.getPhotoUrl();
-                }
-
-                */

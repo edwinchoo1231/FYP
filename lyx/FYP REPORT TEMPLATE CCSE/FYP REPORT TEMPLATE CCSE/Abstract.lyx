@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass report
 \use_default_options true
 \begin_modules
@@ -12,16 +14,16 @@ enumitem
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -80,20 +82,38 @@ ABSTRACT
 \end_layout
 
 \begin_layout Standard
-Write here....
-\end_layout
-
-\begin_layout Standard
-The abstract covers briefly the whole of the work in the report.
- It is presented so that any other reader, who is attracted by the title
- of the project can know a little more without having to read the whole
- report.
- Any reference to the literature is not made in the abstract but if such
- references are necessary, they should be footnoted.
- Abstract should not normally exceed 250 words and must be written in standard
- Bahasa Melayu or English.
- (Background of work, problem statement, methodology of project, results
- obtained and conclusion of work)
+Among the ideas of sharing information, ride-sharing is one of the promising
+ growing trends.
+ It is proven that the technology is currently being implemented as a business
+ idea all around the world.
+ The time taken travelling around the campus is high, and it is an issue
+ as public transport are provided around the campus.
+ The issue worsen when it comes to peak hour travel among faculties and
+ colleges.
+ In UPM Serdang Campus there are 3 units of single-seated MyCOMS.
+ A mobile application has been designed to allow students and staffs of
+ UPM Serdang campus to coordinate and use MyCOMS.
+ However, the application is not deployed currently, and several weakness
+ have been found in the application.
+ This project aims to design and develop a secured in campus ride sharing
+ Android application.
+ Other than that, a prediction of station level demand can also be done
+ based on simulation and real time data.
+ Lastly the system design performance is evaluated.
+ The application is built by using Android Studio.
+ Google Maps API is used to obtained location information of both MyCOMS
+ and user.
+ The data obtained such as location of MyCOMS and user details is stored
+ in Firebase.
+ The application that has been developed is able to locate real time location
+ of MyCOMS, place and manages booking of the vehicle.
+ Fuzzy logic is used to predict the station level demand with simulation
+ of data which includes location of station, temperature of the day, time
+ of travel and population of station.
+ In conclusion, the fully workable Android application is developed for
+ MyCOMS is capable of providing convenience and resolving part of the issues
+ in commuting in campus for UPM students and staff.
+ 
 \end_layout
 
 \end_body

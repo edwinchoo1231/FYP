@@ -52,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         mStatusTextView = findViewById(R.id.status);
-        //mDetailTextView = findViewById(R.id.detail);
         mgoButton = findViewById(R.id.go_to_home);
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -147,16 +146,13 @@ public class MainActivity extends AppCompatActivity {
     private void updateUI(GoogleSignInAccount account) {
         if (account != null) {
             mStatusTextView.setText(getString(R.string.signed_in_fmt, account.getDisplayName()));
-            //mDetailTextView.setText(getString(R.string.firebase_status_fmt, user.getUid()));
+
             findViewById(R.id.sign_in_button).setVisibility(View.GONE);
             findViewById(R.id.go_to_home).setVisibility(View.VISIBLE);
             findViewById(R.id.sign_out_and_disconnect).setVisibility(View.VISIBLE);
         }
 
         else {
-            //mStatusTextView.setText(R.string.signed_out);
-            //mDetailTextView.setText(null);
-
             findViewById(R.id.sign_in_button).setVisibility(View.VISIBLE);
             findViewById(R.id.go_to_home).setVisibility(View.GONE);
             findViewById(R.id.sign_out_and_disconnect).setVisibility(View.GONE);
@@ -166,16 +162,12 @@ public class MainActivity extends AppCompatActivity {
     private void updateUIFire(FirebaseUser user) {
         if (user != null) {
             mStatusTextView.setText(getString(R.string.signed_in_fmt, user.getEmail()));
-            //mDetailTextView.setText(getString(R.string.firebase_status_fmt, user.getUid()));
             findViewById(R.id.sign_in_button).setVisibility(View.GONE);
             findViewById(R.id.go_to_home).setVisibility(View.VISIBLE);
             findViewById(R.id.sign_out_and_disconnect).setVisibility(View.VISIBLE);
         }
 
         else {
-            //mStatusTextView.setText(R.string.signed_out);
-            //mDetailTextView.setText(null);
-
             findViewById(R.id.sign_in_button).setVisibility(View.VISIBLE);
             findViewById(R.id.go_to_home).setVisibility(View.GONE);
             findViewById(R.id.sign_out_and_disconnect).setVisibility(View.GONE);
@@ -198,7 +190,6 @@ public class MainActivity extends AppCompatActivity {
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
-                            //Snackbar.make(findViewById(R.id.main_layout), "Authentication Failed.", Snackbar.LENGTH_SHORT).show();
                             updateUIFire(null);
                         }
 
@@ -225,16 +216,3 @@ public class MainActivity extends AppCompatActivity {
 
 
 }
-
-
-/*
-    public void onSignIn(View view) {
-        Intent intent = new Intent(this, LoginActivitySample.class);
-        startActivity(intent);
-    }
-
-    public void onSignUp(View view) {
-        Intent intent = new Intent(this, SignUpActivity.class);
-        startActivity(intent);
-    }
-*/

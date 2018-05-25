@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass report
 \use_default_options true
 \maintain_unincluded_children false
@@ -9,16 +11,16 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -78,361 +80,16 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-Write here ...
-\end_layout
-
-\begin_layout Standard
-This chapter should contain an accurate description of the equipment used
- and the experiments carried out.
- It should be sufficiently detailed for the reader to be able to repeat
- the work if necessary and know exactly the circumstances under which it
- was done.
- While only representative successful experiments need to be described in
- detail, it is often described in detail, it is often desirable to mention
- briefly the unsuccessful experiments and wrong turnings which occur for
- the benefit of the reader.
- include flowchart, experiment setup, pseudocode or function listing, simulation
- setting and schematic diagram.
- Other supporting documents such as a complete program and data listing
- are provided as Appendix.
-\end_layout
-
-\begin_layout Section
-Report Template: Guideline
-\begin_inset CommandInset label
-LatexCommand label
-name "chap:Report-Template:-Guideline"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-This report is written using Lyx 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "lyx"
-
-\end_inset
-
- and will be used as a template for final year students of Computer and
- Communication Systems Engineering (CCSE)
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "CCSE"
-description "Computer and Communication Systems Engineering"
-
-\end_inset
-
-.
- To install, download Lyx 'bundle' package which includes Miktex distribution
- (for windows) at 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-http://www.lyx.org/Download
-\end_layout
-
-\end_inset
-
-.
- Once installed, you can go to the menu 
-\family sans
-Help
-\family default
- \SpecialChar \menuseparator
-
-\family sans
-Tutorial
-\family default
- to learn how to use Lyx in writing your document.
+The main ideas to be carried out, development process and cycle, hardware
+ and software needed are discussed in this chapter.
+ This project is targeted to create a ride-sharing application in Android,
+ which is suitable for staffs and students in UPM Serdang campus, in travelling
+ in between faculties and major location point using MyCOMS.
+ This application is developed using Android OS, and is installed in an
+ Android smartphone or tablet.
+ The project development cycle is represented graphically in figure 3.1,
+ as it shows the overall flow of the project is developed.
  
-\end_layout
-
-\begin_layout Standard
-The template is written in separate files.
- Do not change the setting of the 'Main Template FYP A.lyx' or 'Main Template
- FYP B.lyx' and do not modify its content.
- You can update the content of the other files or replace the content where
- necessary.
- All files are compiled in the main file which is 'Main Template FYP B.lyx'
- to generate a complete report.
- To compile the whole document, open main template (eg: Main Template FYP
- A.lyx) then go to the menu 
-\family sans
-Document \SpecialChar \menuseparator
- View [PDF (PdfLatex)]
-\family default
- or 
-\family sans
-Ctrl + R
-\family default
-.
- Follows are the files:
-\end_layout
-
-\begin_layout Itemize
-Main Template FYP A.lyx 
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-noitemsep
-\end_layout
-
-\end_inset
-
-
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-This template is used for FYP A only.
- Note that the item list is single spacing.
- You should use this template for all list in your report.
- You must set the Customisable Lists (enumitem) module at document setting.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Main Template FYP B.lyx
-\end_layout
-
-\begin_layout Itemize
-Titlepage.lyx
-\end_layout
-
-\begin_layout Itemize
-Approval.lyx
-\end_layout
-
-\begin_layout Itemize
-Acknow.lyx
-\end_layout
-
-\begin_layout Itemize
-Abstract.lyx
-\end_layout
-
-\begin_layout Itemize
-Abstrak.lyx
-\end_layout
-
-\begin_layout Itemize
-Appendix.lyx
-\end_layout
-
-\begin_layout Itemize
-01 - Intro.lyx
-\end_layout
-
-\begin_layout Itemize
-02 - Literature.lyx
-\end_layout
-
-\begin_layout Itemize
-03 - Methodology.lyx
-\end_layout
-
-\begin_layout Itemize
-04 - Results and Discussion.lyx
-\end_layout
-
-\begin_layout Itemize
-05 - Conclusions.lyx
-\end_layout
-
-\begin_layout Section
-Citations
-\end_layout
-
-\begin_layout Standard
-All references in the report must be cited.
- You need to store all citation information in .bib database file.
- The bib file link to this template is called 
-\family sans
-references.bib
-\family default
-.
- To cite references, go to menu 
-\family sans
-Insert \SpecialChar \menuseparator
-Citation.
- 
-\end_layout
-
-\begin_layout Standard
-The references style used in this report is IEEE style.
- Refer to 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-http://www.ieee.org/documents/ieeecitationref.pdf
-\end_layout
-
-\end_inset
-
- for the format of different types of sources and 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#Citations
-\end_layout
-
-\end_inset
-
- on how to use that in the bib file.
- Following are the examples:
-\end_layout
-
-\begin_layout Itemize
-Book 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "IEEEexample:book_typical"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Journal 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "IEEEexample:articlelargepages"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Figures
-\end_layout
-
-\begin_layout Standard
-To insert a figure, first you need to insert float figure and then insert
- graphics inside the float.
- Go to the menu 
-\family sans
-Insert
-\family default
- \SpecialChar \menuseparator
-
-\family sans
-Float
-\family default
- \SpecialChar \menuseparator
-
-\family sans
-Figure
-\family default
- or you can use the toolbar button 
-\begin_inset Info
-type  "icon"
-arg   "float-insert figure"
-\end_inset
-
-.
- Then put a cursor inside the float before the caption and go to the menu
- 
-\family sans
-Insert
-\family default
- \SpecialChar \menuseparator
-
-\family sans
-Graphics
-\family default
-.
- Note that the figure must appear above the caption of the figure.
- The detail including examples can be found in the menu 
-\family sans
-Help
-\family default
- \SpecialChar \menuseparator
-
-\family sans
-EmbeddedObjects.
- 
-\family default
-If you want to put citation inside a figure or a table, you need to replace
- the default caption.
- Go to 
-\family sans
-Insert
-\family default
- \SpecialChar \menuseparator
-
-\family sans
-Tex Code
-\family default
- or press Ctrl + L and type in the following:
-\end_layout
-
-\begin_layout Standard
-
-\backslash
-caption[Caption for list entry]{the content 
-\backslash
-cite{lyx} 
-\backslash
-label{fig:XXX}}
-\end_layout
-
-\begin_layout Subsection
-Image Formats
-\end_layout
-
-\begin_layout Standard
-You can use different image formats.
- However, the best format is eps format based on the comparison as shown
- in Figures 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:pdfformat"
-
-\end_inset
-
-, 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:jpgformat"
-
-\end_inset
-
- and 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:epsformat"
-
-\end_inset
-
-.
- Note that the figures have been scaled down to 35% to fit onto one page.
- The figures are created using Matlab plot function and saved as in the
- respective formats.
- You can use any free softwares such as GIMP to convert any image formats
- to eps.
- You can change the placement of figures by right click the float figure
- and choose 
-\family sans
-Settings
-\family default
-.
 \end_layout
 
 \begin_layout Standard
@@ -444,7 +101,214 @@ status open
 
 \begin_layout Plain Layout
 \align center
+\begin_inset Graphics
+	filename images/3/1.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The flowchart of the proposed project
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The first stage of the project is to carry out planning.
+ It is carefully plan and a scope of work is detailed out in order to efficientl
+y handle the project.
+ Problem statement, aim and objectives are identified so that goal is clearly
+ defined, and the project will be stay focus on track through the process
+ of development.
+ Timeline and Gantt chart is drawn in order to track and plan the project
+ progress in order to complete it within the given time period.
+ 
+\end_layout
+
+\begin_layout Standard
+After the goals are set, design is carried out together with the teams that
+ is involved with the MyCOMS application development project.
+ Rounds of discussion and decision have been made in order to achieve the
+ targeted functionality of the application.
+ Based on that, the software and hardware requirement are discussed and
+ decided.
+ Choices of programming language and IDE is done, which is Java as the main
+ language of development, on Android Studio, which to deploy the Android
+ application on an Android compatible devices.
+ 
+\end_layout
+
+\begin_layout Standard
+During project implementation, the application will be installed on devices,
+ and real time data must be captured in order to evaluate the system performance.
+ Testing and debugging is done to ensure that minimal bug activity is supervised.
+ If there is no modification to the project, it will advance to the last
+ stage where it is discussion of result and conclusion.
+ 
+\end_layout
+
+\begin_layout Section
+Software and Hardware Development Requirement
+\end_layout
+
+\begin_layout Standard
+The software required for this project is Android Studio and Adobe Experience
+ Design.
+ The following section explains the roles of having these software for the
+ development for the project.
+\end_layout
+
+\begin_layout Subsection
+Software Requirement
+\end_layout
+
+\begin_layout Subsubsection
+Android Studio
+\end_layout
+
+\begin_layout Standard
+Android Studio is an open source IDE and free software which is released
+ by Google, mainly targeted for developers which aims to create application
+ for Android platform.
+ It has pre-installed library, sample code, tools and etc.
+ required in creating an application.
+ It has workspace and extendible plug-ins available to allow customization
+ for Java application development.
+ 
+\color black
+The Android studio version used in this project is Android Studio 3.1.2, JRE:
+ 1.8.0_152-release-1024-b02 amd64, with SDK version of 27 and Gradle Build
+ 3.1.2.
+\end_layout
+
+\begin_layout Subsubsection
+Adobe Experience Design (Adobe XD)
+\end_layout
+
+\begin_layout Standard
+Adobe XD is a user experience design software developed by Adobe Systems.
+ It is a pay to use software, and offers 7 days of free trial.
+ It allow users to do design and customization on the user interface of
+ an application, and allow the interface to be modelled into an application
+ with limited function of interface.
+ It supports vector design and wire framing, and allow users in creating
+ simple interactive click-through prototypes.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Android Virtual Device (AVD)
+\end_layout
+
+\begin_layout Standard
+AVD is a built-in emulator by Android Studio, which allow users to create
+ a mock Android device without having it in real life.
+ Customizable RAM, OS and pixel setting can be done to simulate the created
+ application before deploying it on the real-time devices.
+ It is used in testing and debugging phase of the project as the codes must
+ be tested out frequently to check the functionality, and several model
+ of Android devices can be tested in order to know the flaw of the software
+ before deploying it on market.
+\end_layout
+
+\begin_layout Subsection
+Hardware Requirement
+\end_layout
+
+\begin_layout Standard
+For the project, computer and smartphone is a must as it is the basic tools
+ needed in developing the application.
+ MyCOMS electric vehicle will be involved once the application is ready
+ to deploy, in order to get real time data to evaluate the system performance.
+ 
+\end_layout
+
+\begin_layout Standard
+A system block diagram is shown as in Figure 3.2 in order to visualize the
+ relationship between each component.
+ It is illustrate as below.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename images/3/2.png
+	width 14.4cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+System block diagram of the project.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The application will be linked to computer and database through internet
+ and server.
+ User will be using the application, while the administrator is able to
+ view the activity through the server, and analyses the data through the
+ database.
+ This step is important as it allow the administrator to evaluate the system
+ performance.
+\end_layout
+
+\begin_layout Section
+Application Design and Development
+\end_layout
+
+\begin_layout Standard
+For the design of the application, a flow of required function is detailed,
+ with the targeted group of users.
+ The flow is represented in Figure 3.3.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -452,8 +316,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename images/pdfformat.pdf
-	scale 35
+	filename images/3/3.png
 
 \end_inset
 
@@ -461,23 +324,10 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-\align center
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-pdf format
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:pdfformat"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
+Use case diagram for the application.
 \end_layout
 
 \end_inset
@@ -486,85 +336,71 @@ name "fig:pdfformat"
 \end_layout
 
 \begin_layout Plain Layout
-\align center
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Firstly, the main screen of the application will prompt user input of identify,
+ such as matric number and password for security purposes.
+ New sign up user will have to register themselves, while registered user
+ have to log in just once, unless the user log out after every session.
+ The application will have selection where user is able to book the vehicle
+ and check the availability with real-time synchronization of database.
+ Once the booking is done, user will be able to start the application as
+ a navigation application, where it will route between the starting and
+ the ending point of the trip.
+ System will alert the user if the route is detected to be out of course
+ from the targeted location.
+ Abnormal activity of the application by user will be recorded and uploaded
+ to the database for reference purposes.
+\end_layout
+
+\begin_layout Subsection
+Firebase Database
+\end_layout
+
+\begin_layout Standard
+Firebase is an online database that is released by Google, to allow more
+ control of Android application.
+ This database allow android application to store and synchronize data in
+ real time.
+ Firebase allow encryption of 2048-bit SSL for the protection of the data.
+ It has custom authentication and access control for developers to suit
+ their application development specification.
+ 
+\end_layout
+
+\begin_layout Standard
+Firebase can be used in cross platform development, such as iOS, Android
+ and also Web development.
+ User will need to sign up an account in Firebase, the API can be easily
+ embedded into the application and to create connection to the server.
+ Firebase saves time as it does not require extra scripting on server-side.
+ 
+\end_layout
+
+\begin_layout Standard
+Figure 3.4 shows the relationship between the elements in the database.
+ 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename images/jpgformat.jpg
-	scale 35
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-jpg format
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:jpgformat"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename images/epsformat.eps
-	scale 35
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-eps format
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:epsformat"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
+	filename images/3/4.png
+	width 14.4cm
 
 \end_inset
 
@@ -575,11 +411,15 @@ name "fig:epsformat"
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Matlab Plot.
+Relationship between elements in database.
 \end_layout
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -589,72 +429,132 @@ Matlab Plot.
 \end_layout
 
 \begin_layout Section
-Tables
+Application Design and Development
 \end_layout
 
 \begin_layout Standard
-You can insert a table using either the toolbar button 
-\begin_inset Info
-type  "icon"
-arg   "tabular-insert"
-\end_inset
-
- or the menu 
-\family sans
-Insert\SpecialChar \menuseparator
-Table
-\family default
-.
- The detail including examples can be found in the menu 
-\family sans
-Help
-\family default
- \SpecialChar \menuseparator
-
-\family sans
-EmbeddedObjects
-\family default
-.
- If your table is written in Microsoft Excel, you can convert it to Latex(plain)
- and then import to Lyx using 
-\family sans
-Excel2LaTeX.
- 
-\family default
-To align the table to center, inside the table float, right click, choose
- 
-\family sans
-Paragraph settings
-\family default
-, and set the Alignment to Centered.
- The example of table rotate to sideways is shown in Table 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:Table-Example"
-
-\end_inset
-
-.
+For the design of the application, a block diagram for the application overview
+ is shown in figure 3.5, where it shows the overall activity and functions
+ to be carried out in the application.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float table
+\align center
+\begin_inset Float figure
+placement H
 wide false
-sideways true
+sideways false
 status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/3/5.png
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Table Example (Setting to Rotate sideways if you have wide table) 
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:Table-Example"
+The flowchart of the system
+\end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+User will be prompted to register or log in to the system at the main interface
+ of the application.
+ Once the user’s identity is confirmed which is a student or staff of UPM,
+ the user will be lead to the home interface where all the functions are
+ located.
+ User will be able to choose between viewing the location of the vehicle,
+ booking the vehicle, viewing and managing the status of the booked vehicle,
+ and also view user details.
+ User can choose to log out from the application, or stay in the session
+ until next launch of the application.
+ 
+\end_layout
+
+\begin_layout Standard
+User can see the real time location of the vehicles so that they can know
+ when and where to book the available vehicles.
+ User can also delete and authenticate the booked vehicle by going to the
+ managing booking activity.
+ 
+\end_layout
+
+\begin_layout Section
+Testing and Debugging
+\end_layout
+
+\begin_layout Standard
+AVD emulator plays an important role for this stage of development.
+ It allows the application development process into easier and more convenient.
+ Customization of Android devices can be done so that developer can predict
+ and observe the errors that might happen if the application is deployed
+ real-time.
+ 
+\end_layout
+
+\begin_layout Standard
+For final stage of the development, application is tested on several Android
+ devices such as Samsung J7, Redmi Note 4, and emulated device in terms
+ of resolution.
+ 
+\end_layout
+
+\begin_layout Section
+System Requirement
+\end_layout
+
+\begin_layout Subsection
+Functional Requirement
+\end_layout
+
+\begin_layout Standard
+System is defined by a group of functions which is required to run.
+ A system requirement consists of functional and non-functional requirements
+ which has constraints to the design and implementation.
+ 
+\end_layout
+
+\begin_layout Standard
+Table 3.1 shows the functional requirements, labelled by ID.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Functional Requirements.
 \end_layout
 
 \end_inset
@@ -665,17 +565,17 @@ name "tab:Table-Example"
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="3">
-<features rotate="0" tabularvalignment="middle">
+<lyxtabular version="3" rows="11" columns="3">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="6cm">
+<column alignment="center" valignment="top" width="6cm">
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+ID
 \end_layout
 
 \end_inset
@@ -684,7 +584,7 @@ name "tab:Table-Example"
 \begin_inset Text
 
 \begin_layout Plain Layout
-1
+Description
 \end_layout
 
 \end_inset
@@ -693,7 +593,7 @@ name "tab:Table-Example"
 \begin_inset Text
 
 \begin_layout Plain Layout
-2
+Explaination
 \end_layout
 
 \end_inset
@@ -704,94 +604,7 @@ name "tab:Table-Example"
 \begin_inset Text
 
 \begin_layout Plain Layout
-A
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-B
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-C
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-D
+FR1
 \end_layout
 
 \end_inset
@@ -800,7 +613,8 @@ D
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Users must be able to sign up.
+ 
 \end_layout
 
 \end_inset
@@ -809,7 +623,274 @@ D
 \begin_inset Text
 
 \begin_layout Plain Layout
+The user must be able to sign up with relevant matric number, name, email
+ and password.
+\end_layout
 
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FR2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Users must be able to sign in.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The user must be able to log in using matric number and password.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FR3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Users must be able to log out from the system.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The user must be able to log out from the session.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FR4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Users must be able to change their profile details.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The user must be able to change profile details such as password, email,
+ name and matric number (if there is no duplicate).
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FR5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Users must be able to book a ride.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+User must be able to view availability of ride and book it.
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FR6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Users must be able to cancel a ride.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+User must be able to remove the booking from the ride list.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FR7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Users must be able to launch the driving mode of the ride.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+User must be able to start the tracking and monitoring features of the applicati
+on.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FR8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Users must be able to end the driving mode of the ride.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+User must be able to end the tracking and monitoring session.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FR9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Users must be able to view the location of vehicle.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+User must be able to see the current whereabouts of the vehicle to decide
+ on booking.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FR10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+System must be able to generate error message.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+System must be able to recognize faulty process throughout the launching
+ of application.
 \end_layout
 
 \end_inset
@@ -822,47 +903,255 @@ D
 
 \end_layout
 
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Non-Functional Requirement
+\end_layout
+
+\begin_layout Standard
+A non-functional requirement of a system will define what a system will
+ do, but not the way the system will do it.
+ Several parameters such as system performance requirement, design constraint
+ and software quality attributes are one of the example of non-functional
+ requirement.
+ 
+\end_layout
+
+\begin_layout Standard
+The system’s related non-functional requirements are shown in table 3.2.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Non-Functional Requirements
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="6cm">
+<column alignment="center" valignment="top" width="6cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ID
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Description
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Explanation
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NFR1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The graphic user interface should be user friendly, and maintain a style
+ for all screens.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The buttons, menus and layout should maintain the same design for all screens
+ so that user will not be confuse with different design of buttons.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NFR2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Notification message should be display clear and concise to the user.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+System will display message in pop up window in informing user.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NFR3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The application must not be affected by bugs, and will inform user on wrong
+ steps taken using the application.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+System must be checked in possible of bugs, and only be released when no
+ harmful bugs are found.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+NFR4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The application will have fast response time.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The system should provide operation and react to instruction very fast.
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Section
-View Latex Source
+Station Level Demand Prediction
+\end_layout
+
+\begin_layout Subsection
+Design Flowchart/Diagram And Processes
 \end_layout
 
 \begin_layout Standard
-Go to the menu 
-\family sans
-View
-\family default
- \SpecialChar \menuseparator
+Fuzzy logic is used in predicting the station level demand, and a basic
+ flow of work is needed in ensuring the process of data is smooth with the
+ use of fuzzy logic.
+ Figure 3.6 shows the flowchart of fuzzy logic.
+ To use the fuzzy logic, it must at least have the basic of several input
+ variables, and is then fuzzified with the input membership function.
+ Fuzzy rules are constructed to create interference with the fuzzy membership
+ function, and together with the output membership function.
+ Defuzzification is then done to obtain the center of gravity for the output,
+ in our case which is the demand level.
  
-\family sans
-Source Pane
-\end_layout
-
-\begin_layout Standard
-Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Lyx"
-
-\end_inset
-
- shows the example of source code shown in the bottom panel of Lyx.
- Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Lyx"
-
-\end_inset
-
- ....
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -870,7 +1159,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename images/lyx3.pdf
+	filename images/3/6.png
+	width 14.4cm
 
 \end_inset
 
@@ -878,110 +1168,572 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset ERT
-status open
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fuzzy Logic flowchart
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 
-
-\backslash
-caption[The caption]{The caption 
-\backslash
-cite{lyx}}
 \end_layout
 
 \end_inset
 
 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Lyx"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Create clickable URLs/hyperlinks in a PDF file 
 \end_layout
 
 \begin_layout Standard
-Example:
-\end_layout
-
-\begin_layout Standard
-Go to the menu 
-\family sans
-Insert \SpecialChar \menuseparator
- URL
-\family default
- :
-\begin_inset space \space{}
-\end_inset
-
-
-\begin_inset Flex URL
-status collapsed
-
-\begin_layout Plain Layout
-
-http://developer.android.com/index.html
-\end_layout
-
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-Go to the menu 
-\family sans
-Insert \SpecialChar \menuseparator
- Hyperlink
-\family default
- : 
-\begin_inset space \space{}
-\end_inset
-
- 
-\begin_inset CommandInset href
-LatexCommand href
-target "ocw91@hotmail.com "
-type "mailto:"
-
-\end_inset
-
-
+To complete the steps, parameters and inputs are then determined based on
+ the case studies and literature review.
+ It must be done carefully so that the output obtained will have better
+ accuracy and consistency.
+ The fuzzy rules must be done precisely according to the input and output
+ so that the decision making will match and par with the expected outcome
+ set earlier.
+ A flowchart is constructed so that the flow of the whole process can be
+ supervised and referred to, to ensure that the steps taken will generate
+ the best outcome after the process of fuzzy logic of the input data.
+ Python 3.6 is used in processing the data.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/3/7.png
+
+\end_inset
+
 
 \end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The flowchart of the process.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Figure 3.7 shows the overall flowchart of the process.
+ It is expected that the whole process will not require hardware connectivity
+ as the data will be generated randomly.
+ The whole project will be done using Python and SciKit Fuzzy Logic library
+ as the input are easily process using these two medium.
+\end_layout
+
+\begin_layout Subsection
+Pseudocode
+\end_layout
+
+\begin_layout Standard
+A simple set of pseudo code is used to demonstrate the flow of the program
+ with fuzzy logic.
+ There is two cases involved in determining the demand level, where both
+ of them are explained at the following section.
+\end_layout
+
+\begin_layout Standard
+Case 1 (fixed input variables to find out demand level): 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+Begin Initialize input variable with desired data 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+Calculate demand level Print demand level 
+\end_layout
+
+\begin_layout Standard
+End 
+\end_layout
+
+\begin_layout Standard
+Case 2 (fixed demand level to get values of input variable): 
+\end_layout
+
+\begin_layout Standard
+Begin 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+Initialize demand level 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+Loop
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+Random generate input variables
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+Compare demand level with the pre-defined demand level 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+While calculated demand level >= pre-defined demand level 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+Print input variables 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+Print generated demand level 
+\end_layout
+
+\begin_layout Standard
+End 
+\end_layout
+
+\begin_layout Subsection
+Dataset
+\end_layout
+
+\begin_layout Standard
+As there is no real application at the simulation of the fuzzy logic prediction,
+ random data is generated as input in order for the fuzzy logic interference
+ to occur.
+ It is to simulate user’s impression and it is hope that the random generation
+ will have the result that has high accuracy consistency as compared to
+ real time data.
+ The collection of data must be done daily once there is a steady application
+ launched to the targeted user.
+ The daily searching of the vehicles is retrieved and processed again to
+ find out the demand for each location.
+ The real time data must be tested to make sure that the searches is reaching
+ the expectation of the artificial intelligent processes.
+\end_layout
+
+\begin_layout Subsubsection
+Input
+\end_layout
+
+\begin_layout Standard
+The input are divided into 4 categories, which are:
+\end_layout
+
+\begin_layout Itemize
+Location of station
+\end_layout
+
+\begin_layout Itemize
+Population of station
+\end_layout
+
+\begin_layout Itemize
+Time of travel 
+\end_layout
+
+\begin_layout Itemize
+Temperature of the day 
+\end_layout
+
+\begin_layout Standard
+The inputs is then further categories in order to plot the membership function.
+ The parameters are pre-defined.
+ 
+\end_layout
+
+\begin_layout Itemize
+Location:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename images/lyx3.pdf
+	filename images/3/8.PNG
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-gdfdfgdfg
+The stations based on location
 \end_layout
 
 \end_inset
@@ -998,113 +1750,145 @@ gdfdfgdfg
 
 \end_layout
 
-\begin_layout Section
-Equations 
+\begin_layout Standard
+The station locations are plotted on the map with 15 predicted locations
+ as shown in Figure 3.8.
+ It is based on the faculties and the colleges location which has the higher
+ population compared to every other location in the campus.
+ The region is separated with blue lines, into northern, central and southern
+ region.
+ Membership function is plotted as shown in figure 3.9.
 \end_layout
 
+\end_deeper
 \begin_layout Standard
-Detail explanation on Mathematical formulas can be found in menu 
-\family sans
-Help \SpecialChar \menuseparator
-User's Guide
-\family default
-.
- Example of numbered formula: 
-\end_layout
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
 
-\begin_layout Standard
-Go to the menu 
-\family sans
-Insert \SpecialChar \menuseparator
-Math\SpecialChar \menuseparator
-Numbered Formula
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-x=\left[\begin{array}{c}
-x_{1}\\
-\vdots\\
-x_{10}
-\end{array}\right],Z=\left[\begin{array}{ccc}
-z_{1,1} & \cdots & z_{1,10}\\
-\vdots & \ddots & \vdots\\
-z_{10,1} & \cdots & z_{10,10}
-\end{array}\right],f=\left[\begin{array}{c}
-f_{1}\\
-\vdots\\
-f_{10}
-\end{array}\right]
-\end{equation}
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/3/9.png
+	width 14.4cm
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Section
-Code Program
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Membership function of location.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Population of station:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+The population of the station is predicted to have a sample size of 50 people
+ per station.
+ The number is then randomly generated for each stations, to find out the
+ demand level.
+ The membership function as shown in figure 3.10.
 \end_layout
 
 \begin_layout Standard
-Go to the menu 
-\family sans
-Insert \SpecialChar \menuseparator
-Tex Code.
- 
-\family default
-The detail including examples can be found in the menu 
-\family sans
-Help
-\family default
- \SpecialChar \menuseparator
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
 
-\family sans
-EmbeddedObjects.
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/3/10.png
+	width 14.4cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Membership function of population.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Time of travel
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+To ease the plotting of the membership function, the range of parameters
+ used will be the full clock hour, which is from midnight until midnight
+ (24 hours), and is further divided into 3 region for membership function
+ plotting.
+ The membership function as shown in figure 3.11.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float algorithm
+\begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
 
-\begin_layout LyX-Code
-#include <stdio.h>
-\end_layout
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/3/11.png
+	width 14.4cm
 
-\begin_layout LyX-Code
- 
-\end_layout
+\end_inset
 
-\begin_layout LyX-Code
-int main(void)
-\end_layout
 
-\begin_layout LyX-Code
-{
-\end_layout
-
-\begin_layout LyX-Code
-    printf("Hello World!
-\backslash
-n");
-\end_layout
-
-\begin_layout LyX-Code
-    return 0;
-\end_layout
-
-\begin_layout LyX-Code
-}
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Algorithm of ...
+Membership function of time of travel.
 \end_layout
 
 \end_inset
@@ -1112,101 +1896,60 @@ Algorithm of ...
 
 \end_layout
 
+\begin_layout Plain Layout
+
+\end_layout
+
 \end_inset
 
 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Temperature of the day 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+The temperature of the day will have the parameters in between of 0 to 40℃.
+ Although in Malaysia there is no temperature that below 16℃, the parameters
+ are set to ease the plotting of membership function.
+ The membership function as shown in figure 3.12.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float algorithm
+\begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
 
-\begin_layout LyX-Code
-#include <stdio.h>
-\end_layout
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/3/12.png
+	width 14.4cm
 
-\begin_layout LyX-Code
- 
-\end_layout
+\end_inset
 
-\begin_layout LyX-Code
-int main(void)
-\end_layout
 
-\begin_layout LyX-Code
-{
-\end_layout
-
-\begin_layout LyX-Code
-    printf("Hello World!
-\backslash
-n");
-\end_layout
-
-\begin_layout LyX-Code
-    return 0;
-\end_layout
-
-\begin_layout LyX-Code
-}
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Algorithm of ...
+Membership function of temperature
 \end_layout
 
 \end_inset
 
 
 \end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-If you have a long code program, you can insert it as a file.
- Go to 
-\family sans
-Insert
-\family default
- \SpecialChar \menuseparator
-
-\family sans
-File
-\family default
- \SpecialChar \menuseparator
-
-\family sans
-Child Document
-\family default
- \SpecialChar \menuseparator
-
-\family sans
-Browse.
- Set Include type to Program Listing and then Fill in the caption and label.
- At More parameters type in language=Matlab or any other languages.
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
 
 \begin_layout Plain Layout
 
-
-\backslash
-let
-\backslash
-cleardoublepage
-\backslash
-clearpage
 \end_layout
 
 \end_inset
@@ -1214,15 +1957,49 @@ clearpage
 
 \end_layout
 
+\end_deeper
+\begin_layout Subsubsection
+Output
+\end_layout
+
 \begin_layout Standard
-\begin_inset ERT
-status open
+The output of the fuzzy logic is set as the Station Level demand, with the
+ scale of 0 to 10.
+ The membership function is plotted as shown in figure 3.13.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/3/13.png
+	width 14.4cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+: Membership function of demand level
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 
-
-\backslash
-phantomsection
 \end_layout
 
 \end_inset
@@ -1230,58 +2007,57 @@ phantomsection
 
 \end_layout
 
-\begin_layout Section
-Evaluation Criteria
-\begin_inset CommandInset label
-LatexCommand label
-name "chap:Evaluation-Criteria"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Sem 1
+\begin_layout Subsubsection
+Fuzzy Rules
 \end_layout
 
 \begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename images/EVALUATION - SEM 1.pdf
-	scale 50
-
-\end_inset
-
-
+There is 3 cases of fuzzy rules to be set, to make sure that the demand
+ level calculated will have high accuracy and consistency of data.
 \end_layout
 
-\begin_layout Section
-Sem 2
+\begin_layout Itemize
+IF location is North OR population is Good OR temperature is Cool OR time
+ is in Morning,
 \end_layout
 
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename images/EVALUATION - SEM 2.pdf
-	scale 60
-
-\end_inset
-
-
+\begin_deeper
+\begin_layout Itemize
+then demand will be Good
 \end_layout
 
-\begin_layout Standard
-Disediakan oleh:
+\end_deeper
+\begin_layout Itemize
+IF location is South OR population is Average OR temperature is Warm OR
+ time is in Afternoon,
 \end_layout
 
-\begin_layout Standard
-Siti Mariam Shafie
+\begin_deeper
+\begin_layout Itemize
+then demand will be Good 
 \end_layout
 
-\begin_layout LyX-Code
-
+\end_deeper
+\begin_layout Itemize
+IF location is Central OR population is Average OR temperature is Warm OR
+ time is in Afternoon,
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+then demand will be Average 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+IF population is Poor OR temperature is Hot OR time is in Evening,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+then demand will be Poor 
+\end_layout
+
+\end_deeper
 \end_body
 \end_document

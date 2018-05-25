@@ -71,6 +71,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "880942969254-kim25eul6ibiogdfuj6qid5n1b2pch8e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.edwin.mycomsdriver",
+            "certificate_hash": "e92c31a85a03f295d1e302287a4153403eda4f09"
+          }
+        },
+        {
           "client_id": "880942969254-67ooefff424sbb73mh0i8rjf1igidjue.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
