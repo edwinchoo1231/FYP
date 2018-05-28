@@ -114,6 +114,10 @@ public class BookRideActivity extends AppCompatActivity {
 
     public void showTimePickerDialog(View v){
         DialogFragment newFragment = new TimePickerFragment();
+        //newFragment.show(getFragmentManager(),"timePicker");
+        Bundle bundle = new Bundle();
+        bundle.putString("link",personId);
+        newFragment.setArguments(bundle);
         newFragment.show(getFragmentManager(),"timePicker");
 
     }

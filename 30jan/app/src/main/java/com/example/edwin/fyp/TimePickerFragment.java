@@ -3,6 +3,7 @@ package com.example.edwin.fyp;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.TimePickerDialog;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.widget.Button;
@@ -23,6 +24,9 @@ public class TimePickerFragment extends DialogFragment implements TimePickerDial
     OnTimePickedListener mCallback;
     DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
     DatabaseReference mConditionRef = mRootRef.child("booking/time");
+    String personName,personGivenName,personFamilyName,personEmail,personId;
+    Uri personPhoto;
+    String personId_time;
 
     public interface OnTimePickedListener {
         public void onTimePicked(int hour, int minute);
@@ -34,7 +38,20 @@ public class TimePickerFragment extends DialogFragment implements TimePickerDial
         int hour = c.get(Calendar.HOUR_OF_DAY);
         int minute = c.get(Calendar.MINUTE);
 
+        Bundle bundle = getArguments();
+        personId_time = bundle.getString("link","");
+
         return new TimePickerDialog(getActivity(),this,hour,minute, DateFormat.is24HourFormat(getActivity()));
+
+        /*GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+        if (account != null) {
+            personName = account.getDisplayName();
+            personGivenName = account.getGivenName();
+            personFamilyName = account.getFamilyName();
+            personEmail = account.getEmail();
+            personId = account.getId();
+            personPhoto = account.getPhotoUrl();
+        }*/
     }
 
 
@@ -44,7 +61,7 @@ public class TimePickerFragment extends DialogFragment implements TimePickerDial
         tv1.setText(getString(R.string.booking_time_is, "Hour: " + view.getCurrentHour() + " Minute: " + view.getCurrentMinute()));
         show_booking_time_on_app = "Hour: " + view.getCurrentHour() + " Minute: " + view.getCurrentMinute();
         String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
-        String path = "booking/"+date;
+        String path = "booking/"+date+"/"+personId_time;
         mConditionRef = mRootRef.child(path+"/Time");
         mConditionRef.setValue(show_booking_time_on_app);
 

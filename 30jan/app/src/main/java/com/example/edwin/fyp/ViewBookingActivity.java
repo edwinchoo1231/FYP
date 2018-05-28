@@ -37,7 +37,7 @@ public class ViewBookingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_booking);
         final String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
-        path = "booking/"+date;
+
         mDeparture = findViewById(R.id.departure);
         mArrival = findViewById(R.id.arrival);
         mshow_booking_time = findViewById(R.id.show_booking_time);
@@ -55,6 +55,8 @@ public class ViewBookingActivity extends AppCompatActivity {
             personPhoto = account.getPhotoUrl();
         }
 
+        path = "booking/"+date+"/"+personId;
+
         mConfirm.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -67,7 +69,7 @@ public class ViewBookingActivity extends AppCompatActivity {
         mDelete.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                mDeleteRef =mRootRef.child("booking/date");
+                mDeleteRef =mRootRef.child("booking/date/"+personId);
                 mDeleteRef.removeValue();
 
                 Toast.makeText(ViewBookingActivity.this,"You have deleted your ride. Please book again!!", Toast.LENGTH_LONG).show();
@@ -80,7 +82,7 @@ public class ViewBookingActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        Query mIDRef = mRootRef.child(path+"/ID").equalTo(personId);
+        Query mIDRef = mRootRef.child(path+"/Name").equalTo(personName);
         mIDRef.addListenerForSingleValueEvent(new com.google.firebase.database.ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
